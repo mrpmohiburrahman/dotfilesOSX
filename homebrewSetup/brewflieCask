@@ -33,6 +33,7 @@ cask "notion"
 cask "whatsapp"
 cask "karabiner-elements"
 cask "flux"
+cask "obs"
 
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)

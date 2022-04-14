@@ -1,0 +1,48 @@
+cask_args appdir: "/Applications"
+
+# Fonts
+cask "font-jetbrains-mono"
+# cask "font-fira-code"
+# cask "font-hack-nerd-font"
+# cask "font-sourcecodepro-nerd-font"
+# cask "font-meslo-nerd-font"
+
+# browsers
+cask "firefox"
+cask "google-chrome"
+
+# Dev
+cask "visual-studio-code"
+cask "iterm2"
+cask "devtoys"
+cask "flipper"
+cask "android-studio"
+cask "zulu11" # JDK
+
+# Apps
+cask "appcleaner"
+cask "vlc"
+cask "slack"
+cask "bitwarden"
+cask "megasync"
+cask "maccy"
+cask "betterzip"
+cask "transmission"
+cask "shottr"
+cask "notion"
+cask "whatsapp"
+cask "karabiner-elements"
+cask "flux"
+
+
+# Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "betterzipql"
+cask "qlimagesize"
+cask "webpquicklook"
+cask "suspicious-package"

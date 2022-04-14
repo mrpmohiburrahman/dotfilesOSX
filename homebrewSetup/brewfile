@@ -15,6 +15,7 @@ brew "n"
 
 brew "cocoapods"
 brew "applesimutils"
+brew "blackhole-2ch"
 
 
 # Tools

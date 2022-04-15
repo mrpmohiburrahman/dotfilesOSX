@@ -16,7 +16,7 @@
         },
         "rules": [
           {
-            "description": "Left CMD -> en",
+            "description": "Left CMD -> bn",
             "manipulators": [
               {
                 "from": {
@@ -36,7 +36,7 @@
             ]
           },
           {
-            "description": "Right CMD -> ru",
+            "description": "Right CMD -> en",
             "manipulators": [
               {
                 "from": {
@@ -56,6 +56,54 @@
                   }
                 ],
                 "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "vlc-increment",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "grave_accent_and_tilde"
+                },
+                "to": [
+                  {
+                    "key_code": "equal_sign",
+                    "modifiers": ["command"]
+                  }
+                ],
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["org.videolan.vlc"],
+                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "vlc-decrement",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "escape"
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen",
+                    "modifiers": ["command"]
+                  }
+                ],
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["org.videolan.vlc"],
+                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"]
+                  }
+                ]
               }
             ]
           }

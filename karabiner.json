@@ -22,17 +22,13 @@
                 "from": {
                   "key_code": "left_command"
                 },
-                "to": [
+                "to": {
+                  "key_code": "left_command"
+                },
+                "to_if_held_down": [
                   {
-                    "key_code": "left_command"
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "select_input_source": {
-                      "input_source_id": "com.apple.keylayout.Colemak",
-                      "language": "en"
-                    }
+                    "key_code": "spacebar",
+                    "modifiers": ["left_control"]
                   }
                 ],
                 "type": "basic"

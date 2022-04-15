@@ -68,8 +68,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "equal_sign",
-                    "modifiers": ["command"]
+                    "key_code": "keypad_plus"
                   }
                 ],
                 "type": "basic",
@@ -88,12 +87,11 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "escape"
+                  "key_code": "tab"
                 },
                 "to": [
                   {
-                    "key_code": "hyphen",
-                    "modifiers": ["command"]
+                    "key_code": "keypad_hyphen"
                   }
                 ],
                 "type": "basic",
@@ -102,6 +100,56 @@
                     "type": "frontmost_application_if",
                     "bundle_identifiers": ["org.videolan.vlc"],
                     "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "firefox-video-speed-increment",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "keypad_plus"
+                },
+                "to": [
+                  {
+                    "key_code": "equal_sign"
+                  }
+                ],
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["org.mozilla.firefox"],
+                    "file_paths": [
+                      "/Applications/Firefox.app/Contents/MacOS/firefox"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "firefox-video-speed-decrement",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "keypad_hyphen"
+                },
+                "to": [
+                  {
+                    "key_code": "hyphen"
+                  }
+                ],
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": ["org.mozilla.firefox"],
+                    "file_paths": [
+                      "/Applications/Firefox.app/Contents/MacOS/firefox"
+                    ]
                   }
                 ]
               }

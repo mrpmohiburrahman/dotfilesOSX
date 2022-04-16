@@ -20,17 +20,17 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "left_command"
+                  "key_code": "left_command",
+                  "modifiers": {
+                    "mandatory": ["right_command"],
+                    "optional": ["any"]
+                  }
                 },
                 "to": {
-                  "key_code": "left_command"
+                  "key_code": "spacebar",
+                  "modifiers": ["control"]
                 },
-                "to_if_held_down": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": ["left_control"]
-                  }
-                ],
+
                 "type": "basic"
               }
             ]

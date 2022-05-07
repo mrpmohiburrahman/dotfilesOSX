@@ -352,6 +352,26 @@
                   }
                 ],
                 "type": "basic"
+              },
+              {
+                "description": "hyper+t ==> float / unfloat window and center on screen",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2"
+                  }
+                ],
+                "type": "basic"
               }
             ]
           }

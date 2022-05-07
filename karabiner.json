@@ -30,7 +30,6 @@
                   "key_code": "spacebar",
                   "modifiers": ["control"]
                 },
-
                 "type": "basic"
               }
             ]
@@ -63,6 +62,13 @@
             "description": "vlc-increment",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["org.videolan.vlc"],
+                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
                 "from": {
                   "key_code": "grave_accent_and_tilde"
                 },
@@ -71,14 +77,7 @@
                     "key_code": "keypad_plus"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["org.videolan.vlc"],
-                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"]
-                  }
-                ]
+                "type": "basic"
               }
             ]
           },
@@ -86,6 +85,13 @@
             "description": "vlc-decrement",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["org.videolan.vlc"],
+                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
                 "from": {
                   "key_code": "tab"
                 },
@@ -94,14 +100,7 @@
                     "key_code": "keypad_hyphen"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["org.videolan.vlc"],
-                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"]
-                  }
-                ]
+                "type": "basic"
               }
             ]
           },
@@ -109,6 +108,15 @@
             "description": "firefox-video-speed-increment",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["org.mozilla.firefox"],
+                    "file_paths": [
+                      "/Applications/Firefox.app/Contents/MacOS/firefox"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
                 "from": {
                   "key_code": "keypad_plus"
                 },
@@ -117,16 +125,7 @@
                     "key_code": "equal_sign"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
-                  {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["org.mozilla.firefox"],
-                    "file_paths": [
-                      "/Applications/Firefox.app/Contents/MacOS/firefox"
-                    ]
-                  }
-                ]
+                "type": "basic"
               }
             ]
           },
@@ -134,6 +133,15 @@
             "description": "firefox-video-speed-decrement",
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["org.mozilla.firefox"],
+                    "file_paths": [
+                      "/Applications/Firefox.app/Contents/MacOS/firefox"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
                 "from": {
                   "key_code": "keypad_hyphen"
                 },
@@ -142,16 +150,208 @@
                     "key_code": "hyphen"
                   }
                 ],
-                "type": "basic",
-                "conditions": [
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "CapsLock to Hyper",
+            "manipulators": [
+              {
+                "description": "capslock = esc(click) | hyper(hold)",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
                   {
-                    "type": "frontmost_application_if",
-                    "bundle_identifiers": ["org.mozilla.firefox"],
-                    "file_paths": [
-                      "/Applications/Firefox.app/Contents/MacOS/firefox"
+                    "key_code": "right_shift",
+                    "modifiers": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
                     ]
                   }
-                ]
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "escape"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "escape = capslock switch",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "caps_lock",
+                    "modifiers": ["left_control"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "spacebar = language switch",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["left_control"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "command + spacebar = emoji",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["left_control", "left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Hyper Application",
+            "manipulators": [
+              {
+                "description": "command + e = finder",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/yabai -m space --rotate 90"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "hyper+f ==> toggle window fullscreen zoom",
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "hyper+y ==> swap window west",
+                "from": {
+                  "key_code": "o",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/yabai -m window --swap west"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "hyper+h ==> send window to monitor and follow focus",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/bin/dash /Users/mrp/dotfilesOSX/yabai/moveWindowLeftAndFollowFocus.sh"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "hyper+; ==> swap window east",
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/opt/homebrew/bin/yabai -m window --swap east"
+                  }
+                ],
+                "type": "basic"
               }
             ]
           }

@@ -17,7 +17,6 @@ cask "iterm2"
 cask "devtoys"
 cask "flipper"
 cask "android-studio"
-cask "zulu11" # JDK
 
 # Apps
 cask "appcleaner"

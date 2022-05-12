@@ -38,6 +38,7 @@ cask "messenger"
 cask "krisp"
 cask "protonvpn"
 cask "topnotch"
+cask "bitwarden"
 
 
 

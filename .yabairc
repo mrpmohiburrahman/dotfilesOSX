@@ -14,6 +14,7 @@
 # sudo yabai --load-sa
 # yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
+$HOME/dotfilesOSX/yabai/create_spaces.sh
 
 # global settings
 yabai -m config mouse_follows_focus          off
@@ -37,7 +38,7 @@ yabai -m config auto_balance                 on        # Balance the window tree
 # yabai -m config mouse_action1                move
 # yabai -m config mouse_action2                resize
 # yabai -m config mouse_drop_action            swap
-
+yabai -m config external_bar               all:39:0
 # general space settings
 yabai -m config layout                       bsp
 yabai -m config top_padding                  0

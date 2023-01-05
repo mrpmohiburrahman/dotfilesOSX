@@ -368,7 +368,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/opt/homebrew/bin/yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2"
+                    "shell_command": "/opt/homebrew/bin/yabai -m window --toggle float; /opt/homebrew/bin/yabai -m window --grid 4:4:1:1:2:2"
                   }
                 ],
                 "type": "basic"

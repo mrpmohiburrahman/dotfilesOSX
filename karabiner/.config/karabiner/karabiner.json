@@ -147,6 +147,51 @@
             ]
           },
           {
+            "description": "Left CMD -> bn",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "left_command",
+                  "modifiers": {
+                    "mandatory": ["right_command"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["control"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Right CMD -> en",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "right_command"
+                },
+                "to": [
+                  {
+                    "key_code": "right_command"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "select_input_source": {
+                      "input_source_id": "com.apple.keylayout.Colemak",
+                      "language": "en"
+                    }
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Hyper Key sublayer \"o\"",
             "manipulators": [
               {
@@ -735,52 +780,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "j",
-                  "modifiers": {
-                    "mandatory": ["any"]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_s",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "change language to bn",
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": ["control"]
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "b",
-                  "modifiers": {
-                    "mandatory": ["any"]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_s",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "description": "change language to en",
-                "to": [
-                  {
-                    "key_code": "right_command",
-                    "modifiers": ["control"]
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
                   "modifiers": {
                     "mandatory": ["any"]
                   }

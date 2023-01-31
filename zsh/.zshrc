@@ -114,3 +114,4 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+export PATH=$PATH:$HOME/.maestro/bin

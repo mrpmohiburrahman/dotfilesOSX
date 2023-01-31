@@ -71,7 +71,7 @@ yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 
 # yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Session$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Slack$" sticky=off layer=above manage=off
+# yabai -m rule --add app="^Slack$" sticky=off layer=above manage=off
 yabai -m rule --add app="^CleanMyMac$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Setapp$" sticky=on layer=above manage=off
 # yabai -m rule --add app="^Path Finder$" manage=off

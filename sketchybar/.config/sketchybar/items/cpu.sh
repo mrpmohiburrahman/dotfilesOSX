@@ -20,8 +20,8 @@ sketchybar --add item cpu.top right \
     \
     --add graph cpu.sys right 100 \
     --set cpu.sys width=0 \
-    graph.color=$RED \
-    graph.fill_color=$RED \
+    graph.color=$WHITE \
+    graph.fill_color=$WHITE \
     label.drawing=off \
     icon.drawing=off \
     background.padding_right=20 \

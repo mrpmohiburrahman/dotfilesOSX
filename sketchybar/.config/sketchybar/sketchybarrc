@@ -33,7 +33,7 @@ sketchybar --bar height=39 \
     corner_radius=9 \
     y_offset=0 \
     margin=0 \ # margin on both
-    blur_radius=20 \
+blur_radius=20 \
     notch_width=200 \
     \
     --default updates=when_shown \
@@ -53,7 +53,6 @@ sketchybar --bar height=39 \
     popup.background.color=$POPUP_BACKGROUND_COLOR \
     popup.background.shadow.drawing=$SHADOW
 
-
 # Left
 source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/spaces.sh"
@@ -63,20 +62,19 @@ source "$ITEM_DIR/front_app.sh"
 # source "$ITEM_DIR/spotify.sh"
 
 # Right
-# source "$ITEM_DIR/github.sh"
-# source "$ITEM_DIR/calendar.sh"
-# source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/github.sh"
+source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/cpu.sh"
 source "$ITEM_DIR/volume.sh"
 
-sketchybar --add item clock right                        \
-           --set clock   update_freq=10                  \
-                         script="$PLUGIN_DIR/clock.sh"   \
-                                                         \
-        #    --add item battery right                      \
-        #    --set battery script="$PLUGIN_DIR/battery.sh" \
-                        #  update_freq=10                  \
-        #    --subscribe battery system_woke
+sketchybar --add item clock right \
+    --set clock update_freq=10 \
+    script="$PLUGIN_DIR/clock.sh"
 
+#    --add item battery right                      \
+#    --set battery script="$PLUGIN_DIR/battery.sh" \
+#  update_freq=10                  \
+#    --subscribe battery system_woke
 
 ############## FINALIZING THE SETUP ##############
 sketchybar --update

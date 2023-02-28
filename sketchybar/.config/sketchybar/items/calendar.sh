@@ -2,15 +2,15 @@
 
 sketchybar --add item calendar right \
     --set calendar icon=cal \
-    icon.color=$BLACK \
-    icon.font="$FONT:Black:12.0" \
+    icon.color=$LABEL_COLOR \
+    icon.font="$FONT:Bold:14.0" \
     icon.padding_left=5 \
     icon.padding_right=5 \
-    label.color=$BLACK \
+    label.color=$LABEL_COLOR \
     label.padding_left=5 \
     label.padding_right=5 \
-    width=160 \
+    width=180 \
     align=center \
-    background.color=$CALENDAR_BACKGROUND \
+    background.color=$SPACE_BACKGROUND \
     background.height=26 \
-    background.corner_radius=11
+    background.corner_radius=9

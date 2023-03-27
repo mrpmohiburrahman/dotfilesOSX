@@ -28,7 +28,11 @@
                 "to": [
                   {
                     "key_code": "left_shift",
-                    "modifiers": ["left_command", "left_control", "left_option"]
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
                   }
                 ],
                 "to_if_alone": [
@@ -46,7 +50,11 @@
                 "to": [
                   {
                     "key_code": "left_shift",
-                    "modifiers": ["left_command", "left_control", "left_option"]
+                    "modifiers": [
+                      "left_command",
+                      "left_control",
+                      "left_option"
+                    ]
                   }
                 ],
                 "to_if_alone": [
@@ -59,13 +67,33 @@
             ]
           },
           {
+            "description": "full screen capture using cleanshot: print_screen",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "print_screen"
+                },
+                "to": [
+                  {
+                    "shell_command": "open -g 'cleanshot://capture-fullscreen'"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "vlc-increment",
             "manipulators": [
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["org.videolan.vlc"],
-                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"],
+                    "bundle_identifiers": [
+                      "org.videolan.vlc"
+                    ],
+                    "file_paths": [
+                      "/Applications/VLC.app/Contents/MacOS/VLC"
+                    ],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -87,8 +115,12 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["org.videolan.vlc"],
-                    "file_paths": ["/Applications/VLC.app/Contents/MacOS/VLC"],
+                    "bundle_identifiers": [
+                      "org.videolan.vlc"
+                    ],
+                    "file_paths": [
+                      "/Applications/VLC.app/Contents/MacOS/VLC"
+                    ],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -110,7 +142,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["org.mozilla.firefox"],
+                    "bundle_identifiers": [
+                      "org.mozilla.firefox"
+                    ],
                     "file_paths": [
                       "/Applications/Firefox.app/Contents/MacOS/firefox"
                     ],
@@ -135,7 +169,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["org.mozilla.firefox"],
+                    "bundle_identifiers": [
+                      "org.mozilla.firefox"
+                    ],
                     "file_paths": [
                       "/Applications/Firefox.app/Contents/MacOS/firefox"
                     ],
@@ -161,14 +197,20 @@
                 "from": {
                   "key_code": "left_command",
                   "modifiers": {
-                    "mandatory": ["right_command"],
-                    "optional": ["any"]
+                    "mandatory": [
+                      "right_command"
+                    ],
+                    "optional": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
                   {
                     "key_code": "spacebar",
-                    "modifiers": ["control"]
+                    "modifiers": [
+                      "control"
+                    ]
                   }
                 ],
                 "type": "basic"
@@ -257,7 +299,9 @@
                 "from": {
                   "key_code": "t",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -279,7 +323,9 @@
                 "from": {
                   "key_code": "c",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -301,7 +347,9 @@
                 "from": {
                   "key_code": "v",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -323,7 +371,9 @@
                 "from": {
                   "key_code": "g",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -345,7 +395,9 @@
                 "from": {
                   "key_code": "d",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -367,7 +419,9 @@
                 "from": {
                   "key_code": "j",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -389,7 +443,9 @@
                 "from": {
                   "key_code": "f",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -411,7 +467,9 @@
                 "from": {
                   "key_code": "z",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -433,7 +491,9 @@
                 "from": {
                   "key_code": "e",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -455,7 +515,9 @@
                 "from": {
                   "key_code": "s",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -525,7 +587,9 @@
                 "from": {
                   "key_code": "f",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -547,7 +611,9 @@
                 "from": {
                   "key_code": "e",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -569,7 +635,9 @@
                 "from": {
                   "key_code": "o",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -591,7 +659,9 @@
                 "from": {
                   "key_code": "h",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -612,7 +682,9 @@
                 "description": "hyper+; ==> swap window east",
                 "from": {
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -634,7 +706,9 @@
                 "from": {
                   "key_code": "j",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -656,7 +730,9 @@
                 "from": {
                   "key_code": "k",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -678,7 +754,9 @@
                 "from": {
                   "key_code": "l",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -700,7 +778,9 @@
                 "from": {
                   "key_code": "semicolon",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -769,7 +849,9 @@
                 "from": {
                   "key_code": "u",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [
@@ -790,7 +872,9 @@
                 "from": {
                   "key_code": "j",
                   "modifiers": {
-                    "mandatory": ["any"]
+                    "mandatory": [
+                      "any"
+                    ]
                   }
                 },
                 "to": [

@@ -13,7 +13,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="mrp"
 
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -77,7 +76,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     z
-    )
+)
 
 source $ZSH/oh-my-zsh.sh
 

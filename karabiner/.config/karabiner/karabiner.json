@@ -125,7 +125,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "delete_forward"
+                                    "key_code": "page_up"
                                 },
                                 "to": [
                                     {

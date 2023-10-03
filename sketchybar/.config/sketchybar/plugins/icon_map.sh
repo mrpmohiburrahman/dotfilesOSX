@@ -1,4 +1,10 @@
 case $@ in
+"Session")
+  icon_result="􁙆"
+  ;;
+"Activity Monitor")
+  icon_result="􀟫"
+  ;;
 "Clock")
   icon_result="􀐬"
   ;;

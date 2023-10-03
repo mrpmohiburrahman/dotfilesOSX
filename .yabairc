@@ -57,7 +57,7 @@ yabai -m config right_padding 0
 yabai -m config window_gap 3
 
 # float system preferences. Most of these just disable Yabai form resizing them.
-yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
+# yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Settings$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off

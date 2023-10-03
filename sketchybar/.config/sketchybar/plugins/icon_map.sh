@@ -6,7 +6,7 @@ case $@ in
   icon_result="􀟫"
   ;;
 "Clock")
-  icon_result="􀐬"
+  icon_result=":clock:"
   ;;
 "Brave Browser")
   icon_result=":brave_browser:"

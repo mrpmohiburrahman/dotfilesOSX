@@ -1,4 +1,7 @@
 case $@ in
+"Clock")
+  icon_result=":clock:"
+  ;;
 "Brave Browser")
   icon_result=":brave_browser:"
   ;;

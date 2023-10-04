@@ -1,6 +1,6 @@
 case $@ in
 "Session")
-  icon_result="􁙆"
+  icon_result=":clock:"
   ;;
 "Activity Monitor")
   icon_result="􀟫"

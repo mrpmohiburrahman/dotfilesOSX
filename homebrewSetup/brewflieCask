@@ -34,7 +34,7 @@ cask "transmission"
 # cask "shottr"
 cask "notion"
 cask "whatsapp"
-cask "karabiner-elements"
+cask "karabiner-elements" # needs user password
 cask "flux"
 cask "obs"
 cask "discord"

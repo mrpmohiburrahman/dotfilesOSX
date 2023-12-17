@@ -18,7 +18,7 @@ cask "flipper"
 # cask "android-studio"
 
 # Apps
-cask "blackhole-2ch"
+cask "blackhole-2ch" # need user password
 cask "xcodes"
 cask "figma"
 cask "setapp"

@@ -11,5 +11,20 @@
 ```ln -nfs ~/dotfilesOSX/.yabairc ~/.yabairc```
 
 stow karabiner
+
 stow sketchybar
+
 stow zsh
+
+install homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
+```
+
+Run brewInstall.sh
+
+```bash
+cd homebrewSetup/
+sh brewInstall.sh
+```

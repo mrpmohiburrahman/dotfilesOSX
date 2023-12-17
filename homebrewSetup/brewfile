@@ -15,8 +15,11 @@ brew "n"
 
 brew "cocoapods"
 brew "applesimutils"
-brew "blackhole-2ch"
 
+
+brew "sketchybar"
+brew "stow"
+brew "koekeishiya/formulae/yabai"
 
 # Tools
 brew "z" # Jump around to frequent directories # use if from plugin
@@ -69,7 +72,7 @@ brew "z" # Jump around to frequent directories # use if from plugin
 # brew "perl"
 
 # Zsh
-# brew "zsh" # UNIX shell (command interpreter)
+brew "zsh" # UNIX shell (command interpreter)
 # brew "getantibody/tap/antibody" # Plugin manager for Zsh
 # brew "zsh-lovers" # Tips, tricks, and examples for zsh
 

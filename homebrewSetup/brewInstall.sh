@@ -11,17 +11,9 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# brew tap homebrew/versions #depricated
-# brew tap Goles/battery #battery in command line
-# brew tap getantibody/tap #antibody for zsh
-# Installing from the API is now the default behaviour!
-# You can save space and time by running:
-#   brew untap homebrew/core
-#   brew untap homebrew/cask
+
 brew tap homebrew/bundle
 brew tap homebrew/cask-fonts # fonts for sketchybar
-# brew tap homebrew/cask
-# brew tap homebrew/core # Warning: Tapping homebrew/core is no longer typically necessary.
 brew tap mas-cli/tap
 
 brew tap FelixKratz/formulae # for sketchybar

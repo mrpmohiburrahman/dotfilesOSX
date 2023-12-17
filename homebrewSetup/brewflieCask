@@ -8,7 +8,6 @@ cask "font-hack-nerd-font"
 # cask "font-meslo-nerd-font"
 
 # browsers
-# cask "firefox"
 cask "google-chrome"
 
 # Dev

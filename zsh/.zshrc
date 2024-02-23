@@ -114,8 +114,8 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$HOME/.maestro/bin
 
 # Mega CMD
-export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
-source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
+# export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
+# source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

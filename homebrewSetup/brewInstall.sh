@@ -54,3 +54,7 @@ xattr -r -d com.apple.quarantine /Applications
 # brew install robotsandpencils/made/xcodes
 
 # For react native android
+
+chmod +x ~/dotfilesOSX/customize_macos.sh
+
+~/dotfilesOSX/customize_macos.sh

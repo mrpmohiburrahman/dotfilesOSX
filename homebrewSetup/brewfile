@@ -23,6 +23,7 @@ brew "koekeishiya/formulae/yabai"
 
 # Tools
 brew "z" # Jump around to frequent directories # use if from plugin
+brew "jq"
 # brew "ack" # Search tool like grep, but optimized for programmers
 # brew "autossh" # Automatically restart SSH sessions and tunnels
 # brew "clinfo" # Print information about OpenCL platforms and devices

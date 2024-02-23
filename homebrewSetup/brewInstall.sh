@@ -4,17 +4,16 @@
 
 export PATH="/opt/homebrew/bin:$PATH"
 
-
 # Ask for the administrator password upfront
 sudo -v
 
 # Check for Homebrew and install it if missing
 #if test ! $(which brew); then
- # echo "Installing Homebrew..."
-  #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
+# echo "Installing Homebrew..."
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
 
 #fi
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null
 
 brew tap homebrew/bundle
 brew tap homebrew/cask-fonts # fonts for sketchybar

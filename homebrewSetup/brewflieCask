@@ -4,6 +4,7 @@ cask_args appdir: "/Applications"
 cask "font-jetbrains-mono"
 # cask "font-fira-code"
 cask "font-hack-nerd-font"
+cask "sf-symbols" # for skethybar
 # cask "font-sourcecodepro-nerd-font"
 # cask "font-meslo-nerd-font"
 
@@ -18,7 +19,7 @@ cask "flipper"
 # cask "android-studio"
 
 # Apps
-cask "blackhole-2ch" # need user password
+# cask "blackhole-2ch" # need user password
 cask "xcodes"
 cask "figma"
 cask "setapp"

@@ -15,6 +15,10 @@ sudo -v
 #fi
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/null
 
+# mac os sript
+chmod +x ~/dotfilesOSX/customize_macos.sh
+~/dotfilesOSX/customize_macos.sh
+
 brew tap homebrew/bundle
 brew tap homebrew/cask-fonts # fonts for sketchybar
 brew tap mas-cli/tap
@@ -53,8 +57,5 @@ xattr -r -d com.apple.quarantine /Applications
 # sudo xcode-select --switch /Applications/Xcode.app
 # brew install robotsandpencils/made/xcodes
 
-# For react native android
-
-chmod +x ~/dotfilesOSX/customize_macos.sh
-
-~/dotfilesOSX/customize_macos.sh
+# for setting up yabai scripting edition
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai

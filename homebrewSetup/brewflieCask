@@ -3,12 +3,12 @@ cask_args appdir: "/Applications"
 # Fonts
 cask "font-jetbrains-mono"
 # cask "font-fira-code"
-# cask "font-hack-nerd-font"
+cask "font-hack-nerd-font"
+cask "sf-symbols" # for skethybar
 # cask "font-sourcecodepro-nerd-font"
 # cask "font-meslo-nerd-font"
 
 # browsers
-cask "firefox"
 cask "google-chrome"
 
 # Dev
@@ -16,33 +16,37 @@ cask "visual-studio-code"
 cask "iterm2"
 cask "devtoys"
 cask "flipper"
-cask "android-studio"
+# cask "android-studio"
 
 # Apps
+# cask "blackhole-2ch" # need user password
+cask "xcodes"
+cask "figma"
+cask "setapp"
+cask "alfred"
 cask "appcleaner"
 cask "vlc"
 cask "slack"
 cask "bitwarden"
 cask "megasync"
-cask "maccy"
+# cask "maccy"
 cask "betterzip"
 cask "transmission"
-cask "shottr"
+# cask "shottr"
 cask "notion"
 cask "whatsapp"
-cask "karabiner-elements"
+cask "karabiner-elements" # needs user password
 cask "flux"
 cask "obs"
 cask "discord"
 cask "messenger"
 cask "krisp"
-cask "protonvpn"
+# cask "protonvpn"
 cask "topnotch"
-cask "bitwarden"
-cask "textsniper"
-cask "monitorcontrol"
-cask "bootstrap-studio"
-cask "hazeover"
+# cask "textsniper"
+# cask "monitorcontrol"
+# cask "bootstrap-studio"
+# cask "hazeover"
 
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)

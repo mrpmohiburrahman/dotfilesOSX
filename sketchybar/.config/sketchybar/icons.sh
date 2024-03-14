@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # General Icons
 LOADING=􀖇
@@ -45,3 +45,6 @@ VOLUME_33=􀊥
 VOLUME_10=􀊡
 VOLUME_0=􀊣
 
+# WiFi
+WIFI_CONNECTED=􀙇
+WIFI_DISCONNECTED=􀙈

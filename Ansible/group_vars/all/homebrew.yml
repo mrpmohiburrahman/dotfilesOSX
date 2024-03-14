@@ -1,0 +1,23 @@
+# group_vars/all/homebrew.yml
+---
+brew_cask_packages:
+  - name: font-hack-nerd-font
+    state: present
+
+brew_packages:
+  - name: jq
+    state: present
+  - name: sketchybar
+    state: present
+  - name: dockutil
+    state: present
+
+brew_taps:
+  - name: FelixKratz/formulae
+    state: present
+  - name: homebrew/cask-fonts
+    state: present
+
+install_homebrew_if_missing: true
+upgrade_homebrew_packages: false
+update_homebrew: true

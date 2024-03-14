@@ -1,6 +1,10 @@
 reated by https://www.gitignore.io/api/vim
 # Edit at https://www.gitignore.io/?templates=vim
 
+### Alfred ###
+license.T2P4YF7LQC.plist
+powerpack.T2P4YF7LQC.dat
+*.alfdb
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
@@ -39,7 +43,6 @@ tags
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*
@@ -91,8 +94,6 @@ zsdoc/data
 !/tests/_output/.gitkeep
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,zsh
-
-
 
 vim/bundle/
 # vim/bundle/auto-pairs/

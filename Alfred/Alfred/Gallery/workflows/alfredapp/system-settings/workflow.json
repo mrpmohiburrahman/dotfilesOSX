@@ -1,0 +1,34 @@
+{
+  "timestamps": {
+    "added": 1662383494,
+    "modified": 1697116508
+  },
+  "bundleIDs": [
+    "com.alfredapp.vitor.systemsettings"
+  ],
+  "name": "System Settings",
+  "description": "Open macOS System Settings Panes",
+  "codeType": "no-code",
+  "updatesFeed": {
+    "url": "https://github.com/alfredapp/system-settings-workflow/releases.atom",
+    "state": "W/\"d4ce48e7ad3c966f194d803e598cbb1d\"|2023-10-12T13:14:29Z"
+  },
+  "links": {
+    "homepage": "https://github.com/alfredapp/system-settings-workflow/",
+    "alfredForum": "https://www.alfredforum.com/topic/19264-system-settings-—-open-macos-system-settings-panes/",
+    "bugReports": "https://github.com/alfredapp/1password-workflow/issues/"
+  },
+  "download": {
+    "latest": {
+      "version": "2023.3",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/84ec0a3c34df3719eb0a304a6ed7249680d78f33/workflows/alfredapp/system-settings.alfredworkflow",
+      "signature": "bb5R1wYmdlcxTpn/XlJzay4qQDaGTkVojixwMQ3kRvjnlJOdOrt37FwIIPB5xrCOJpKLGjztzP1YLIPzMgeqhIeTwj1M7/fO4Kx2t7D0AHEvmVI2FyeY7UXsx+uzgHkO2iyiYL+vWlJQ00W8t7RPyMolPTPh2IaEdtmDFwaByDOGOBpzVZzFaN1WSdjTNhIANJR853k16qXF2y7RmjtSm++USjaa2gPlsO/Yl5GKm5OwrHSvRhhMaCP/uukfISfeREwHnCFuGQJTla+USmERzLwNiX/3tyxdgPPDf1AnS1Xg3g9xej75urSlTjNAWmpfOHKT5MchrT4yUA/PKPIVbpvWsSFRZPqtCd53uEEiSvKCndwkKmJb0yrN0tEplvNepGykpN05uAlt9Owa8g0vQmNgZItH54OU2RRFZEKSd+g2bD6yHDJyDUDBo5REnsy4nqg+jpyacGFdzZ0VsUcuKFc9UjKSF5jVC0jsuwOUZGW36C2mZ1K+/QWFBFJcrpg4FdC3G5P2lcqxTh+8lcyWL5kzP9KLu/4/shFVYAg3pu/wbVcbmGT/k0X3NuQrAg3TGWgpOqWFOImg4IBZObiYErxskR/tIA1mJomMpsULtWACwPoalPGWE2K8jDdOoVGRq/M7CqefdqqD4NLaXABZPnJThWzAgLFtBIyqbs5IPHI="
+    }
+  },
+  "tags": [
+    "system"
+  ],
+  "keywords": [
+    "preferences"
+  ]
+}

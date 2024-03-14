@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>D52DE176-8016-42AD-898E-A92382A83ADC</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>learning</string>
+			<key>spaces</key>
+			<string>%20</string>
+			<key>text</key>
+			<string>Search LinkedIn Learning for {query}</string>
+			<key>url</key>
+			<string>https://www.linkedin.com/learning/search?keywords={query}&amp;u=93946321</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

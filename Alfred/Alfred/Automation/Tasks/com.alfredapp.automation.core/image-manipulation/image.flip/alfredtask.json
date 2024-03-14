@@ -1,0 +1,44 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "filtermode" : 2,
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false
+      },
+      "description" : "",
+      "label" : "Image",
+      "type" : "filepicker",
+      "variable" : "target_path"
+    },
+    {
+      "config" : {
+        "default" : "horizontal",
+        "pairs" : [
+          [
+            "Horizontal",
+            "horizontal"
+          ],
+          [
+            "Vertical",
+            "vertical"
+          ]
+        ]
+      },
+      "description" : "",
+      "label" : "Flip",
+      "type" : "popupbutton",
+      "variable" : "direction"
+    }
+  ],
+  "inputMulti" : 2,
+  "inputOverride" : "target_path",
+  "inputType" : 1,
+  "outputType" : 2,
+  "script" : "for image in \"${@}\"\ndo\n  \/usr\/bin\/sips --flip \"${direction}\" \"${image}\"\ndone",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Mirror images horizontally or vertically",
+  "taskName" : "Flip Image"
+}

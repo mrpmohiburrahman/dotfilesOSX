@@ -1,0 +1,37 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false,
+        "trim" : true
+      },
+      "description" : "",
+      "label" : "URL",
+      "type" : "textfield",
+      "variable" : "url"
+    },
+    {
+      "config" : {
+        "default" : true,
+        "required" : false,
+        "text" : "Also removes www2., www3., and similar."
+      },
+      "description" : "",
+      "label" : "Remove www.",
+      "type" : "checkbox",
+      "variable" : "no_www"
+    }
+  ],
+  "inputMulti" : 2,
+  "inputOverride" : "url",
+  "inputType" : 2,
+  "outputDescription" : "Text",
+  "outputType" : 1,
+  "script" : "function envVar(varName) {\n  return $.NSProcessInfo\n    .processInfo\n    .environment\n    .objectForKey(varName).js\n}\n\nfunction alfredArgs(args) {\n  return JSON.stringify({ alfredworkflow: { arg: args } })\n}\n\nfunction run(argv) {\n  const hostnames = argv.map(url => $.NSURL.URLWithString(url).host.js)\n\n  if (envVar(\"no_www\") === \"1\") return alfredArgs(hostnames.map(url => url.replace(\/^www\\d*\\.\/, \"\")))\n  return alfredArgs(hostnames)\n}",
+  "scriptType" : 7,
+  "state" : 0,
+  "taskDescription" : "Get hostname from URLs",
+  "taskName" : "URL Hostname"
+}

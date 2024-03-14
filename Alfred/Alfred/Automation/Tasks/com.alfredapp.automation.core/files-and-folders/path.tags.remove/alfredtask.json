@@ -1,0 +1,48 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "filtermode" : 0,
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false
+      },
+      "description" : "",
+      "label" : "Path",
+      "type" : "filepicker",
+      "variable" : "target_path"
+    },
+    {
+      "config" : {
+        "default" : "",
+        "required" : true,
+        "trim" : true,
+        "verticalsize" : 3
+      },
+      "description" : "Newline-separated list of tags.",
+      "label" : "Tags",
+      "type" : "textarea",
+      "variable" : "new_tags"
+    },
+    {
+      "config" : {
+        "default" : true,
+        "required" : false,
+        "text" : "Act on directory contents"
+      },
+      "description" : "",
+      "label" : "Recursive",
+      "type" : "checkbox",
+      "variable" : "recursive"
+    }
+  ],
+  "inputMulti" : 2,
+  "inputOverride" : "target_path",
+  "inputType" : 1,
+  "outputType" : 2,
+  "script" : "..\/.common\/tag remove \"${new_tags}\" \"${recursive}\" \"${@}\"",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Delete select tags from paths",
+  "taskName" : "Remove Tags"
+}

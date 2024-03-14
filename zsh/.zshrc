@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -75,10 +73,11 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    z
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
+
+eval "$(starship init zsh)"
 
 # User configuration
 
@@ -114,10 +113,22 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$HOME/.maestro/bin
 
 # Mega CMD
-# export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
-# source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
+source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
 
 PATH=~/.console-ninja/.bin:$PATH
+eval "$(zoxide init --cmd cd zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias cat='bat'
+alias vim='nvim'
+
+# lsd The next gen ls command https://github.com/lsd-rs/lsd
+
+# issue: lsd -la takes a long time
+# alias ls='lsd'
+# alias l='ls -l'
+# alias la='ls -a'
+# alias lla='ls -la'
+# alias lt='ls --tree'

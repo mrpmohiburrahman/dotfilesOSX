@@ -1,0 +1,32 @@
+---
+debian_packages:
+  - name: golang
+    state: present
+  - name: jq
+    state: present
+  - name: keepassx
+    state: absent
+  - name: keepassxc
+    state: present
+  - name: nmap
+    state: present
+  - name: npm
+    state: present
+  - name: python-psutil
+    state: absent
+  - name: ruby
+    state: present
+  - name: ruby-dev
+    state: present
+  - name: shellcheck
+    state: present
+  - name: terminator
+    state: absent
+  - name: tmux
+    state: present
+  - name: tree
+    state: present
+  - name: vim
+    state: present
+  - name: zsh
+    state: present

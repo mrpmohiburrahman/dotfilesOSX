@@ -1,0 +1,39 @@
+{
+  "timestamps": {
+    "added": 1646138718,
+    "modified": 1689354345
+  },
+  "bundleIDs": [
+    "com.alfredapp.vitor.shortcuts",
+    "com.alfredapp.shortcuts"
+  ],
+  "name": "Shortcuts",
+  "description": "Run installed macOS shortcuts",
+  "codeType": "script",
+  "updatesFeed": {
+    "url": "https://github.com/alfredapp/shortcuts-workflow/releases.atom",
+    "state": "W/\"4ff2b1987a67137035c752cb2462bd01\"|2023-07-14T17:05:20Z"
+  },
+  "links": {
+    "homepage": "https://github.com/alfredapp/shortcuts-workflow/",
+    "bugReports": "https://github.com/alfredapp/shortcuts-workflow/issues/",
+    "alfredForum": "https://www.alfredforum.com/topic/17723-shortcuts"
+  },
+  "download": {
+    "latest": {
+      "version": "2023.8",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/9675dbedafc3f714bd7802a19b7164269cd36adc/workflows/alfredapp/shortcuts.alfredworkflow",
+      "signature": "CTEV+cQwZby9NqPP2LiUDg0+dd5Ug9cSJXnHGJLhfb+SscxsXg0d/M6T51P9UVzMANsxz5jDpAvRms6DEvyHsaFfDQGmslQRu36/JD3Y8VH+CvWcUOgexeEQTAHMaxsnSLCgSN1snhlQKx7GKySolqx27h3qwBZWnh0XhTtAK0TdEDl6rTl+kTe1wZ7+3LEtIqJwrlsGcn2NADhYrIFyJE+DlVvVuow867Ztzj4WxD8WjVN7WtMzjJPgM+1dWwZcxn4no3GVIN9mBbHFBV2WUHPRX7WK+YDxsz0apvTg6Fx1dEIAjR+DCQSaBYBAGHwaB1/VDhYhuh3+KZ1j+SApS6XM5FoNiGCtBhPf5BOlLBZDQV8mbNU95KKk1iYyYfw/VPU6CSOvVe17i8xw9kthGLKj1Pb/6ddILrsFpLPI2DFKhWDErLiLaY3ANMqbkp3szDrux52PBQKwJtEXwZCgNcl7uhIavPz2gjdEyxLPb4iEQgmnGsdiq/yjREBWAEP60/GyJgk9J+pZtUCRNWu+43gvY3CgGx6Oi6VonCir1G7pti/EbxvDR09BiNnCTSGrgEst8XX/oYEgsknY97NjPjoyBseNKBkNKztwZxl7EjHg53YnLIaD7int4RtExLmlE7QXaprVGydRG9KFG5+JxFwr8UdmCCF9RprAxXm9Mz0="
+    }
+  },
+  "tags": [
+    "featured",
+    "shortcuts",
+    "universal-actions"
+  ],
+  "dependencies": {
+    "otherLanguages": [
+      "osascript (jxa)"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "inputMulti" : 0,
+  "inputType" : 0,
+  "outputDescription" : "Boolean (\"true\" or \"false\")",
+  "outputType" : 1,
+  "script" : "function writeSTDOUT(string) {\n  const nsdata = $(string).dataUsingEncoding($.NSUTF8StringEncoding)\n  $.NSFileHandle.fileHandleWithStandardOutput.writeData(nsdata)\n}\n\n\/\/ Output as string, without newline\nconst state = Application(\"System Events\").appearancePreferences.darkMode().toString()\nwriteSTDOUT(state)",
+  "scriptType" : 7,
+  "state" : 0,
+  "taskDescription" : "Check if Dark Mode is enabled",
+  "taskName" : "Is Dark Mode On?"
+}

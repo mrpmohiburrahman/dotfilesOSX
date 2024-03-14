@@ -1,0 +1,26 @@
+# main.yml
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+    # - name: Include Homebrew installation tasks
+    #   include_tasks: tasks/install_homebrew.yml
+    # - name: Include Homebrew Taps
+    #   include_tasks: tasks/homebrew/install_homebrew_taps.yml
+
+    - name: Include Homebrew Cask
+      include_tasks: tasks/homebrew/install_homebrew_casks.yml
+
+    # - name: Include Homebrew Formulae
+    #   include_tasks: tasks/homebrew/install_homebrew_formulae.yml
+
+    - name: Managing Dock Items
+      include_tasks: tasks/dockutil.yml
+
+    # - name: Include Git Setup tasks
+    # include_tasks: tasks/git-setup.yml
+
+    # - name: Install Google Chrome using shell
+    #   ansible.builtin.shell:
+    #     cmd: "brew install --cask google-chrome"
+    #   become: no  # Homebrew commands should generally be run as the regular user, not root

@@ -1,0 +1,28 @@
+---
+redhat_packages:
+  - name: bat
+    state: present
+  - name: ShellCheck
+    state: present
+  - name: golang
+    state: present
+  - name: jq
+    state: present
+  - name: keepassx
+    state: present
+  - name: nmap
+    state: present
+  - name: npm
+    state: present
+  - name: ruby-devel
+    state: present
+  - name: rubygems
+    state: present
+  - name: terminator
+    state: present
+  - name: tmux
+    state: present
+  - name: tree
+    state: present
+  - name: vim
+    state: present

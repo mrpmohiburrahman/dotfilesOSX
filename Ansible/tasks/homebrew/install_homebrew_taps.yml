@@ -1,0 +1,37 @@
+- name: Set HomeBrew path
+  ansible.builtin.set_fact:
+    homebrew_path: /usr/local/bin/brew
+  when: ansible_architecture != "arm64"
+
+- name: Set HomeBrew path
+  ansible.builtin.set_fact:
+    homebrew_path: /opt/homebrew/bin
+  when: ansible_architecture == "arm64"
+
+- name: Ensuring Homebrew Is Installed
+  ansible.builtin.stat:
+    path: "{{ homebrew_path  }}"
+  register: homebrew_check
+
+- name: Installing Homebrew Taps
+  become: false
+  homebrew_tap:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  register: result
+  until: result is successful
+  loop: "{{ brew_taps }}"
+  when: homebrew_check.stat.exists
+
+- name: Check if FelixKratz/formulae tap is installed
+  become: false
+  homebrew_tap:
+    name: FelixKratz/formulae
+    state: present
+  check_mode: yes
+  register: felixkratz_tap_check
+
+- name: Display result of the check
+  debug:
+    msg: "FelixKratz/formulae tap is already installed."
+  when: felixkratz_tap_check is not changed

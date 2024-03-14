@@ -1,0 +1,25 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "filtermode" : 2,
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false
+      },
+      "description" : "",
+      "label" : "Image",
+      "type" : "filepicker",
+      "variable" : "target_path"
+    }
+  ],
+  "inputMulti" : 1,
+  "inputOverride" : "target_path",
+  "inputType" : 1,
+  "outputType" : 2,
+  "script" : "function run(argv) {\n  Application(\"System Events\").currentDesktop.picture = argv[0]\n}",
+  "scriptType" : 7,
+  "state" : 0,
+  "taskDescription" : "Set the Desktop wallpaper",
+  "taskName" : "Change Wallpaper"
+}

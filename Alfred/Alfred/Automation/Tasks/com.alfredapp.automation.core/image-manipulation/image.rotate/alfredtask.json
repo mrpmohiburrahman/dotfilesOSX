@@ -1,0 +1,37 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "filtermode" : 2,
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false
+      },
+      "description" : "",
+      "label" : "Image",
+      "type" : "filepicker",
+      "variable" : "target_path"
+    },
+    {
+      "config" : {
+        "default" : "",
+        "placeholder" : "e.g. 90",
+        "required" : false,
+        "trim" : true
+      },
+      "description" : "",
+      "label" : "Degrees Clockwise",
+      "type" : "textfield",
+      "variable" : "degrees"
+    }
+  ],
+  "inputMulti" : 2,
+  "inputOverride" : "target_path",
+  "inputType" : 1,
+  "outputType" : 2,
+  "script" : "for image in \"${@}\"\ndo\n  \/usr\/bin\/sips --rotate \"${degrees}\" \"${image}\"\ndone",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Rotate images by degrees",
+  "taskName" : "Rotate Image"
+}

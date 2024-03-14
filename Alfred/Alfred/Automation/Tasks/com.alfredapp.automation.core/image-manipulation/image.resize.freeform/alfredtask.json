@@ -1,0 +1,49 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "filtermode" : 2,
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false
+      },
+      "description" : "",
+      "label" : "Image",
+      "type" : "filepicker",
+      "variable" : "target_path"
+    },
+    {
+      "config" : {
+        "default" : "",
+        "placeholder" : "e.g. 640",
+        "required" : true,
+        "trim" : true
+      },
+      "description" : "",
+      "label" : "Width",
+      "type" : "textfield",
+      "variable" : "width"
+    },
+    {
+      "config" : {
+        "default" : "",
+        "placeholder" : "e.g. 480",
+        "required" : true,
+        "trim" : true
+      },
+      "description" : "",
+      "label" : "Height",
+      "type" : "textfield",
+      "variable" : "height"
+    }
+  ],
+  "inputMulti" : 2,
+  "inputOverride" : "target_path",
+  "inputType" : 1,
+  "outputType" : 2,
+  "script" : "for image in \"${@}\"\ndo\n  \/usr\/bin\/sips --resampleHeightWidth \"${height}\" \"${width}\" \"${image}\"\ndone",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Alter image proportions, ignoring aspect ratio",
+  "taskName" : "Resize Image Exactly"
+}

@@ -1,0 +1,10 @@
+---
+- name: Configure Git settings via shell commands
+  block:
+    - name: Set global user name
+      ansible.builtin.shell:
+        cmd: git config --global user.name "MD. MOHIBUR RAHMAN"
+
+    - name: Set global user email
+      ansible.builtin.shell:
+        cmd: git config --global user.email "35300157+mrpmohiburrahman@users.noreply.github.com"

@@ -1,0 +1,90 @@
+#!/usr/bin/osascript -l JavaScript
+
+function alfredArgs(args) {
+  return JSON.stringify({ alfredworkflow: { arg: args } })
+}
+
+function frontmostBrowserName() {
+  const getBrowser = $("~/Library/Application Support/Alfred/Automation/Tasks/com.alfredapp.automation.core/safari/.common/get-frontmost-browser").stringByExpandingTildeInPath.js
+
+  const task = $.NSTask.alloc.init
+  const stdout = $.NSPipe.pipe
+
+  task.executableURL = $.NSURL.alloc.initFileURLWithPath("/usr/bin/env")
+  task.arguments = [getBrowser]
+  task.standardOutput = stdout
+  task.launchAndReturnError(false)
+
+  const dataOut = stdout.fileHandleForReading.readDataToEndOfFile
+  const stringOut = $.NSString.alloc.initWithDataEncoding(dataOut, $.NSUTF8StringEncoding).js
+
+  if (task.terminationStatus !== 0) throw "Did not find a supported web browser"
+  return stringOut.trim()
+}
+
+function browserVariant(appName) {
+  const webkitVariants = ["Safari", "Webkit", "Orion"]
+  const chromiumVariants = ["Google Chrome", "Chromium", "Opera", "Vivaldi", "Brave Browser", "Microsoft Edge"]
+
+  if (webkitVariants.some(browserName => appName.startsWith(browserName))) return { app: Application(appName), variant: "webkit" }
+  if (chromiumVariants.some(browserName => appName.startsWith(browserName))) return { app: Application(appName), variant: "chromium" }
+  throw `${appName} is not a supported browser: ${webkitVariants.concat(chromiumVariants).join(", ")}`
+}
+
+function lookFor(matchString, inText, useRegex) {
+  if (useRegex) return RegExp(matchString).test(inText)
+  return inText.includes(matchString)
+}
+
+function run(argv) {
+  const targetBrowser = argv[0]
+  const includeAllWindows = argv[1] === "1"
+  const allowEmptyWindows = argv[2] === "1"
+  const outFormat = argv[3]
+  const matchString = argv[4]
+  const regex = argv[5] === "1"
+
+  // Find browser
+  let browser
+
+  try {
+    browser = targetBrowser === "frontmost_browser" ?
+      browserVariant(frontmostBrowserName()) :
+      browserVariant(targetBrowser)
+  } catch(error) {
+    if (allowEmptyWindows) return
+    throw error
+  }
+
+  // Check if running
+  if (!browser.app.running()) {
+    if (allowEmptyWindows) return
+    throw `${browser.app.name()} is not running.`
+  }
+
+  // Grab windows
+  const allWindows = browser.app.windows
+
+  if (allWindows.length === 0) {
+    if (allowEmptyWindows) return
+    throw "No windows found."
+  }
+
+  const windows = includeAllWindows ? allWindows() : [allWindows[0]]
+
+  // Act on tabs
+  const matchingTabs = windows
+    .flatMap(window => window.tabs())
+    .filter(tab => tab !== null)
+    .map(tab => [tab.url(), tab.name()])
+    .filter(tab => !lookFor(matchString, tab[0], regex))
+
+  switch (outFormat) {
+    case "url": return alfredArgs(matchingTabs.map(tab => tab[0]))
+    case "title": return alfredArgs(matchingTabs.map(tab => tab[1]))
+    case "url_tab_title": return alfredArgs(matchingTabs.map(tab => tab[0] + "\t" + tab[1]))
+    case "title_tab_url": return alfredArgs(matchingTabs.map(tab => tab[1] + "\t" + tab[0]))
+    case "url_title": return alfredArgs(matchingTabs.map(tab => tab[0] + "|" + tab[1]))
+    default: throw "Unrecognised type: " + outFormat
+  }
+}

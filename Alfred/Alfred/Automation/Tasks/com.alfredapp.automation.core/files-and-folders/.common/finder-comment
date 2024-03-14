@@ -1,0 +1,33 @@
+#!/usr/bin/osascript -l JavaScript
+
+function alfredArgs(args) {
+  return JSON.stringify({ alfredworkflow: { arg: args } })
+}
+
+function pathToFinderItem(path) {
+  // Writability check
+  if (!$.NSFileManager.defaultManager.isWritableFileAtPath(path)) throw "Cannot write to path: " + path
+
+  // Convert to Finder item
+  return path
+    .split("/") // Split into components
+    .slice(1) // Ignore the first (empty) component
+    .map(c => c.replace(/:/g, "/")) // Colons in paths are slashes in the Finder
+    .reduce(
+      (parent, child) => parent.items.byName(child), // Merge into Finder item
+      Application("Finder").startupDisk() // Start at the file system root
+    )
+}
+
+function run(argv) {
+  const mode = argv[0]
+  const finderComment = argv[1]
+  const allPaths = argv.slice(2).map(path => pathToFinderItem(path))
+
+  switch (mode) {
+    case "read": return alfredArgs(allPaths.map(p => p.comment()))
+    case "set": return allPaths.forEach(p => p.comment = finderComment)
+    case "clear": return allPaths.forEach(p => p.comment = "")
+    default: throw "Unrecognised mode: " + mode
+  }
+}

@@ -1,0 +1,67 @@
+#!/usr/bin/osascript -l JavaScript
+
+function frontmostBrowserName() {
+  const getBrowser = $("~/Library/Application Support/Alfred/Automation/Tasks/com.alfredapp.automation.core/safari/.common/get-frontmost-browser").stringByExpandingTildeInPath.js
+
+  const task = $.NSTask.alloc.init
+  const stdout = $.NSPipe.pipe
+
+  task.executableURL = $.NSURL.alloc.initFileURLWithPath("/usr/bin/env")
+  task.arguments = [getBrowser]
+  task.standardOutput = stdout
+  task.launchAndReturnError(false)
+
+  const dataOut = stdout.fileHandleForReading.readDataToEndOfFile
+  const stringOut = $.NSString.alloc.initWithDataEncoding(dataOut, $.NSUTF8StringEncoding).js
+
+  if (task.terminationStatus !== 0) throw "Did not find a supported web browser"
+  return stringOut.trim()
+}
+
+function browserVariant(appName) {
+  const webkitVariants = ["Safari", "Webkit", "Orion"]
+  const chromiumVariants = ["Google Chrome", "Chromium", "Opera", "Vivaldi", "Brave Browser", "Microsoft Edge"]
+
+  if (webkitVariants.some(browserName => appName.startsWith(browserName))) return { app: Application(appName), variant: "webkit" }
+  if (chromiumVariants.some(browserName => appName.startsWith(browserName))) return { app: Application(appName), variant: "chromium" }
+  throw `${appName} is not a supported browser: ${webkitVariants.concat(chromiumVariants).join(", ")}`
+}
+
+function run(argv) {
+  const browser = argv[0] === "frontmost_browser" ?
+    browserVariant(frontmostBrowserName()) :
+    browserVariant(argv[0])
+  const windowMode = argv[1] === "1" ? "incognito" : "normal"
+  const urls = argv.slice(2)
+
+  // With no arguments, open empty window
+  if (browser.variant === "webkit") {
+    if (windowMode === "incognito") throw "Webkit browsers do not support opening new Private windows programatically"
+
+    if (urls.length === 0) {
+      browser.app.Document().make()
+      browser.app.activate()
+      return
+    }
+
+    // Open in reverse order so they show in given order
+    urls.slice().reverse().forEach(url => {
+      browser.app.Document({url: url}).make()
+      browser.app.activate()
+    })
+  } else if (browser.variant === "chromium") {
+    // With no arguments, open empty window
+    if (urls.length === 0) {
+      browser.app.Window({ mode: windowMode }).make()
+      browser.app.activate()
+      return
+    }
+
+    // Open in reverse order so they show in given order
+    urls.slice().reverse().forEach(url => {
+      browser.app.Window({ mode: windowMode }).make()
+      browser.app.windows[0].activeTab.url = url
+      browser.app.activate()
+    })
+  }
+}

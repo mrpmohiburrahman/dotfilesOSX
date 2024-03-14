@@ -1,0 +1,25 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "1",
+        "placeholder" : "",
+        "required" : false,
+        "trim" : true
+      },
+      "description" : "",
+      "label" : "Trailing Arguments",
+      "type" : "textfield",
+      "variable" : "arguments_number"
+    }
+  ],
+  "inputMulti" : 2,
+  "inputType" : 0,
+  "outputDescription" : "Argument array",
+  "outputType" : 1,
+  "script" : "function alfredArgs(args) {\n  return JSON.stringify({ alfredworkflow: { arg: args } })\n}\n\nfunction envVar(varName) {\n  return $.NSProcessInfo\n    .processInfo\n    .environment\n    .objectForKey(varName).js\n}\n\nconst arguments_number = parseInt(envVar(\"arguments_number\"))\n\nfunction run(argv) {\n  return alfredArgs(argv.slice(-arguments_number))\n}",
+  "scriptType" : 7,
+  "state" : 0,
+  "taskDescription" : "Get number of arguments from end",
+  "taskName" : "Trailing Arguments"
+}

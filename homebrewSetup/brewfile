@@ -15,15 +15,16 @@ brew "n"
 
 brew "cocoapods"
 brew "applesimutils"
+brew "blackhole-2ch"
 
-
-brew "sketchybar"
-brew "stow"
-brew "koekeishiya/formulae/yabai"
 
 # Tools
 brew "z" # Jump around to frequent directories # use if from plugin
-brew "jq"
+brew "zoxide" # zoxide is a smarter cd command, inspired by z and autojump.
+brew "bat" # cat alternative with highlighting
+brew "bottom" # cross-platform graphical process/system monitor for the terminal,Inspired by other tools like gtop, gotop, and htop.https://clementtsang.github.io/bottom/0.9.6/
+brew "lolcat"
+brew "lsd" # The next gen ls command https://github.com/lsd-rs/lsd
 # brew "ack" # Search tool like grep, but optimized for programmers
 # brew "autossh" # Automatically restart SSH sessions and tunnels
 # brew "clinfo" # Print information about OpenCL platforms and devices
@@ -38,6 +39,7 @@ brew "jq"
 # brew "wget" # Internet file retriever
 
 # Apps
+brew "neovim"
 # brew "graphviz" # Graph visualization software from AT&T and Bell Labs
 # brew "htop" # Improved top (interactive process viewer)
 # brew "imagemagick" # Tools and libraries to manipulate images in many formats
@@ -73,7 +75,7 @@ brew "jq"
 # brew "perl"
 
 # Zsh
-brew "zsh" # UNIX shell (command interpreter)
+# brew "zsh" # UNIX shell (command interpreter)
 # brew "getantibody/tap/antibody" # Plugin manager for Zsh
 # brew "zsh-lovers" # Tips, tricks, and examples for zsh
 

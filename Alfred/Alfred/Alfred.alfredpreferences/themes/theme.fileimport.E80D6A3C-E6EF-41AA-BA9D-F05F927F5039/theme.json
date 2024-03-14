@@ -1,0 +1,64 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 9,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#FEFFFE6B",
+        "font" : "Inter Light",
+        "color" : "#FEFFFE6B"
+      },
+      "shortcut" : {
+        "size" : 15,
+        "colorSelected" : "#FEFFFE6B",
+        "font" : "Inter Light",
+        "color" : "#FEFFFE6B"
+      },
+      "backgroundSelected" : "#313334FF",
+      "text" : {
+        "size" : 13,
+        "colorSelected" : "#FEFFFEFF",
+        "font" : "Inter",
+        "color" : "#FEFFFEFF"
+      },
+      "iconPaddingHorizontal" : 22,
+      "roundness" : 4,
+      "paddingVertical" : 12,
+      "iconSize" : 30
+    },
+    "search" : {
+      "backgroundSelected" : "#0099FDFF",
+      "paddingHorizontal" : 8,
+      "spacing" : 11,
+      "text" : {
+        "size" : 26,
+        "colorSelected" : "#FEFFFEFF",
+        "font" : "Inter Light",
+        "color" : "#FEFFFEFF"
+      },
+      "background" : "#1C1E1FFF",
+      "roundness" : 7,
+      "paddingVertical" : 10
+    },
+    "window" : {
+      "color" : "#1C1E1FFF",
+      "paddingHorizontal" : 30,
+      "width" : 666,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 0,
+      "roundness" : 5,
+      "paddingVertical" : 30
+    },
+    "credit" : "Chris Messina",
+    "separator" : {
+      "color" : "#3E4041FF",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#767878FF",
+      "thickness" : 7
+    },
+    "name" : "Tempo (Dark)"
+  }
+}

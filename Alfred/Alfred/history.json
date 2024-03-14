@@ -1,0 +1,16 @@
+{
+  "preferences" : {
+    "workflows" : [
+      "user.workflow.9C7EF05F-1960-4425-8656-1C37DBBAFE61",
+      "user.workflow.76C32D7E-F185-4EE4-95D2-5E892A5EE04E",
+      "user.workflow.EFFA060E-00C7-478D-8D45-6B8E866D26E1",
+      "user.workflow.ECA32DA8-1B8F-4C8E-8075-8D20DCB170B7",
+      "user.workflow.FF9738D4-B163-4F75-9624-641F949571B2",
+      "user.workflow.A8466050-956E-475A-A948-BAEB125443FF",
+      "user.workflow.2DD90309-3505-44EA-A6BE-300D98F151FD",
+      "user.workflow.FFD03686-EE4F-41F2-8127-AE91032A7941",
+      "user.workflow.0927BE83-F551-4416-AF35-53B72F10AE50",
+      "user.workflow.7AEE33AF-4E16-42F2-AC1A-EF722B9253D4"
+    ]
+  }
+}

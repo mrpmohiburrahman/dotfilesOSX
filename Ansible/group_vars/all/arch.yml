@@ -1,0 +1,44 @@
+---
+arch_packages:
+  - name: atom
+    state: present
+  - name: bat
+    state: present
+  - name: chromium
+    state: present
+  - name: code
+    state: present
+  - name: docker
+    state: present
+  - name: jq
+    state: present
+  - name: keepass
+    state: present
+  - name: net-tools
+    state: present
+  - name: nmap
+    state: present
+  - name: npm
+    state: present
+  - name: ruby
+    state: present
+  - name: rubygems
+    state: present
+  - name: shellcheck
+    state: present
+  - name: sqlitebrowser
+    state: present
+  - name: terminator
+    state: absent
+  - name: tmux
+    state: present
+  - name: tree
+    state: present
+  - name: ttf-fira-code
+    state: present
+  - name: vagrant
+    state: present
+  - name: vim
+    state: present
+  - name: zsh
+    state: present

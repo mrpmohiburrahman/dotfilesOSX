@@ -1,0 +1,49 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "filtermode" : 2,
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false
+      },
+      "description" : "",
+      "label" : "Image",
+      "type" : "filepicker",
+      "variable" : "target_path"
+    },
+    {
+      "config" : {
+        "default" : "width",
+        "pairs" : [
+          [
+            "Width",
+            "width"
+          ],
+          [
+            "Height",
+            "height"
+          ],
+          [
+            "Width and Height",
+            "both"
+          ]
+        ]
+      },
+      "description" : "\"Width and Height\" outputs in JSON format. Other options output a number.",
+      "label" : "Output",
+      "type" : "popupbutton",
+      "variable" : "property"
+    }
+  ],
+  "inputMulti" : 1,
+  "inputOverride" : "target_path",
+  "inputType" : 1,
+  "outputDescription" : "Integer or JSON",
+  "outputType" : 1,
+  "script" : "function size_json {\n  \/usr\/bin\/osascript -l JavaScript -e 'function run(argv) { return JSON.stringify({ alfredworkflow: { arg: JSON.stringify({ width: parseInt(argv[0]), height: parseInt(argv[1]) }) } }) }' \"${@}\"\n}\n\nreadonly image=\"${1}\"\nreadonly width=\"$(..\/.common\/get-image-property 'pixelWidth' \"${image}\")\"\nreadonly height=\"$(..\/.common\/get-image-property 'pixelHeight' \"${image}\")\"\n\ncase \"${property}\" in\n  width) echo -n \"${width}\";;\n  height) echo -n \"${height}\";;\n  both) size_json \"${width}\" \"${height}\";;\n  *) echo \"Invalid dimensions: ${property}\" >&2; exit 1;;\nesac",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Get images pixel width, height, or both",
+  "taskName" : "Image Dimensions"
+}

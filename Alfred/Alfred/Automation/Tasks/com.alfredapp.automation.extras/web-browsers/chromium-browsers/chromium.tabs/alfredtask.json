@@ -1,0 +1,109 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "Google Chrome",
+        "pairs" : [
+          [
+            "Google Chrome",
+            "Google Chrome"
+          ],
+          [
+            "Microsoft Edge",
+            "Microsoft Edge"
+          ],
+          [
+            "Brave Browser",
+            "Brave Browser"
+          ],
+          [
+            "Vivaldi",
+            "Vivaldi"
+          ],
+          [
+            "Opera",
+            "Opera"
+          ],
+          [
+            "Custom...",
+            "custom"
+          ]
+        ]
+      },
+      "description" : "",
+      "label" : "Browser",
+      "type" : "popupbutton",
+      "variable" : "popup_browser"
+    },
+    {
+      "config" : {
+        "default" : "",
+        "placeholder" : "e.g. Google Chrome Canary",
+        "required" : false,
+        "trim" : true
+      },
+      "description" : "Pick \"Custom...\" in the popup selection to use a particular browser edition or read from a variable.",
+      "label" : "Custom",
+      "type" : "textfield",
+      "variable" : "custom_browser"
+    },
+    {
+      "config" : {
+        "default" : true,
+        "required" : false,
+        "text" : "Include all windows behind the frontmost"
+      },
+      "description" : "",
+      "label" : "Scope",
+      "type" : "checkbox",
+      "variable" : "all_windows"
+    },
+    {
+      "config" : {
+        "default" : false,
+        "required" : false,
+        "text" : "Allow empty result when no windows are open"
+      },
+      "description" : "",
+      "label" : "",
+      "type" : "checkbox",
+      "variable" : "allow_empty"
+    },
+    {
+      "config" : {
+        "default" : "url",
+        "pairs" : [
+          [
+            "URL",
+            "url"
+          ],
+          [
+            "Title",
+            "title"
+          ],
+          [
+            "URL⇥Title",
+            "url_tab_title"
+          ],
+          [
+            "Title⇥URL",
+            "title_tab_url"
+          ]
+        ]
+      },
+      "description" : "⇥ represents a tab.",
+      "label" : "Output Format",
+      "type" : "popupbutton",
+      "variable" : "out_format"
+    }
+  ],
+  "inputMulti" : 0,
+  "inputType" : 0,
+  "outputDescription" : "Text array or URL array",
+  "outputType" : 1,
+  "script" : "readonly run_script='..\/..\/..\/..\/com.alfredapp.automation.core\/safari\/.common\/tabs'\n\nif [[ \"${popup_browser}\" == 'custom' ]]\nthen\n  browser=\"${custom_browser}\"\nelse\n  browser=\"${popup_browser}\"\nfi\n\n\"${run_script}\" \"${browser}\" \"${all_windows}\" \"${allow_empty}\" \"${out_format}\"",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Get name and URL of tabs open in Chromium browser",
+  "taskName" : "Chromium Browser Tab List"
+}

@@ -1,0 +1,51 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : false,
+        "required" : false,
+        "text" : "Allow empty result when no windows are open"
+      },
+      "description" : "",
+      "label" : "Scope",
+      "type" : "checkbox",
+      "variable" : "allow_empty"
+    },
+    {
+      "config" : {
+        "default" : "url",
+        "pairs" : [
+          [
+            "URL",
+            "url"
+          ],
+          [
+            "Title",
+            "title"
+          ],
+          [
+            "URL⇥Title",
+            "url_tab_title"
+          ],
+          [
+            "Title⇥URL",
+            "title_tab_url"
+          ]
+        ]
+      },
+      "description" : "⇥ represents a tab.",
+      "label" : "Output Format",
+      "type" : "popupbutton",
+      "variable" : "out_format"
+    }
+  ],
+  "inputMulti" : 0,
+  "inputType" : 0,
+  "outputDescription" : "Text or URL",
+  "outputType" : 1,
+  "script" : "..\/.common\/tabs-current 'Safari' \"${allow_empty}\" \"${out_format}\"",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Get URL or title of Safari's current tab",
+  "taskName" : "Current Safari Tab"
+}

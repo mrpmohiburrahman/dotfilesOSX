@@ -1,0 +1,53 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "pairs" : [
+          [
+            "Base64",
+            "base64"
+          ],
+          [
+            "Hexadecimal",
+            "hex"
+          ]
+        ]
+      },
+      "description" : "",
+      "label" : "Input Representation",
+      "type" : "popupbutton",
+      "variable" : "in_format"
+    },
+    {
+      "config" : {
+        "default" : "~\/Desktop",
+        "filtermode" : 1,
+        "required" : false
+      },
+      "description" : "File name will be derived from current date and time.",
+      "label" : "Save Folder",
+      "type" : "filepicker",
+      "variable" : "save_in"
+    },
+    {
+      "config" : {
+        "default" : false,
+        "required" : false,
+        "text" : "Replace file with same name at destination"
+      },
+      "description" : "",
+      "label" : "Overwrite",
+      "type" : "checkbox",
+      "variable" : "overwrite"
+    }
+  ],
+  "inputMulti" : 1,
+  "inputType" : 0,
+  "outputDescription" : "File path",
+  "outputType" : 1,
+  "script" : "readonly output=\"${save_in}\/bin-$(date \"+%F-%H-%M-%S\")\"\n\/bin\/mkdir -p \"${save_in}\"\n\nif [[ \"${overwrite}\" -eq 0 && -f \"${output}\" ]]\nthen\n  echo \"File exists: ${output}\" >&2\n  exit 1\nfi\n\ncase \"${in_format}\" in\n  base64) \/usr\/bin\/base64 --decode <<< \"${1}\" --output \"${output}\";;\n  hex) \/usr\/bin\/xxd -plain -revert <<< \"${1}\" > \"${output}\";;\n  *) echo \"Invalid representation: ${in_format}\" >&2; exit 1;;\nesac\n\necho -n \"${output}\"",
+  "scriptType" : 5,
+  "state" : 0,
+  "taskDescription" : "Make files from binary-encoded representations",
+  "taskName" : "Binary Decode Text"
+}

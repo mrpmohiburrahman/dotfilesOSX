@@ -1,0 +1,26 @@
+{
+  "configurableConfig" : [
+    {
+      "config" : {
+        "default" : "",
+        "filtermode" : 0,
+        "placeholder" : "The passed-in arguments will be used",
+        "required" : false
+      },
+      "description" : "",
+      "label" : "Path",
+      "type" : "filepicker",
+      "variable" : "target_path"
+    }
+  ],
+  "inputMulti" : 2,
+  "inputOverride" : "target_path",
+  "inputType" : 1,
+  "outputDescription" : "File path array of the duplicates",
+  "outputType" : 1,
+  "script" : "function alfredArgs(args) {\n  return JSON.stringify({ alfredworkflow: { arg: args } })\n}\n\nfunction finderItemToPath(item) {\n  return $.NSURL.URLWithString(item.url()).path.js\n}\n\nfunction run(argv) {\n  const finder = Application(\"Finder\")\n\n  const duplicated = argv.map(p => finderItemToPath(finder.duplicate(Path(p))))\n  return alfredArgs(duplicated)\n}",
+  "scriptType" : 7,
+  "state" : 0,
+  "taskDescription" : "Make duplicates of paths next to the originals",
+  "taskName" : "Duplicate Path"
+}

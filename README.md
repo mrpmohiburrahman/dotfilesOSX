@@ -1,67 +1,58 @@
-# First run 
+## steps
 
-install homebrew
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" < /dev/null
+```
+export PATH="$(python3 -m site --user-base)/bin:$PATH"
 ```
 
-
-Run brewInstall.sh
-
-```bash
-cd homebrewSetup/
-sh brewInstall.sh
+```
+sign in to icloud
 ```
 
+```
+sign in to app store
+```
+
+```bash
+xcode-select --install
+```
+
+```
+sudo pip3 install --upgrade pip
+```
+
+```
+pip3 install ansible
+```
+
+```
+ansible-playbook ansible-install-os-packages.yml --ask-become-pass
+
+```
+
+```
+
+```
 
 # Symbolic link
 
-```bash
-ln -nfs ~/dotfilesOSX/zsh/.zshrc ~/.zshrc
-```
+`ln -nfs ~/dotfilesOSX/.zshrc ~/.zshrc`
 
-```bash
-ln -nfs ~/dotfilesOSX/zsh/.zprofile ~/.zprofile
-```
+`ln -nfs ~/dotfilesOSX/.zprofile ~/.zprofile`
 
-<!-- ```bash
-ln -nfs ~/dotfilesOSX/karabiner.json ~/.config/karabiner/karabiner.json
-``` -->
+`ln -nfs ~/dotfilesOSX/karabiner.json ~/.config/karabiner/karabiner.json`
 
-```bash
-ln -s ~/bin/dotfiles/ZSH_THEME/mrp.zsh-theme ~/.oh-my-zsh/custom/themes/mrp.zsh-theme\
-```
+`ln -s ~/bin/dotfiles/ZSH_THEME/mrp.zsh-theme ~/.oh-my-zsh/custom/themes/mrp.zsh-theme\`
 
-```bash
-ln -nfs ~/dotfilesOSX/.yabairc ~/.yabairc
-```
+`ln -nfs ~/dotfilesOSX/.yabairc ~/.yabairc`
 
+`ln -nfs ~/dotfilesOSX/.fzf.zsh ~/.fzf.zsh`
 
-```open new Iterm session```
-
-```bash
 stow karabiner
 stow sketchybar
 stow zsh
-```
-
-
-# Symbolic link
-
-```ln -nfs ~/dotfilesOSX/.zshrc ~/.zshrc```
-
-```ln -nfs ~/dotfilesOSX/.zprofile ~/.zprofile```
-
-```ln -nfs ~/dotfilesOSX/karabiner.json ~/.config/karabiner/karabiner.json```
-
-```ln -s ~/bin/dotfiles/ZSH_THEME/mrp.zsh-theme ~/.oh-my-zsh/custom/themes/mrp.zsh-theme\```
-
-```ln -nfs ~/dotfilesOSX/.yabairc ~/.yabairc```
-
-stow karabiner
-
-stow sketchybar
-
-stow zsh
-
+stow lsd
+stow borders
+stow -t "$HOME/Library/Application Support/" Alfred/
+stow warp
+stow starship
+stow alacritty

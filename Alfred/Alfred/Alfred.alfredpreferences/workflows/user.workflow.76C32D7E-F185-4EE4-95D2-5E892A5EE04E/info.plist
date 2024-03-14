@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>0BB281EA-2215-4564-AFB4-9B6E8D00CFF0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7C13758F-1060-4A7F-8671-FCA2BD229592</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>11414428-BAEB-43D9-8C9B-F57B1F9E07E5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6E55B3BA-26C2-408B-9EED-BA7E913E4BCF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>255C1906-B33D-4F58-86B4-01CF61033EC3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0BB281EA-2215-4564-AFB4-9B6E8D00CFF0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4713EA4F-E29E-455A-A180-7DABF6C7870A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E59D971C-1BDB-47E7-88A6-0A5BCC250C17</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>54731D1A-08BD-4506-9BCF-A8F88A64176C</key>
+		<array/>
+		<key>6E55B3BA-26C2-408B-9EED-BA7E913E4BCF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>255C1906-B33D-4F58-86B4-01CF61033EC3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7C13758F-1060-4A7F-8671-FCA2BD229592</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7546A37B-DC5F-4F15-9A18-9B0B4A7C12F0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C0599899-ADDA-4673-96A5-3A353EF86396</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>54731D1A-08BD-4506-9BCF-A8F88A64176C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E59D971C-1BDB-47E7-88A6-0A5BCC250C17</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>11414428-BAEB-43D9-8C9B-F57B1F9E07E5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>MRP</string>
+	<key>description</key>
+	<string>Move apps on exact spaces</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>workflow: automated</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>#!/bin/bash
+
+# Function to wait for an app to launch and get its window ID using the query name
+waitForApp() {
+    local queryName="$1" # Use queryName to match the app name in yabai's window query
+    local windowId
+    while true; do
+        # Try to get the window ID of the app using the query name
+        windowId=$(yabai -m query --windows | jq -re ".[] | select(.app==\"$queryName\") | .id" | head -n 1)
+        if [[ -n $windowId ]]; then
+            # Output the window ID, which will be captured by the caller
+            echo $windowId
+            return # Exit the function after finding the window ID
+        fi
+        sleep 0.5
+    done
+}
+
+# Function to open an app and move its window to a specific space.
+# It now accepts an appName for opening the app, and optionally, a queryName for querying the window.
+# If queryName is not provided, appName is used for querying.
+openAppAndMove() {
+    local appName="$1"
+    local queryName="${2:-$1}" # If queryName is not provided, fall back to appName
+    echo "$queryName"
+
+    local spaceNumber="$3"
+    open -a "$appName"
+    # Capture the window ID from waitForApp using the query name or appName if queryName is not provided
+    local windowId=$(waitForApp "$queryName")
+    # Now, with the correct window ID, move the window
+    yabai -m window "$windowId" --space "$spaceNumber"
+    echo "$appName launched and moved to space $spaceNumber."
+}
+
+# Example usage:
+
+# Open iTerm and move it to desktop 1. No need to specify "iTerm2" as the query name explicitly.
+openAppAndMove "iTerm" "iTerm2" 1
+
+# Open Google Chrome and move it to desktop 5
+openAppAndMove "Google Chrome" "" 5
+
+# Open Visual Studio Code and move it to desktop 6
+openAppAndMove "Visual Studio Code" "Code" 6
+
+# Open Notion and move it to desktop 7
+openAppAndMove "Notion" "" 7</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>54731D1A-08BD-4506-9BCF-A8F88A64176C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>W</string>
+				<key>subtext</key>
+				<string>Iterm2, Activity Indicator, Google Chrome, VS Code, Notion</string>
+				<key>text</key>
+				<string>Apps on exact spaces</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C0599899-ADDA-4673-96A5-3A353EF86396</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Slack.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>7546A37B-DC5F-4F15-9A18-9B0B4A7C12F0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>/Applications/Notion.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>6E55B3BA-26C2-408B-9EED-BA7E913E4BCF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>DISPLAY=$(yabai -m query --displays --display | jq '.index'); yabai -m space --focus $((4+4*($DISPLAY - 1)))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0BB281EA-2215-4564-AFB4-9B6E8D00CFF0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>DISPLAY=$(yabai -m query --displays --display | jq '.index'); yabai -m space --focus $((3+4*($DISPLAY - 1)))</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E59D971C-1BDB-47E7-88A6-0A5BCC250C17</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>7C13758F-1060-4A7F-8671-FCA2BD229592</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>11414428-BAEB-43D9-8C9B-F57B1F9E07E5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>4713EA4F-E29E-455A-A180-7DABF6C7870A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>255C1906-B33D-4F58-86B4-01CF61033EC3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>0BB281EA-2215-4564-AFB4-9B6E8D00CFF0</key>
+		<dict>
+			<key>xpos</key>
+			<real>525</real>
+			<key>ypos</key>
+			<real>590</real>
+		</dict>
+		<key>11414428-BAEB-43D9-8C9B-F57B1F9E07E5</key>
+		<dict>
+			<key>xpos</key>
+			<real>235</real>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
+		<key>255C1906-B33D-4F58-86B4-01CF61033EC3</key>
+		<dict>
+			<key>xpos</key>
+			<real>455</real>
+			<key>ypos</key>
+			<real>625</real>
+		</dict>
+		<key>4713EA4F-E29E-455A-A180-7DABF6C7870A</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
+		<key>54731D1A-08BD-4506-9BCF-A8F88A64176C</key>
+		<dict>
+			<key>xpos</key>
+			<real>205</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>6E55B3BA-26C2-408B-9EED-BA7E913E4BCF</key>
+		<dict>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>590</real>
+		</dict>
+		<key>7546A37B-DC5F-4F15-9A18-9B0B4A7C12F0</key>
+		<dict>
+			<key>xpos</key>
+			<real>730</real>
+			<key>ypos</key>
+			<real>585</real>
+		</dict>
+		<key>7C13758F-1060-4A7F-8671-FCA2BD229592</key>
+		<dict>
+			<key>xpos</key>
+			<real>660</real>
+			<key>ypos</key>
+			<real>615</real>
+		</dict>
+		<key>C0599899-ADDA-4673-96A5-3A353EF86396</key>
+		<dict>
+			<key>xpos</key>
+			<real>35</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>E59D971C-1BDB-47E7-88A6-0A5BCC250C17</key>
+		<dict>
+			<key>xpos</key>
+			<real>85</real>
+			<key>ypos</key>
+			<real>595</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

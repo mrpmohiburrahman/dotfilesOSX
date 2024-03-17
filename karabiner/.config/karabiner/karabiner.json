@@ -540,6 +540,33 @@
                     "value": 1
                   }
                 ],
+                "description": "Execute switch_prev_window.sh with hyper+w+n",
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_shift",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/bin/dash /Users/mrp/dotfilesOSX/yabai/switch_prev_window.sh"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_sublayer_w",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "description": "Execute switch_next_window.sh with hyper+w+n",
                 "from": {
                   "key_code": "n",

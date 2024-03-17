@@ -8,6 +8,19 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
+		<key>3EA36C21-DD34-4B2D-B63F-D0308E5F31E7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6D2105C2-6244-463A-BA1A-8E0E40759682</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>51ECED60-B6BE-4DDD-9B31-677CCBA98FA1</key>
 		<array>
 			<dict>
@@ -60,6 +73,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>AAFDB10A-3E6E-42C4-A6E1-83B5644264BB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4B254C55-1817-4583-AA7C-7CDE11FDF141</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C69E817C-F354-48B2-8D52-7D9AD6A99969</key>
 		<array>
 			<dict>
@@ -103,11 +129,11 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>work</string>
+				<string>Movies</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Open Work Downloads</string>
+				<string>Open Movies</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -126,7 +152,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open ~/Downloads/Work</string>
+				<string>open ~/Documents/4-Archive/movies</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -193,7 +219,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open ~/Developer</string>
+				<string>open ~/Library</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -214,11 +240,11 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>sites</string>
+				<string>library</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Open Sites</string>
+				<string>Open Library</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -281,7 +307,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>open ~/Dropbox</string>
+				<string>open ~/Documents/1-Projects</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -302,11 +328,11 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>knightdrive</string>
+				<string>projects</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Open Knightdrive</string>
+				<string>Open 1-Projects</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -361,11 +387,113 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open ~/Documents/0-Inbox</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6D2105C2-6244-463A-BA1A-8E0E40759682</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>inbox</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open 0-Inbox</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>3EA36C21-DD34-4B2D-B63F-D0308E5F31E7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open ~/Documents/4-Archive</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4B254C55-1817-4583-AA7C-7CDE11FDF141</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>archive</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open 4-Archive</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>AAFDB10A-3E6E-42C4-A6E1-83B5644264BB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Open common folders I need to get to</string>
 	<key>uidata</key>
 	<dict>
+		<key>3EA36C21-DD34-4B2D-B63F-D0308E5F31E7</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>830</real>
+		</dict>
+		<key>4B254C55-1817-4583-AA7C-7CDE11FDF141</key>
+		<dict>
+			<key>xpos</key>
+			<real>265</real>
+			<key>ypos</key>
+			<real>965</real>
+		</dict>
 		<key>51ECED60-B6BE-4DDD-9B31-677CCBA98FA1</key>
 		<dict>
 			<key>xpos</key>
@@ -393,6 +521,13 @@
 			<real>265</real>
 			<key>ypos</key>
 			<real>440</real>
+		</dict>
+		<key>6D2105C2-6244-463A-BA1A-8E0E40759682</key>
+		<dict>
+			<key>xpos</key>
+			<real>265</real>
+			<key>ypos</key>
+			<real>830</real>
 		</dict>
 		<key>707C5CEE-A3B7-4DD9-A93C-A73E1D2884A8</key>
 		<dict>
@@ -428,6 +563,13 @@
 			<real>265</real>
 			<key>ypos</key>
 			<real>170</real>
+		</dict>
+		<key>AAFDB10A-3E6E-42C4-A6E1-83B5644264BB</key>
+		<dict>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>965</real>
 		</dict>
 		<key>C69E817C-F354-48B2-8D52-7D9AD6A99969</key>
 		<dict>

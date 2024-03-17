@@ -1,0 +1,3 @@
+[submodule "scripts/karabiner"]
+	path = scripts/karabiner
+	url = git@github.com:mrpmohiburrahman/karabiner.git

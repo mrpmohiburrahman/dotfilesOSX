@@ -1,6 +1,3 @@
-[submodule "scripts/karabiner"]
-	path = scripts/karabiner
-	url = git@github.com:mrpmohiburrahman/karabiner.git
 [submodule "scripts/karabiner_config_generator_ts"]
 	path = scripts/karabiner_config_generator_ts
 	url = git@github.com:mrpmohiburrahman/karabiner_config_generator_ts.git

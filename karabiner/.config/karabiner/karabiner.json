@@ -757,6 +757,33 @@
                     "value": 1
                   }
                 ],
+                "description": "hyper+w+u ==> Move app to next space or create new",
+                "from": {
+                  "key_code": "u",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_shift",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/bin/bash /Users/mrp/dotfilesOSX/yabai/move_to_next_space_or_create.sh"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_sublayer_w",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "description": "go to workspack 1",
                 "from": {
                   "key_code": "j",

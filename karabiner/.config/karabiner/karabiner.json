@@ -687,7 +687,7 @@
                 ],
                 "description": "hyper+y ==> swap window west",
                 "from": {
-                  "key_code": "o",
+                  "key_code": "y",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -735,6 +735,7 @@
                 ],
                 "description": "hyper+; ==> swap window east",
                 "from": {
+                  "key_code": "semicolon",
                   "modifiers": {
                     "mandatory": [
                       "any"

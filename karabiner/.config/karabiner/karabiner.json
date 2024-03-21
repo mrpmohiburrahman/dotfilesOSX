@@ -771,7 +771,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/bin/bash /Users/mrp/dotfilesOSX/yabai/move_to_next_space_or_create.sh"
+                    "shell_command": "/bin/bash /Users/mrp/dotfilesOSX/yabai/move_to_immediate_next_space_or_create.sh"
                   }
                 ],
                 "type": "basic"

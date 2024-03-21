@@ -784,6 +784,33 @@
                     "value": 1
                   }
                 ],
+                "description": "hyper+w+l ==> Execute move_to_immediate_previous_space.sh",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_shift",
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "/bin/bash /Users/mrp/dotfilesOSX/yabai/move_to_immediate_previous_space.sh"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "name": "hyper_sublayer_w",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
                 "description": "go to workspack 1",
                 "from": {
                   "key_code": "j",

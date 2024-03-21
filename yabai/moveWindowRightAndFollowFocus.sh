@@ -1,5 +1,9 @@
 #!/bin/dash
-curWindowId="$(/opt/homebrew/bin/yabai -m query --windows --window | jq -re ".id")"
 
-$(/opt/homebrew/bin/yabai -m window --display next || /opt/homebrew/bin/yabai -m window --display first)
-$(/opt/homebrew/bin/yabai -m window --focus "$curWindowId")
+YABAI="/opt/homebrew/bin/yabai"
+JQ="/opt/homebrew/bin/jq"
+
+curWindowId="$($YABAI -m query --windows --window | jq -re ".id")"
+
+$($YABAI -m window --display next || $YABAI -m window --display first)
+$($YABAI -m window --focus "$curWindowId")

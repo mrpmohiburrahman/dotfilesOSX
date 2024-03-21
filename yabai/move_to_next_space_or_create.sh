@@ -43,5 +43,8 @@ else
     $YABAI -m window $current_window_id --space $next_space_index
 fi
 
+# Optional: Focus the next window in the current space after moving the current window
+$YABAI -m window --focus next || $YABAI -m window --focus prev
+
 # Focus on the window after moving it
-$YABAI -m window --focus $current_window_id
+# $YABAI -m window --focus $current_window_id

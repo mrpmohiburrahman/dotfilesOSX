@@ -133,3 +133,6 @@ alias ls='eza --icons'
 # alias la='ls -a'
 # alias lla='ls -la'
 # alias lt='ls --tree'
+
+# bun completions
+[ -s "/Users/mrp/.bun/_bun" ] && source "/Users/mrp/.bun/_bun"

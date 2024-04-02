@@ -96,8 +96,15 @@ openAppAndMove "Reminders" "" 3
 # Open Google Chrome and move it to desktop 5
 openAppAndMove "Google Chrome" "" 5
 
-# Define your URLs here
-urls=("https://pahe.ink/" "https://psa.wf/" "https://www.facebook.com/messages/t/" "https://www.linkedin.com/" "https://news.ycombinator.com/" "https://youtube.com/")
+# Define your URLs here with each URL on a new line for readability
+urls=(
+    "https://pahe.ink/"
+    "https://psa.wf/"
+    "https://www.facebook.com/messages/t/"
+    "https://www.linkedin.com/"
+    "https://news.ycombinator.com/"
+    "https://youtube.com/"
+)
 
 # Pass the URLs to the function
 openUrlsInChrome "${urls[@]}"

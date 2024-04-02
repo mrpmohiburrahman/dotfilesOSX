@@ -439,7 +439,7 @@
                     "value": 1
                   }
                 ],
-                "description": "Open -a 'iTerm.app'",
+                "description": "Open -a 'warp.app'",
                 "from": {
                   "key_code": "t",
                   "modifiers": {
@@ -450,7 +450,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'iTerm.app'"
+                    "shell_command": "open -a 'warp.app'"
                   }
                 ],
                 "type": "basic"

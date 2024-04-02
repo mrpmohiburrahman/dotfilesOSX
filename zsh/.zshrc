@@ -126,6 +126,7 @@ alias vim='nvim'
 
 # lsd The next gen ls command https://github.com/lsd-rs/lsd
 
+alias ls='eza --icons'
 # issue: lsd -la takes a long time
 # alias ls='lsd'
 # alias l='ls -l'

@@ -88,7 +88,8 @@ openUrlsInChrome() {
 # Example usage:
 
 # Open iTerm and move it to desktop 1. We need to specify "iTerm2" as the query name explicitly.
-openAppAndMove "iTerm" "iTerm2" 1
+# openAppAndMove "iTerm" "iTerm2" 1
+openAppAndMove "Warp" "" 1
 openAppAndMove "Reminders" "" 3
 openAppAndMove "Google Chrome" "" 5
 

@@ -1,0 +1,34 @@
+{
+  "timestamps": {
+    "added": 1675779624,
+    "modified": 1705595370
+  },
+  "bundleIDs": [
+    "cn.alanhe.aboutmac"
+  ],
+  "name": "About Mac",
+  "description": "Show \"About This Mac\" information",
+  "codeType": "script",
+  "updatesFeed": {
+    "url": "https://github.com/alanhg/alfred-workflows/commits/master/about-mac/About%20Mac.alfredworkflow.atom",
+    "state": "\"85420fe9186516599f405e2991ba0c0d\"|2024-01-13T06:38:31Z"
+  },
+  "links": {
+    "homepage": "https://github.com/alanhg/alfred-workflows/tree/master/about-mac/"
+  },
+  "download": {
+    "latest": {
+      "version": "1.16",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/db44dd27b05da369ed9c8b82256bb4ad3598489b/workflows/alanhe/about-mac.alfredworkflow",
+      "signature": "jeIphlpkh0SYzcoXHN6cPw6Udt9HYoao+b4QlkFBGYu8WhQtll97jJ3EuGzpEkQTfxS68TUPs2t2FHjpE4sENu3QQjB7LW37AhI7P/ppzLPnV3Qzp6htW8Qu0Z8iMV0HAkIjbJqUvzbXWWYTO7i/x7uj9u/A8G+dIIeDdESsrxnelPQ4q+UXzx/p36/GittdNi81M6STIMK7y93fFJW5ADCkfBcgZ0Y8Eqf764Kc7skO++oZIUkeHneo5ye4giE673X9Um6+s898mLKoi5H5mz0iRBGPcmrFTVn/nlJAeoe5NsbaJDyE0+rCtM2t2hTBYlzVUO3WQODKJasaT/1JjWLqiTStlXHAUgacwg7/rv05CUAKrzJ+qHrQ/DcEU+u70fNhXZAjOlgDjukpMSKECmcz49VRfTQqyQbvqHWQkgAU+Z/fXeR/Se+EWSUxnFhq6CxlkWuI+jdbu3iXdK+ErLK6h34VNQxuetLlmTy0yfaRR8Xv/+lLSEGlNjX0Erv1ijwsM/DF0LiZnrglEYLlUpRtOIzuTNs+0XTaoX1XKVXFulbO3wQ6oMPESNGyh6Lv9uPRrYvNc03k8o9iVC58AKwzEfYCR8EohRpRtVcHOvhr3yjycpOY9KvOl/S17Qr1WVbPl4phxja+mSq7PsCg4RmlRhgeQhWAgU95msVlw5w="
+    }
+  },
+  "tags": [
+    "system"
+  ],
+  "dependencies": {
+    "otherLanguages": [
+      "osascript (as)"
+    ]
+  }
+}

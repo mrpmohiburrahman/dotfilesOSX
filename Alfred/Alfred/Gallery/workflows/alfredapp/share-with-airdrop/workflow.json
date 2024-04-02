@@ -1,0 +1,33 @@
+{
+  "timestamps": {
+    "added": 1703003032,
+    "modified": 1703006969
+  },
+  "bundleIDs": [
+    "com.alfredapp.vitor.sharewithairdrop"
+  ],
+  "name": "Share with AirDrop",
+  "description": "Share files, text, and URLs via AirDrop",
+  "codeType": "no-code",
+  "updatesFeed": {
+    "url": "https://github.com/alfredapp/share-with-airdrop-workflow/releases.atom",
+    "state": "W/\"1abeb8cdb81f251f5f0b47e39d7cddb0\"|2023-12-19T17:28:42Z"
+  },
+  "links": {
+    "homepage": "https://github.com/alfredapp/share-with-airdrop-workflow/",
+    "alfredForum": "https://www.alfredforum.com/topic/21237-share-with-airdrop"
+  },
+  "download": {
+    "latest": {
+      "version": "2023.1",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/f8791459d7063beb29dda37fc9a90fa57d721783/workflows/alfredapp/share-with-airdrop.alfredworkflow",
+      "signature": "rdf+FOe0k1FPclCpgjGF97cjJNr/5ZW3pDg8BSquf5aQVFXSCxBeEI745XUgHpjEEYFfnmaf9m997zkY/ILuNbSM0YRs4vcyF0aZ2Um2z2PT9/jnPigbBLurQgA5AusXtA6fnlBB3WTJNTdq2qV2WsbjtKtFVdhYQ1RbF+pibUPa+ECklo+jz8xBDZfRQeA77T1TjCaozPiJQ728gzSehMVkeY6nsoE4Vln+X5BM5jCwObM7hyA8iQ8h1dDr9fhUTaR8nHQ49saql3v1CuMNbRtoCPpEh4rpnvbHczmAJjXi1s9qyTZn5uuUWOnwewU0LqTEFqJVTxxJrAmDZrJ0IFLxl0Ob9TTLakuTbs16MNtyr1z/wwxT4SgK+RtwiAE9yCcTDICJAUt6p1aJpTMDZs/9dh+irjwHU5b6khxZSjVDNMTQKy7SFJijUEbZh8snYuN5dBPekx5c/5kXUpXNAFiwvCUCtTF5ZS34SGYEokt+2nfdRc0g066bYDBfjUvHZiRv7CmSJSNTf6a19H5suhSXeKSA6JAfag/TvEv1BKXvSUVt4lrWJQc/sVYn6KRwnphRsirBeU9uidxIruQ21hfC4/ojJEAKQ1h1jeZBEcf6U8iGNX8rl38H71cWrSvmKpuslIJvd1ckAm7cY9olSzQOOC0yxShBnNbs+p9np04="
+    }
+  },
+  "tags": [
+    "file-management",
+    "shortcuts",
+    "system",
+    "universal-actions"
+  ]
+}

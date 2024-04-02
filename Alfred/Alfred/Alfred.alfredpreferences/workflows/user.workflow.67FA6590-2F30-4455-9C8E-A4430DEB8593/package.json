@@ -1,0 +1,10 @@
+{
+  "name": "user.workflow.3b313816-14e1-4507-9d16-d2774ed6aff9",
+  "version": "1.0.0",
+  "author": "Fabio Spampinato <spampinabio@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ls": "^0.2.1",
+    "nodejs-disks": "^0.2.1"
+  }
+}

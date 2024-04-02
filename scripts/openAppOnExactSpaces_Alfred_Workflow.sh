@@ -45,14 +45,10 @@ openUrlsInChrome() {
 
 # Open iTerm and move it to desktop 1. We need to specify "iTerm2" as the query name explicitly.
 openAppAndMove "iTerm" "iTerm2" 1
-
-# Open Reminders and move it to desktop 1. No need to specify "Reminders" as the query name explicitly.
 openAppAndMove "Reminders" "" 3
-
-# Open Google Chrome and move it to desktop 5
 openAppAndMove "Google Chrome" "" 5
 
-# Define your URLs here with each URL on a new line for readability
+# Open Urls in Chrome
 urls=(
     "https://pahe.ink/"
     "https://psa.wf/"
@@ -61,12 +57,7 @@ urls=(
     "https://news.ycombinator.com/"
     "https://youtube.com/"
 )
-
-# Pass the URLs to the function
 openUrlsInChrome "${urls[@]}"
 
-# Open Visual Studio Code and move it to desktop 6
 openAppAndMove "Visual Studio Code" "Code" 6
-
-# Open Notion and move it to desktop 7
 openAppAndMove "Notion" "" 7

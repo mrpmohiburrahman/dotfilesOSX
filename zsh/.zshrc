@@ -137,4 +137,5 @@ alias ls='eza --icons'
 # bun completions
 [ -s "/Users/mrp/.bun/_bun" ] && source "/Users/mrp/.bun/_bun"
 
-alias nvim-nvchad="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/NvChad nvim"
+alias nvc="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/NvChad nvim"
+alias lzv="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/lazyvim nvim"

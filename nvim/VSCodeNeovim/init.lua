@@ -1,9 +1,12 @@
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
+
 -- <leader> key
 vim.g.mapleader = ' '
 
 
 -- Select all
-vim.api.nvim_set_keymap('n', '<leader>a', 'ggVG', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>a', 'ggVG', opts)
 
 -- keymap.set("n", "<leader>a", "gg<S-v>G")
 

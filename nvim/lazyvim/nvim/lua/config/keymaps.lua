@@ -1,23 +1,14 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "x", '"_x') -- In normal mode ("n"), pressing x will delete the character under the cursor without yanking it, using the black-hole register ("_).
--- 3
+keymap.set("n", "x", '"_x')
 
--- Remap ";" to ":"
-keymap.set("n", ";", ":", opts)
-
--- Remap ":" to ";"
-keymap.set("n", ":", ";", opts)
 -- Increment/decrement
-keymap.set("n", "+", "<C-a>") -- In normal mode, + increments the number under the cursor, and
-keymap.set("n", "-", "<C-x>") -- - decrements it, mimicking the default <C-a> and <C-x> behavior.
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
 
 -- Select all
-keymap.set("n", "<Leader>a", "gg<S-v>G") -- Ctrl+a selects all text in the buffer by going to the top (gg), starting visual line mode (<S-v>), and going to the bottom (G)
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Save file and quit
 keymap.set("n", "<Leader>w", ":update<Return>", opts)
@@ -52,5 +43,5 @@ keymap.set("n", "<C-S-j>", "<C-w>-")
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
-  vim.diagnostic.goto_next()
+	vim.diagnostic.goto_next()
 end, opts)

@@ -4,6 +4,8 @@ local opts = { noremap = true, silent = true }
 -- <leader> key
 vim.g.mapleader = ' '
 
+-- save
+vim.cmd('nmap <leader>w :w<cr>')
 
 -- Select all
 vim.api.nvim_set_keymap('n', '<leader>a', 'ggVG', opts)

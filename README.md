@@ -56,3 +56,6 @@ stow -t "$HOME/Library/Application Support/" Alfred/
 stow warp
 stow starship
 stow alacritty
+
+cd nvim
+stow -t "$HOME/" CoreNvim --verbose 

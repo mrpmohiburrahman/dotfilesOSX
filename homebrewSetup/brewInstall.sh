@@ -60,6 +60,3 @@ chmod +x ~/dotfilesOSX/startupScripts/setup_startup_script.sh
 sh ~/dotfilesOSX/homebrewSetup/warp/installThemesToWarp.sh
 
 # clone this repo and install the fonts for sketchybar https://github.com/kvndrsslr/sketchybar-app-font
-cd ~/dotfilesOSX/sketchybar-app-font
-pnpm install
-pnpm run build:install

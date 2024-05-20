@@ -1,0 +1,37 @@
+{
+  "timestamps": {
+    "added": 1678803123,
+    "modified": 1691767339
+  },
+  "bundleIDs": [
+    "com.vitorgalvao.alfred.shriekingchimes"
+  ],
+  "name": "Shrieking Chimes",
+  "description": "Set Timers and Alarms",
+  "codeType": "script",
+  "updatesFeed": {
+    "url": "https://github.com/vitorgalvao/shrieking-chimes-workflow/releases.atom",
+    "state": "W/\"3e599c503c318a96b4deecef209f9f23\"|2023-08-11T15:21:49Z"
+  },
+  "links": {
+    "homepage": "https://github.com/vitorgalvao/shrieking-chimes-workflow/",
+    "alfredForum": "https://www.alfredforum.com/topic/20108-shrieking-chimes"
+  },
+  "download": {
+    "latest": {
+      "version": "2023.5",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/7f89e4d3dbf75b05897d3e60a31ff06fe95bf5b0/workflows/vitor/shrieking-chimes.alfredworkflow",
+      "signature": "fdRYtN1UBrK5lk844ofu6ooGBJy+jajJTfTixP4Rm00ICVi8qLTSt1FX8AoKQapR8txTMfLy7fDjD5JHiKVY7osi+P+D4y0zuPdjaEzOUheQ8o2w3SpCkRwWnb5xDQgs+tWOcL0Kf6ObkR2i6PemHf6tcCXSFQEDpt+PHpQqrsECn2tjBYZhBJFgOoG4gk+vTACnQEK9eO1gFCdMIaVul4Hx9GuKwt0Dzy1jGPyiHupA4mpkBQptSNors5EsIUym8/P9h2CfP8Qamk49V9NglFAwRmPWJ6ESV9FGwQI/Sc7IGSaLWbG6xhRZlu4T7MIduUQeSIHdzA5l/pdfpxp0NmZtcyphnZAjbgrdA8ltj1OyWTka/UZ8RnKPfLQN81/6jy1cX51cdE+X9dxnY+vLVQwP4Q/S726rdbLwCtws9JhoGHezoiCv4fx5kMvdI1jvV4zZMTyhb6scaHUNUVyxUsgWxkjf1yOK7Yy6SdGIkYV6v3lXXL3SiJqgM7BAeBEjvx6s547ymRcb+cWPL4Q+mULh+bwjVkkz5QVXEAnRMQdZiM8eKSoxzfvzPpJmo36U+D0CjkmWfmsfDl7MJEVgvKFqf7c116jN+qJi5Aqw4RBpd3qgz1VeZIpguGwYK6uzsF5ZMi+aM+M7+6WsUta6IWPLMA6jqpmu9CBPj7q+ZeQ="
+    }
+  },
+  "tags": [
+    "timer",
+    "alarm"
+  ],
+  "dependencies": {
+    "minimumSystemVersion": "13",
+    "otherLanguages": [
+      "osascript (jxa)"
+    ]
+  }
+}

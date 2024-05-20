@@ -1,0 +1,35 @@
+{
+  "timestamps": {
+    "added": 1684345090,
+    "modified": 1689621958
+  },
+  "bundleIDs": [
+    "timer.workflow"
+  ],
+  "name": "Timer",
+  "description": "Set short timers and pomodoros",
+  "codeType": "script",
+  "updatesFeed": {
+    "url": "https://github.com/colomolo/alfred-timer/releases.atom",
+    "state": "W/\"32d769db77edce8ae90f1398e7a12859\"|2023-07-17T19:22:06Z"
+  },
+  "links": {
+    "homepage": "https://github.com/colomolo/alfred-timer/"
+  },
+  "download": {
+    "latest": {
+      "version": "1.3.2",
+      "url": "https://github.com/alfredapp/gallery-workflows/raw/48c1a8c17610d597ca8093aae958f6471bed0669/workflows/colomolo/timer.alfredworkflow",
+      "signature": "FTidcZkkZ+EEgYJN5MfsIn0qLJ/hi/xkeuGyghl4l8DsgxRbPFC9wPe/Ssf+U3BDFv20SoOyh5RtK8DbBSPur5I5o6kspb7052wqz4rZ6deJ5dausp0XKxk4mmVDBXskR0kWoNLyTRV7taMDXdGQKe8kAbkbufDCR0W3Yd8j2aoAEA6buzdLls9jrdmtRzWWyaC6upyj6MYPh+aig5Q8Y26JlI07ZLYpYtI47oYi0ZzmNOtmF89ix5ZEnNQvWpwpMrKFeaqtXVAadlv/xskZErmAMvW7pjE0HXv7xw3bDZZKyFB/yocyjKNSiOJ7Hpp4NAcCgj/UVjutXMaMtzBVV3bqqkTAQQ5lHLlWNp5j3iZAU8lCI2i/xRc2U0s1sov3mfwVJUGl0r4dt48koMlx1ZcdsEyKlpb2vFk2TKLviJ5QiFowRal3EPUv7dOr8PmlGixOE+lHARPiAhbDLmQ5n4tq/5w8oOmeKUsK87Ot9uwT2E+m2s84HfDjnuK5VuLmbaOgsrJjFxDFJaYKgoCJOQvEhRI4WwcSF4Xq3E2iI8bRdOO/Dgv/oW8fsLmcRh/VuWPErcFgJtr9J79frJBoSjGOAve1dK4FCkCfD6OCs/hF0PsIdVvkiGdZXZHJ8fOP+ZZ2qZwZps1hCITmd0DMLeydXS/Nkz2+9ziRFEGbug8="
+    }
+  },
+  "tags": [
+    "timer",
+    "pomodoro"
+  ],
+  "dependencies": {
+    "otherLanguages": [
+      "osascript (jxa)"
+    ]
+  }
+}

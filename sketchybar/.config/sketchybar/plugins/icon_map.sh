@@ -125,6 +125,9 @@ case $@ in
 "Calibre")
   icon_result=":book:"
   ;;
+"Calculator" | "Calculette")
+  icon_result=":calculator:"
+  ;;
 "Brave Browser")
   icon_result=":brave_browser:"
   ;;

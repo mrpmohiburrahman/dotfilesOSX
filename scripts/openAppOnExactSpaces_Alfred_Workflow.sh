@@ -47,6 +47,8 @@ openUrlsInChrome() {
 # openAppAndMove "iTerm" "iTerm2" 1
 openAppAndMove "Warp" "" 1
 openAppAndMove "Reminders" "" 3
+openAppAndMove "Symlex" "" 4 1
+
 openAppAndMove "Google Chrome" "" 5
 
 # Open Urls in Chrome

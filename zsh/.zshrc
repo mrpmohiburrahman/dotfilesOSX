@@ -142,3 +142,13 @@ alias vc="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/NvChad nvim"
 alias vcm="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/customized-by-mgastonportillo nvim"
 alias vz="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/lazyvim nvim"
 alias v="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/CoreNvim/.config nvim"
+
+eval "$(direnv hook zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/mrp/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

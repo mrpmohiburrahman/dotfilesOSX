@@ -16,7 +16,6 @@ vim.api.nvim_set_keymap('n', '<leader>a', 'ggVG', opts)
 -- skip folds (down, up)
 vim.cmd('nmap j gj')
 vim.cmd('nmap k gk')
-
 -- -- Skip folds (down, up) using 'j' and 'k'
 -- vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })

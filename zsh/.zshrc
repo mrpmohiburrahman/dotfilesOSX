@@ -72,7 +72,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
+  git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -137,18 +137,19 @@ alias ls='eza --icons'
 # bun completions
 [ -s "/Users/mrp/.bun/_bun" ] && source "/Users/mrp/.bun/_bun"
 
-alias vf="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/folky_nvim nvim"
-alias vc="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/NvChad nvim"
-alias vcm="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/customized-by-mgastonportillo nvim"
-alias vz="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/lazyvim nvim"
-alias v="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/CoreNvim/.config nvim"
+alias nvim_folky="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/folky_nvim nvim"
+alias nvim_starter_nvchad="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/starter-nv-chad nvim"
+alias nvim_nvchad="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/NvChad nvim"
+alias nvim_nvchad_m="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/customized-by-mgastonportillo nvim"
+alias nvim_lazyvim="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/lazyvim nvim"
+alias nvim_core_nvim="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/CoreNvim/.config nvim"
 
 eval "$(direnv hook zsh)"
 
 # pnpm
 export PNPM_HOME="/Users/mrp/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end

@@ -1,9 +1,6 @@
 local map = vim.keymap.set
 return {
     "nvim-tree/nvim-tree.lua",
-    -- init = function()
-    --   map("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle NvimTree" })
-    -- end,
     config = function()
         dofile(vim.g.base46_cache .. "nvimtree")
 
@@ -68,36 +65,31 @@ return {
                 }
             },
             view = {
-                -- Allow statuscolumn to be applied on nvim-tree
-                signcolumn = "no",
-                float = {
-                    enable = true,
-                    open_win_config = function()
-                        local screen_w = vim.opt.columns:get()
-                        local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
-                        local window_w = screen_w * WIDTH_RATIO
-                        local window_h = screen_h * HEIGHT_RATIO
-                        local window_w_int = math.floor(window_w)
-                        local window_h_int = math.floor(window_h)
-                        local center_x = (screen_w - window_w) / 2
-                        local center_y = ((vim.opt.lines:get() - window_h) / 2) - vim.opt.cmdheight:get()
-                        return {
-                            border = "rounded",
-                            relative = "editor",
-                            row = center_y,
-                            col = center_x,
-                            width = window_w_int,
-                            height = window_h_int
-                        }
-                    end
-                },
-                width = function()
-                    return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
-                end
+                width = 30,
+                side = "right",
+                signcolumn = "no"
             },
             filesystem_watchers = {
                 ignore_dirs = {"node_modules"}
             }
         }
+
+        -- Key mappings
+        map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", {
+            desc = "Toggle NvimTree"
+        })
+        map("n", "<leader>f", function()
+            nvtree.open_float()
+        end, {
+            desc = "Open NvimTree Floating"
+        })
+
+        -- Autocommand to open nvim-tree on startup
+        -- vim.api.nvim_create_autocmd("VimEnter", {
+        --     callback = function()
+        --         local api = require "nvim-tree.api"
+        --         api.tree.open()
+        --     end
+        -- })
     end
 }

@@ -43,6 +43,9 @@ return {
                 enable = true
             },
             renderer = {
+                indent_markers = {
+                    enable = true
+                },
                 highlight_git = "none",
                 icons = {
                     glyphs = {
@@ -84,12 +87,5 @@ return {
             desc = "Open NvimTree Floating"
         })
 
-        -- Autocommand to open nvim-tree on startup
-        -- vim.api.nvim_create_autocmd("VimEnter", {
-        --     callback = function()
-        --         local api = require "nvim-tree.api"
-        --         api.tree.open()
-        --     end
-        -- })
     end
 }

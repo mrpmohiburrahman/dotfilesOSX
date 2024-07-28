@@ -1,6 +1,3 @@
--- This file  needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
-
 ---@type ChadrcConfig
 local M = {}
 
@@ -12,17 +9,11 @@ M.ui = {
     order = {
       "mode",
       "file",
-      -- "git",
       "%=",
       "lsp_msg",
       "%=",
-      -- "diagnostics",
-      -- "lsp",
-      -- "cursor",
-      -- "caps_status",
       "cwd",
     },
-
     modules = {
       caps_status = function()
         if vim.g.CAPSON == "True" then
@@ -33,17 +24,30 @@ M.ui = {
       end,
     },
   },
-
-  ---@diagnostic disable-next-line
   theme_toggle = { "catppuccin", "decay" },
   telescope = { style = "bordered" },
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true, fg = "#7F838B" },
+    CursorLine = { bg = "#7F838B", fg = "#7F838B" }, -- Highlight the line where the cursor is
+    CursorLineNr = { bg = "#2C313C" },
+    LspInlayHint = { fg = "#4e5665", bg = "NONE" },
+    FloatBorder = { link = "TelescopeBorder" },
+    NvimTreeRootFolder = { link = "TelescopeBorder" },
+    NvimTreeGitDirty = { link = "NvimTreeNormal" },
+    Visual = { bg = "#3E4451" }, -- Custom background color for visual mode
+    VisualLine = { bg = "#3E4451" }, -- Custom background color for visual line mode
   },
-
-  -- hl_add = {}
-  -- nvdash = {}
+  hl_add = {
+    YankVisual = { link = "CursorColumn" },
+    LspInfoBorder = { fg = "#444c5b" },
+    WinBar = { bg = "NONE" },
+    WinBarNC = { bg = "NONE" },
+    DropBarMenuCurrentContext = { link = "Visual" },
+    St_HarpoonInactive = { link = "StText" },
+    St_HarpoonActive = { link = "St_LspHints" },
+    NvimTreeGitStagedIcon = { fg = "#a6e3a1" },
+  },
 }
 
 M.term = {
@@ -51,4 +55,5 @@ M.term = {
     border = "rounded",
   },
 }
+
 return M

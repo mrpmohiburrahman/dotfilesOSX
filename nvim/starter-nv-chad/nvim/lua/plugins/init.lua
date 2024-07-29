@@ -30,6 +30,8 @@ return {{
     import = "plugins.mrp.diffview"
 }, {
     import = "plugins.mrp.dropbar"
+}, {
+    import = "plugins.mrp.goto-preview"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

@@ -50,6 +50,8 @@ return {{
     import = "plugins.mrp.ts-autotag"
 }, {
     import = "plugins.mrp.ts-context-commentstring"
+}, {
+    import = "plugins.mrp.tstools"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

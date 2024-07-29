@@ -46,6 +46,15 @@ local function set_highlights()
     vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", {
         fg = "#1e222a"
     }) -- Set end of buffer color to match background
+
+    -- Highlight selected file or folder
+    vim.api.nvim_set_hl(0, "NvimTreeCursorLine", {
+        bg = "#383D4E"
+    }) -- Set background color when a file or folder is selected
+    vim.api.nvim_set_hl(0, "NvimTreeCursorLineNr", {
+        fg = "#abb2bf",
+        bg = "#383D4E"
+    }) -- Set foreground and background color of line number when a file or folder is selected
 end
 
 return {

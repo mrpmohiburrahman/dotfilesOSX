@@ -54,6 +54,8 @@ return {{
     import = "plugins.mrp.tstools"
 }, {
     import = "plugins.mrp.undo-tree"
+}, {
+    import = "plugins.mrp.vim-illuminate"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

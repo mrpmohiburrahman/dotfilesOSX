@@ -28,6 +28,8 @@ return {{
     import = "plugins.mrp.comment"
 }, {
     import = "plugins.mrp.diffview"
+}, {
+    import = "plugins.mrp.dropbar"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

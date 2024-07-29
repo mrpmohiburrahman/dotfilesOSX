@@ -1,19 +1,23 @@
 return {{
-    import = "plugins.spec.conform"
+    import = "plugins.override.conform"
 }, {
-    import = "plugins.spec.nvim-treesitter"
+    import = "plugins.override.nvim-treesitter"
+}, {
+    import = "plugins.override.nvim-web-devicons"
 }, {
     import = "plugins.spec.nvim-surround"
 }, {
     import = "plugins.spec.fine-cmdline"
 }, {
-    import = "plugins.spec.nvim-tree"
+    import = "plugins.override.nvim-tree"
 }, {
     import = "plugins.spec.auto-save"
 }, {
     import = "plugins.spec.gitsigns"
 }, {
-    import = "plugins.spec.telescope"
+    import = "plugins.override.telescope"
+}, {
+    import = "plugins.override.whichkey"
 }, {
     import = "plugins.spec.searchbox"
 }, {

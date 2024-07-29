@@ -18,6 +18,8 @@ return {{
     import = "plugins.mrp.searchbox"
 }, {
     import = "plugins.mrp.zen-mode"
+}, {
+    import = "plugins.mrp.ccc"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

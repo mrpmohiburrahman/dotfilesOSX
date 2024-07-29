@@ -20,6 +20,8 @@ return {{
     import = "plugins.mrp.zen-mode"
 }, {
     import = "plugins.mrp.ccc"
+}, {
+    import = "plugins.mrp.cd-project"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

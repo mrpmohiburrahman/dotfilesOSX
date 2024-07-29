@@ -34,6 +34,8 @@ return {{
     import = "plugins.mrp.goto-preview"
 }, {
     import = "plugins.mrp.grug-far"
+}, {
+    import = "plugins.mrp.hop"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

@@ -8,6 +8,8 @@ return {{
     import = "plugins.mrp.fine-cmdline"
 }, {
     import = "plugins.mrp.nvim-tree"
+}, {
+    import = "plugins.mrp.auto-save"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

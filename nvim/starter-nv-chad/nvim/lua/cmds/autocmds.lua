@@ -8,6 +8,22 @@ autocmd("VimEnter", {
         api.tree.open()
     end
 })
+
+-- Autocommand group for auto-formatting using conform.nvim
+autocmd("BufWritePre", {
+    callback = function(args)
+        local bufnr = args.buf
+        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+            return
+        end
+        local conform = require("conform")
+        conform.format {
+            bufnr = bufnr,
+            lsp_fallback = true
+        }
+    end,
+    desc = "Automatically format on buffer write"
+})
 -- autocmd("BufLeave", {
 --   desc = "Hide tabufline if only one buffer and one tab are open.",
 --   pattern = "*",

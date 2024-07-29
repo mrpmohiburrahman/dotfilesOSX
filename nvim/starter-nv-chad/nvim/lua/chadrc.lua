@@ -108,7 +108,7 @@ M.ui = {
     FloatBorder = { link = "TelescopeBorder" },
     NvimTreeRootFolder = { link = "TelescopeBorder" },
     NvimTreeGitDirty = { link = "NvimTreeNormal" },
-    Visual = { bg = "#3E4451" }, -- Custom background color for visual mode
+    Visual = { bg = "#3E4451" },     -- Custom background color for visual mode
     VisualLine = { bg = "#3E4451" }, -- Custom background color for visual line mode
   },
   hl_add = {

@@ -11,6 +11,8 @@ return {{
 }, {
     import = "plugins.override.nvim-tree"
 }, {
+    import = "plugins.spec.neo-tree"
+}, {
     import = "plugins.spec.auto-save"
 }, {
     import = "plugins.spec.gitsigns"

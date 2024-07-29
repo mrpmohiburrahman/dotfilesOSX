@@ -1,4 +1,53 @@
 local map = vim.keymap.set
+
+-- Function to set highlight groups
+local function set_highlights()
+    -- vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", {
+    --     fg = "#61afef"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeFolderName", {
+    --     fg = "#61afef"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeOpenedFolderName", {
+    --     fg = "#98c379"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeEmptyFolderName", {
+    --     fg = "#e5c07b"
+    -- })
+    vim.api.nvim_set_hl(0, "NvimTreeIndentMarker", {
+        fg = "#8891B1"
+    })
+    -- vim.api.nvim_set_hl(0, "NvimTreeGitDirty", {
+    --     fg = "#e06c75"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeGitStaged", {
+    --     fg = "#98c379"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeGitMerge", {
+    --     fg = "#c678dd"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeGitRenamed", {
+    --     fg = "#61afef"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeGitNew", {
+    --     fg = "#56b6c2"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeGitDeleted", {
+    --     fg = "#e06c75"
+    -- })
+    -- vim.api.nvim_set_hl(0, "NvimTreeNormal", {
+    --     fg = "#abb2bf"
+    --     -- bg = "#1e222a"
+    -- }) -- Set background color of NvimTree
+    vim.api.nvim_set_hl(0, "NvimTreeStatusLine", {
+        bg = "#1e222a"
+    })
+    -- Set statusline background color
+    vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", {
+        fg = "#1e222a"
+    }) -- Set end of buffer color to match background
+end
+
 return {
     "nvim-tree/nvim-tree.lua",
     config = function()
@@ -6,6 +55,9 @@ return {
 
         local nvtree = require "nvim-tree"
         local api = require "nvim-tree.api"
+
+        -- Set custom highlights
+        set_highlights()
 
         -- Add custom mappings
         local function custom_on_attach(bufnr)
@@ -81,11 +133,11 @@ return {
         map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", {
             desc = "Toggle NvimTree"
         })
-        map("n", "<leader>f", function()
-            nvtree.open_float()
-        end, {
-            desc = "Open NvimTree Floating"
-        })
+        -- map("n", "<leader>f", function()
+        --     nvtree.open_float()
+        -- end, {
+        --     desc = "Open NvimTree Floating"
+        -- })
 
     end
 }

@@ -10,7 +10,7 @@ return {
                 no_ignore = true,
                 hidden = true,
                 prompt_prefix = " 󱡴  ",
-                prompt_title = "All Files"
+                prompt_title = "All Files: hello world"
             }
         end, {
             desc = "Telescope search all files"

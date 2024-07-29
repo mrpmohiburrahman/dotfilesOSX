@@ -12,6 +12,8 @@ return {{
     import = "plugins.mrp.auto-save"
 }, {
     import = "plugins.mrp.gitsigns"
+}, {
+    import = "plugins.mrp.telescope"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

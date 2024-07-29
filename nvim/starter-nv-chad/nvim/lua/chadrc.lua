@@ -3,9 +3,14 @@ local M = {}
 
 M.ui = {
   transparency = true,
+
   theme = "catppuccin",
+
+
+
   statusline = {
     theme = "vscode_colored",
+
     order = {
       "mode",
       "tint",

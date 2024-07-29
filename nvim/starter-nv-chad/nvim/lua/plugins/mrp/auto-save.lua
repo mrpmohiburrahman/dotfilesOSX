@@ -3,14 +3,17 @@ return {{
     cmd = "ASToggle", -- optional for lazy loading on command
     event = {"InsertLeave", "TextChanged"}, -- optional for lazy loading on trigger events
     opts = {
-        --
-        -- All of these are just the defaults
-        --
         enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
         execution_message = {
-            enabled = true,
+            enabled = false,
             message = function() -- message to print on save
-                return ("AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"))
+                local msg = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S")
+                -- vim.notify(msg, "info", {
+                --     title = "AutoSave",
+                --     timeout = 500, -- Adjust the timeout as needed for minimalistic display
+                --     icon = "🛠" -- Optional: Add an icon to make it visually distinct
+                -- })
+                return msg
             end,
             dim = 0.18, -- dim the color of `message`
             cleaning_interval = 1250 -- (milliseconds) automatically clean MsgArea after displaying `message`. See :h MsgArea

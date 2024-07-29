@@ -35,3 +35,19 @@ require "cmds.autocmds"
 vim.schedule(function()
     require "mappings"
 end)
+
+-- -- Function to reload NvChad configuration
+-- function ReloadNvChad()
+--     -- Reload init.lua or chadrc.lua
+--     vim.cmd("source ~/dotfilesOSX/nvim/starter-nv-chad/nvim/init.lua")
+--     vim.cmd("source ~/dotfilesOSX/nvim/starter-nv-chad/nvim/lua/chadrc.lua")
+
+--     -- Reload autocommand definitions if you have a separate file
+--     vim.cmd("source ~/dotfilesOSX/nvim/starter-nv-chad/nvim/lua/cmds/autocmds.lua")
+
+--     -- Reload lazy.nvim plugin configurations
+--     require("lazy").reload()
+-- end
+
+-- -- Create a custom command to easily call the reload function
+-- vim.api.nvim_create_user_command('ReloadConfig', ReloadNvChad, {})

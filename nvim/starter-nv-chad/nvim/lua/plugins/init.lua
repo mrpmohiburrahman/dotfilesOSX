@@ -10,6 +10,8 @@ return {{
     import = "plugins.mrp.nvim-tree"
 }, {
     import = "plugins.mrp.auto-save"
+}, {
+    import = "plugins.mrp.gitsigns"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

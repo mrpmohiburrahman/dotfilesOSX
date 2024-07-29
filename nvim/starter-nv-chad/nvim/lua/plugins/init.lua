@@ -1,61 +1,63 @@
 return {{
-    import = "plugins.mrp.conform"
+    import = "plugins.spec.conform"
 }, {
-    import = "plugins.mrp.nvim-treesitter"
+    import = "plugins.spec.nvim-treesitter"
 }, {
-    import = "plugins.mrp.nvim-surround"
+    import = "plugins.spec.nvim-surround"
 }, {
-    import = "plugins.mrp.fine-cmdline"
+    import = "plugins.spec.fine-cmdline"
 }, {
-    import = "plugins.mrp.nvim-tree"
+    import = "plugins.spec.nvim-tree"
 }, {
-    import = "plugins.mrp.auto-save"
+    import = "plugins.spec.auto-save"
 }, {
-    import = "plugins.mrp.gitsigns"
+    import = "plugins.spec.gitsigns"
 }, {
-    import = "plugins.mrp.telescope"
+    import = "plugins.spec.telescope"
 }, {
-    import = "plugins.mrp.searchbox"
+    import = "plugins.spec.searchbox"
 }, {
-    import = "plugins.mrp.zen-mode"
+    import = "plugins.spec.zen-mode"
 }, {
-    import = "plugins.mrp.ccc"
+    import = "plugins.spec.ccc"
 }, {
-    import = "plugins.mrp.cd-project"
+    import = "plugins.spec.cd-project"
 }, {
-    import = "plugins.mrp.codesnap"
+    import = "plugins.spec.codesnap"
 }, {
-    import = "plugins.mrp.comment"
+    import = "plugins.spec.comment"
 }, {
-    import = "plugins.mrp.diffview"
+    import = "plugins.spec.diffview"
 }, {
-    import = "plugins.mrp.dropbar"
+    import = "plugins.spec.dropbar"
 }, {
-    import = "plugins.mrp.goto-preview"
+    import = "plugins.spec.goto-preview"
 }, {
-    import = "plugins.mrp.grug-far"
+    import = "plugins.spec.grug-far"
 }, {
-    import = "plugins.mrp.hop"
+    import = "plugins.spec.hop"
 }, {
-    import = "plugins.mrp.hover"
+    import = "plugins.spec.hover"
 }, {
-    import = "plugins.mrp.notify"
+    import = "plugins.spec.notify"
 }, {
-    import = "plugins.mrp.todo-comments"
+    import = "plugins.spec.todo-comments"
 }, {
-    import = "plugins.mrp.treesitter-textobjects"
+    import = "plugins.spec.treesitter-textobjects"
 }, {
-    import = "plugins.mrp.trouble"
+    import = "plugins.spec.trouble"
 }, {
-    import = "plugins.mrp.ts-autotag"
+    import = "plugins.spec.ts-autotag"
 }, {
-    import = "plugins.mrp.ts-context-commentstring"
+    import = "plugins.spec.ts-context-commentstring"
 }, {
-    import = "plugins.mrp.tstools"
+    import = "plugins.spec.tstools"
 }, {
-    import = "plugins.mrp.undo-tree"
+    import = "plugins.spec.undo-tree"
 }, {
-    import = "plugins.mrp.vim-illuminate"
+    import = "plugins.spec.vim-illuminate"
+}, {
+    import = "plugins.override.blankline"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

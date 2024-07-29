@@ -14,6 +14,8 @@ return {{
     import = "plugins.mrp.gitsigns"
 }, {
     import = "plugins.mrp.telescope"
+}, {
+    import = "plugins.mrp.searchbox"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

@@ -36,6 +36,8 @@ return {{
     import = "plugins.mrp.grug-far"
 }, {
     import = "plugins.mrp.hop"
+}, {
+    import = "plugins.mrp.hover"
 } -- These are some examples, uncomment them if you want to see them work!
 -- {
 --   "neovim/nvim-lspconfig",

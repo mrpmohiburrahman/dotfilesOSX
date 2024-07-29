@@ -23,6 +23,8 @@ vim.cmd('nmap k gk')
 -- vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true, silent = true })
 -- Added { noremap = true, silent = true } to the key mappings to ensure they do not allow rema
 
+-- Prevent cursor jumping back to where selection started on yank
+-- map("v", "y", "ygv<Esc>")
 -- sync system clipboard
 vim.opt.clipboard = 'unnamedplus'
 

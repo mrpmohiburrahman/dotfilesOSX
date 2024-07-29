@@ -32,7 +32,7 @@ M.ui = {
       end,
     },
   },
-  theme = "decay",
+  theme = "chadracula-evondev",
 
   ---@diagnostic disable-next-line
   theme_toggle = { "chadracula-evondev", "decay" },

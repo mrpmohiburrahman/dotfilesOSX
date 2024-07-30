@@ -24,6 +24,17 @@ autocmd("BufWritePre", {
     end,
     desc = "Automatically format on buffer write"
 })
+-- Handle buffer deletion with bufdelete.nvim
+-- autocmd("BufDelete", {
+--     callback = function(event)
+--         local buf = vim.fn.bufnr()
+--         if vim.fn.buflisted(buf) == 0 then
+--             require('bufdelete').bufdelete(buf, true) -- Use bufdelete.nvim to delete the buffer
+--             vim.cmd("enew") -- Create a new empty buffer
+--         end
+--     end
+-- })
+
 -- autocmd("BufLeave", {
 --   desc = "Hide tabufline if only one buffer and one tab are open.",
 --   pattern = "*",

@@ -6,6 +6,13 @@ return {{
     import = "plugins.override.nvim-web-devicons"
 }, {
     import = "plugins.spec.nvim-surround"
+}, --  {
+--     import = "plugins.spec.bufdelete"
+-- }, 
+{
+    import = "plugins.spec.NeoNoName"
+}, {
+    import = "plugins.spec.nvim-ide"
 }, {
     import = "plugins.spec.fine-cmdline"
 }, {

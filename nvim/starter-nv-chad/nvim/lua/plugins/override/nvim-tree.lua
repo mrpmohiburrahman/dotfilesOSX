@@ -14,6 +14,7 @@ local function set_highlights()
     -- vim.api.nvim_set_hl(0, "NvimTreeEmptyFolderName", {
     --     fg = "#e5c07b"
     -- })
+
     vim.api.nvim_set_hl(0, "NvimTreeIndentMarker", {
         fg = "#8891B1"
     })
@@ -97,6 +98,7 @@ return {
         nvtree.setup {
             on_attach = custom_on_attach,
             sync_root_with_cwd = true,
+            -- hijack_unnamed_buffer_when_opening = false,
             update_focused_file = {
                 enable = true,
                 update_cwd = true,
@@ -110,7 +112,13 @@ return {
             },
             renderer = {
                 indent_markers = {
-                    enable = true
+                    enable = true,
+                    icons = {
+                        corner = "└",
+                        edge = "│",
+                        item = "├",
+                        none = " "
+                    }
                 },
                 highlight_git = "none",
                 icons = {

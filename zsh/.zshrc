@@ -138,7 +138,7 @@ alias ls='eza --icons'
 [ -s "/Users/mrp/.bun/_bun" ] && source "/Users/mrp/.bun/_bun"
 
 alias nvim_folky="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/folky_nvim nvim"
-alias nvim-ide="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/nvim-ide nvim"
+alias nvim_ide="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/nvim-ide nvim"
 alias nvim_starter_kickstart="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/starter-kickstart-nvim nvim"
 alias nvim_starter_lazyvim="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/starter-lazy-vim nvim"
 alias nvim_starter_nvchad="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/starter-nv-chad nvim"

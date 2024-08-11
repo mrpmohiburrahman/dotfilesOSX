@@ -6,6 +6,8 @@ return {{
     import = "plugins.override.nvim-web-devicons"
 }, {
     import = "plugins.spec.nvim-surround"
+}, {
+    import = "plugins.spec.vim-bufkill"
 }, --  {
 --     import = "plugins.spec.bufdelete"
 -- }, 

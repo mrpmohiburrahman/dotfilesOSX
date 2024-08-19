@@ -48,14 +48,23 @@ ansible-playbook ansible-install-os-packages.yml --ask-become-pass
 `ln -nfs ~/dotfilesOSX/.fzf.zsh ~/.fzf.zsh`
 
 stow karabiner
+
 stow sketchybar
+
 stow zsh
+
 stow lsd
+
 stow borders
+
 stow -t "$HOME/Library/Application Support/" Alfred/
+
 stow warp
+
 stow starship
+
 stow alacritty
+
 
 cd nvim
 stow -t "$HOME/" CoreNvim --verbose 

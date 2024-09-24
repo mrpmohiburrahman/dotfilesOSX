@@ -150,6 +150,8 @@ alias nvim_nvchad_m="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/customized-by-mgastonpor
 alias nvim_lazyvim="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/lazyvim nvim"
 alias nvim_core_nvim="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/CoreNvim/.config nvim"
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
 eval "$(direnv hook zsh)"
 
 # pnpm
@@ -159,3 +161,16 @@ case ":$PATH:" in
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+work() {
+  # usage: work 10m, work 60s etc. Default is 20m
+  timer "${1:-20m}" && terminal-notifier -message 'Pomodoro'\
+        -title 'Work Timer is up! Take a Break 😊'\
+        -sound Crystal
+}
+
+rest() {
+  # usage: rest 10m, rest 60s etc. Default is 5m
+  timer "${1:-5m}" && terminal-notifier -message 'Pomodoro'\
+        -title 'Break is over! Get back to work 😬'\
+        -sound Crystal
+}

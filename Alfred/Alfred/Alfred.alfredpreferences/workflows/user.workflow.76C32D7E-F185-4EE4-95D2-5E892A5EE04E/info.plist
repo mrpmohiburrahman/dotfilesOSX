@@ -89,13 +89,16 @@ openUrlsInChrome() {
 
 # Open iTerm and move it to desktop 1. We need to specify "iTerm2" as the query name explicitly.
 # openAppAndMove "iTerm" "iTerm2" 1
-openAppAndMove "Warp" "" 1
-# Open Discord and move it to the 2nd space on display 1
-openAppAndMove "Discord" "" 2 1
-openAppAndMove "Reminders" "" 3
+openAppAndMove "Warp" "" 1 1
+# Open Discord and move it to the 4th space on display 1
+openAppAndMove "Discord" "" 4 1
+openAppAndMove "Reminders" "" 3 1
+# openAppAndMove "WhatsApp" "" 3 1
+openAppAndMove "Messenger" "" 3 1
+
 openAppAndMove "Symlex" "" 4 1
 
-openAppAndMove "Google Chrome" "" 5
+openAppAndMove "Google Chrome" "" 5 2
 
 # Open Urls in Chrome
 urls=(
@@ -109,8 +112,11 @@ urls=(
 )
 openUrlsInChrome "${urls[@]}"
 
-openAppAndMove "Visual Studio Code" "Code" 6
-openAppAndMove "Notion" "" 7</string>
+openAppAndMove "Visual Studio Code" "Code" 6 2
+openAppAndMove "Notion" "" 7 2
+
+# Open Discord and move it to the 4th space on display 1
+# openAppAndMove "Discord" "" 4 1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

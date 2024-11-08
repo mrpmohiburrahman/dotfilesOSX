@@ -116,7 +116,7 @@ export PATH=$PATH:$HOME/.maestro/bin
 export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
 source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
 
-PATH=~/.console-ninja/.bin:$PATH
+
 eval "$(zoxide init --cmd cd zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -137,6 +137,7 @@ alias ls='eza --icons'
 # bun completions
 [ -s "/Users/mrp/.bun/_bun" ] && source "/Users/mrp/.bun/_bun"
 
+alias nvim_okwasniewski_rn="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/nvim-okwasniewski-rn nvim"
 alias nvim_unphased="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/nvim-by-unphased nvim"
 alias nvim_alex_courtis="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/alex-courtis nvim"
 alias nvim_folky="XDG_CONFIG_HOME=~/dotfilesOSX/nvim/folky_nvim nvim"
@@ -174,3 +175,4 @@ rest() {
         -title 'Break is over! Get back to work 😬'\
         -sound Crystal
 }
+PATH=~/.console-ninja/.bin:$PATH

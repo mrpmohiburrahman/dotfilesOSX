@@ -27,11 +27,11 @@
 	<key>createdby</key>
 	<string>MRP</string>
 	<key>description</key>
-	<string>Move apps on exact spaces</string>
+	<string>Apps on exact spaces</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>workflow: automated</string>
+	<string>workflow: automated: Apps on exact spaces</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -92,11 +92,14 @@ openUrlsInChrome() {
 openAppAndMove "Warp" "" 1 1
 # Open Discord and move it to the 4th space on display 1
 openAppAndMove "Discord" "" 4 1
-openAppAndMove "Reminders" "" 3 1
+openAppAndMove "goodtask" "" 2 1
+# openAppAndMove "Reminders" "" 3 1
 # openAppAndMove "WhatsApp" "" 3 1
 openAppAndMove "Messenger" "" 3 1
 
-openAppAndMove "Symlex" "" 4 1
+# openAppAndMove "Slack" "" 4 1
+
+# openAppAndMove "Symlex" "" 4 1
 
 openAppAndMove "Google Chrome" "" 5 2
 
@@ -104,7 +107,7 @@ openAppAndMove "Google Chrome" "" 5 2
 urls=(
     "https://pahe.ink/"
     "https://psa.wf/"
-    "https://mlwbd.st/genre/bollywood-hindi/"
+    "https://fojik.com/genre/bollywood-hindi/"
     "https://www.facebook.com/messages/t/"
     "https://www.linkedin.com/"
     "https://news.ycombinator.com/"

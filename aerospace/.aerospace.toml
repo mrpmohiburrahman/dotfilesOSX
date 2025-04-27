@@ -20,6 +20,7 @@ exec-on-workspace-change = [
 # Start AeroSpace at login
 start-at-login = true
 
+
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -70,6 +71,30 @@ outer.bottom =     5
 outer.top = [{ monitor."built-in" = 10 }, 45 ]
 outer.right =      5
 
+[[on-window-detected]]
+if.app-id = 'dev.warp.Warp-Stable'
+run       = "move-node-to-workspace 1"
+[[on-window-detected]]
+if.app-id = 'com.kolpolok.symlexVPN'
+run       = "move-node-to-workspace 2"
+[[on-window-detected]]
+if.app-id = 'com.philipyoungg.session-setapp'
+run       = "move-node-to-workspace 2"
+[[on-window-detected]]
+if.app-id = 'com.hahainteractive.GoodTask-setapp'
+run       = "move-node-to-workspace 3"
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run       = "move-node-to-workspace 4"
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run       = "move-node-to-workspace 5"
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run       = "move-node-to-workspace 6"
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run       = "move-node-to-workspace 7"
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented

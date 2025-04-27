@@ -1,56 +1,76 @@
-# sketchybarrc
-#!/usr/bin/env bash
+#!/bin/bash
 
-source "$CONFIG_DIR/environment"
-source "$THEME_DIR/tokyonight"
+source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 
-# Configure general bar appearance.
-bar=(
-  blur_radius="$BAR_BLUR_RADIUS"
-  border_color="$BAR_BORDER_COLOR"
-  color="$BAR_COLOR"
-  corner_radius="$BAR_CORNER_RADIUS"
-  height="$BAR_HEIGHT"
-  margin="$BAR_MARGIN"
-  position="$BAR_POSITION"
-  padding_left="$BAR_PADDING"
-  padding_right="$BAR_PADDING"
-  y_offset="$BAR_Y_OFFSET"
-)
-sketchybar --bar "${bar[@]}"
+# This is a demo config to showcase some of the most important commands.
+# It is meant to be changed and configured, as it is intentionally kept sparse.
+# For a (much) more advanced configuration example see my dotfiles:
+# https://github.com/FelixKratz/dotfiles
 
-# Configure default values for later defined items.
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+##### Bar Appearance #####
+# Configuring the general appearance of the bar.
+# These are only some of the options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+
+sketchybar --bar height=28        \
+                 blur_radius=30   \
+                 position=top     \
+                 sticky=off       \
+                 padding_left=10  \
+                 padding_right=10 \
+                 color=$BAR_COLOR \
+                 topmost=window
+
+
+##### Changing Defaults #####
+# We now change some default values, which are applied to all further items.
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+
 default=(
-  background.color="$BACKGROUND_COLOR"
-  background.border_color="$BACKGROUND_BORDER_COLOR"
-  background.corner_radius="$BACKGROUND_CORNER_RADIUS"
-  background.height="$BACKGROUND_HEIGHT"
-  icon.drawing=off
-  icon.font="$ICON_FONT"
-  label.align="$LABEL_ALIGN"
-  label.font="$LABEL_FONT"
-  label.color="$LABEL_COLOR"
-  label.highlight_color="$LABEL_HIGHLIGHT_COLOR"
-  label.y_offset="$LABEL_Y_OFFSET"
-  label.padding_left="$LABEL_PADDING"
-  label.padding_right="$LABEL_PADDING"
-  y_offset="$Y_OFFSET"
+  padding_left=5
+  padding_right=5
+  icon.font="SF Pro Nerd Font:Semibold:14.0"
+  label.font="SF Pro Nerd Font:Semibold:14.0"
+  icon.color="0xff$TEXT"
+  label.color="0xff$TEXT"
+  background.color=$ITEM_BG_COLOR
+  background.corner_radius=5
+  background.height=22
+  icon.padding_left=10
+  icon.padding_right=4
+  label.padding_left=4
+  label.padding_right=10
 )
 sketchybar --default "${default[@]}"
 
-# Left
-source "$ITEM_DIR/aerospace"
-source "$ITEM_DIR/spacer"
-source "$ITEM_DIR/front_app"
 
-# Right
-source "$ITEM_DIR/clock"
 
-# Automatically apply configuration changes
-sketchybar --hotload on
+# -- Left Side Items --
+source $ITEM_DIR/aerospace.sh
+source $ITEM_DIR/front_app.sh
 
-# Force all scripts to run the first time (never do this in a script)
+# -- Center Items --
+source $ITEM_DIR/media.sh
+
+# --- Right side items ---
+source $ITEM_DIR/calendar.sh
+source $ITEM_DIR/volume.sh
+source $ITEM_DIR/battery.sh
+source $ITEM_DIR/cpu.sh
+source $ITEM_DIR/memory.sh
+source $ITEM_DIR/wifi.sh
+
+# -- Handle theme changes --
+sketchybar --add event theme_change AppleInterfaceThemeChangedNotification 
+# This is an invisible item that runs the theme change script
+source $ITEM_DIR/theme_change.sh
+
+# ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
 
-# Initialize focused workspace
-sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$(aerospace list-workspaces --focused)

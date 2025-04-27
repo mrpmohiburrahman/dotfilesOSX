@@ -65,8 +65,11 @@ stow starship
 
 stow alacritty
 
-
 <!-- cd nvim
 stow -t "$HOME/" CoreNvim --verbose  -->
 
 sh ./nvim/VSCodeNeovim-sokhuong/installer.sh
+
+### stop sketchybar
+
+`brew services stop sketchybar`

@@ -1,3 +1,4 @@
+# .config/sketchybar/helpers/app_icons.lua
 return {
     ["Live"] = ":ableton:",
     ["Adobe Bridge"] = ":adobe_bridge:",

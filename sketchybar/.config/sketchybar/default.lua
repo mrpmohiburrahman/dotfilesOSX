@@ -1,3 +1,4 @@
+-- .config/sketchybar/default.lua
 local settings = require("settings")
 local colors = require("colors")
 
@@ -24,7 +25,7 @@ sbar.default({
         color = colors.white,
         highlight_color = colors.bg1,
         padding_left = 0,
-        padding_right = 0,
+        padding_right = 0
     },
     label = {
         font = {
@@ -34,7 +35,7 @@ sbar.default({
         },
         color = colors.white,
         padding_left = settings.paddings,
-        padding_right = settings.paddings,
+        padding_right = settings.paddings
     },
     popup = {
         align = "center",
@@ -42,7 +43,9 @@ sbar.default({
             border_width = 0,
             corner_radius = 6,
             color = colors.popup.bg,
-            shadow = { drawing = true },
+            shadow = {
+                drawing = true
+            }
         },
         blur_radius = 50,
         y_offset = 5
@@ -50,5 +53,5 @@ sbar.default({
     padding_left = 3,
     padding_right = 3,
     scroll_texts = true,
-    updates = "on",
+    updates = "on"
 })

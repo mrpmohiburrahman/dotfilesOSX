@@ -1,3 +1,4 @@
+-- .config/sketchybar/colors.lua
 return {
     default = 0x80ffffff,
     black = 0xff181819,
@@ -15,7 +16,7 @@ return {
 
     bar = {
         bg = 0x00000000,
-        border = 0xff2c2e34,
+        border = 0xff2c2e34
     },
 
     popup = {
@@ -32,7 +33,9 @@ return {
     spotify_green = 0xe040a02b,
 
     with_alpha = function(color, alpha)
-        if alpha > 1.0 or alpha < 0.0 then return color end
+        if alpha > 1.0 or alpha < 0.0 then
+            return color
+        end
         return (color & 0x00ffffff) | (math.floor(alpha * 255.0) << 24)
-    end,
+    end
 }

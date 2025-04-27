@@ -1,3 +1,4 @@
+-- .config/sketchybar/items/apple.lua
 local icons = require("icons")
 local settings = require("settings")
 

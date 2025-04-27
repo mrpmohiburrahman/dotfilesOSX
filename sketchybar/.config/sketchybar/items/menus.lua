@@ -1,3 +1,4 @@
+-- .config/sketchybar/items/menus.lua
 local settings = require("settings")
 
 -- Create a menu trigger item
@@ -10,9 +11,11 @@ local menu_item = sbar.add("item", "menu_trigger", {
         },
         padding_left = settings.padding.icon_item.icon.padding_left,
         padding_right = settings.padding.icon_item.icon.padding_right,
-        string = "≡",
+        string = "≡"
     },
-    label = { drawing = false },
+    label = {
+        drawing = false
+    }
 })
 
 menu_item:subscribe("mouse.clicked", function(env)
@@ -27,16 +30,18 @@ local menu_items = {}
 for i = 1, max_items, 1 do
     local menu = sbar.add("item", "menu." .. i, {
         position = "left", -- Position them on the left of the bar
-        drawing = false,   -- Hidden by default
-        icon = { drawing = false },
+        drawing = false, -- Hidden by default
+        icon = {
+            drawing = false
+        },
         label = {
             font = {
                 style = settings.font.style_map["Semibold"]
             },
             padding_left = settings.paddings,
-            padding_right = settings.paddings,
+            padding_right = settings.paddings
         },
-        click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s " .. i,
+        click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s " .. i
     })
     menu_items[i] = menu
 end
@@ -44,7 +49,7 @@ end
 -- Menu watcher to monitor app changes
 local menu_watcher = sbar.add("item", {
     drawing = false,
-    updates = false,
+    updates = false
 })
 
 -- Menu state variable
@@ -55,7 +60,10 @@ local function update_menus()
     sbar.exec("$CONFIG_DIR/helpers/menus/bin/menus -l", function(menus)
         -- Reset all menu items
         for i = 1, max_items do
-            menu_items[i]:set({ drawing = false, width = 0 })
+            menu_items[i]:set({
+                drawing = false,
+                width = 0
+            })
         end
 
         -- Update with new menu items
@@ -64,7 +72,7 @@ local function update_menus()
             if id <= max_items then
                 menu_items[id]:set({
                     label = {
-                        string = menu,
+                        string = menu
                     },
                     drawing = menu_visible,
                     width = menu_visible and "dynamic" or 0
@@ -84,7 +92,9 @@ local function toggle_menu()
 
     if menu_visible then
         -- Show menu items with animation
-        menu_watcher:set({ updates = true })
+        menu_watcher:set({
+            updates = true
+        })
 
         -- Prepare menu items but keep them hidden until animation starts
         update_menus()
@@ -112,7 +122,9 @@ local function toggle_menu()
             local has_content = query.label.string ~= ""
 
             if has_content then
-                menu_items[i]:set({ drawing = true })
+                menu_items[i]:set({
+                    drawing = true
+                })
             end
         end
 
@@ -124,7 +136,9 @@ local function toggle_menu()
 
                 if is_drawing then
                     -- First set the width
-                    menu_items[i]:set({ width = "dynamic" })
+                    menu_items[i]:set({
+                        width = "dynamic"
+                    })
                     -- Then make label visible
                     menu_items[i]:set({
                         label = {
@@ -139,13 +153,19 @@ local function toggle_menu()
         -- Hide menu items with animation
         sbar.animate("tanh", 30, function()
             for i = 1, max_items do
-                menu_items[i]:set({ width = 0 })
+                menu_items[i]:set({
+                    width = 0
+                })
             end
         end, function()
             for i = 1, max_items do
-                menu_items[i]:set({ drawing = false })
+                menu_items[i]:set({
+                    drawing = false
+                })
             end
-            menu_watcher:set({ updates = false })
+            menu_watcher:set({
+                updates = false
+            })
         end)
     end
 end

@@ -1,3 +1,4 @@
+-- .config/sketchybar/items/workspaces.lua
 local colors = require("colors")
 local settings = require("settings")
 local app_icons = require("helpers.app_icons")

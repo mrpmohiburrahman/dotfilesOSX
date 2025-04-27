@@ -1,3 +1,4 @@
+-- .config/sketchybar/init.lua
 -- Require the sketchybar module
 sbar = require("sketchybar")
 

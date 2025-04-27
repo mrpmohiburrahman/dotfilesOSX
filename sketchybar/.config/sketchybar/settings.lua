@@ -1,3 +1,4 @@
+-- .config/sketchybar/settings.lua
 return {
     font = {
         text = "SF Pro",

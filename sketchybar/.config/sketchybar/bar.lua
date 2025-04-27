@@ -1,3 +1,5 @@
+-- .config/sketchybar/bar.lua
+
 local colors = require("colors")
 local settings = require("settings")
 

@@ -1,3 +1,4 @@
+-- .config/sketchybar/items/widgets/wifi.lua
 local icons = require("icons")
 local colors = require("colors")
 local settings = require("settings")

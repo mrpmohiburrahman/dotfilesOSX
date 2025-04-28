@@ -42,84 +42,68 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>#!/bin/bash
+				<string>#!/usr/bin/env bash
 
-# Function to wait for an app to launch and get its window ID using the query name
-waitForApp() {
-    local queryName="$1" # Use queryName to match the app name in yabai's window query
-    local windowId
-    while true; do
-        # Try to get the window ID of the app using the query name
-        windowId=$(yabai -m query --windows | jq -re ".[] | select(.app==\"$queryName\") | .id" | head -n 1)
-        if [[ -n $windowId ]]; then
-            # Output the window ID, which will be captured by the caller
-            echo $windowId
-            return # Exit the function after finding the window ID
-        fi
-        sleep 0.5
-    done
+# Function: launch an app under AeroSpace, then move its window to workspace $2
+launch_and_assign() {
+  local app="$1"      # e.g. "Warp"
+  local ws="$2"       # e.g. 1
+
+  # 1) Launch without blocking
+  aerospace exec-and-forget open -a "$app"  
+    # uses 'exec-and-forget' to fire-and-forget the open command :contentReference[oaicite:3]{index=3}
+
+  # 2) Brief pause so the window appears in AeroSpace
+  sleep 1
+
+  # 3) Move the newly focused window into workspace $ws
+  aerospace move-node-to-workspace "$ws"          
+    # uses 'move-node-to-workspace' to target the frontmost window :contentReference[oaicite:4]{index=4}
 }
 
-# Function to open an app and move its window to a specific space.
-# It now accepts an appName for opening the app, and optionally, a queryName for querying the window.
-# If queryName is not provided, appName is used for querying.
-openAppAndMove() {
-    local appName="$1"
-    local queryName="${2:-$1}" # If queryName is not provided, fall back to appName
-    echo "$queryName"
+# ———————————————————————————————————
+# 1) Launch &amp; assign each app
+# ———————————————————————————————————
+launch_and_assign "Warp"            1    # Warp → ws 1 :contentReference[oaicite:5]{index=5}
+launch_and_assign "Discord"         4    # Discord → ws 4 :contentReference[oaicite:6]{index=6}
+launch_and_assign "goodtask"        2    # goodtask → ws 2 :contentReference[oaicite:7]{index=7}
+launch_and_assign "Messenger"       3    # Messenger → ws 3 :contentReference[oaicite:8]{index=8}
 
-    local spaceNumber="$3"
-    open -a "$appName"
-    # Capture the window ID from waitForApp using the query name or appName if queryName is not provided
-    local windowId=$(waitForApp "$queryName")
-    # Now, with the correct window ID, move the window
-    yabai -m window "$windowId" --space "$spaceNumber"
-    echo "$appName launched and moved to space $spaceNumber."
-}
-
-# Function to open URLs in Chrome. It now accepts an array of URLs as an argument.
-openUrlsInChrome() {
-    local urls=("$@") # Accept an array of URLs as argument
-    for url in "${urls[@]}"; do
-        open -a "Google Chrome" "$url"
-    done
-}
-
-# Example usage:
-
-# Open iTerm and move it to desktop 1. We need to specify "iTerm2" as the query name explicitly.
-# openAppAndMove "iTerm" "iTerm2" 1
-openAppAndMove "Warp" "" 1 1
-# Open Discord and move it to the 4th space on display 1
-openAppAndMove "Discord" "" 4 1
-openAppAndMove "goodtask" "" 2 1
-# openAppAndMove "Reminders" "" 3 1
-# openAppAndMove "WhatsApp" "" 3 1
-openAppAndMove "Messenger" "" 3 1
-
-# openAppAndMove "Slack" "" 4 1
-
-# openAppAndMove "Symlex" "" 4 1
-
-openAppAndMove "Google Chrome" "" 5 2
-
-# Open Urls in Chrome
+# 4) Chrome: open all URLs, then move the Chrome window to ws 5
 urls=(
-    "https://pahe.ink/"
-    "https://psa.wf/"
-    "https://fojik.com/genre/bollywood-hindi/"
-    "https://www.facebook.com/messages/t/"
-    "https://www.linkedin.com/"
-    "https://news.ycombinator.com/"
-    "https://youtube.com/"
+  "https://pahe.ink/"
+  "https://psa.wf/"
+  "https://fojik.com/genre/bollywood-hindi/"
+  "https://www.facebook.com/messages/t/"
+  "https://www.linkedin.com/"
+  "https://news.ycombinator.com/"
+  "https://youtube.com/"
 )
-openUrlsInChrome "${urls[@]}"
+aerospace exec-and-forget open -a "Google Chrome" "${urls[@]}"  
+  # open Chrome with multiple tabs :contentReference[oaicite:9]{index=9}
+sleep 1
+aerospace move-node-to-workspace 5    
+  # move Chrome’s frontmost window to ws 5 :contentReference[oaicite:10]{index=10}
 
-openAppAndMove "Visual Studio Code" "Code" 6 2
-openAppAndMove "Notion" "" 7 2
+launch_and_assign "Visual Studio Code" "Code" 6   # VS Code → ws 6 :contentReference[oaicite:11]{index=11}
+launch_and_assign "Notion"             7         # Notion → ws 7 :contentReference[oaicite:12]{index=12}
 
-# Open Discord and move it to the 4th space on display 1
-# openAppAndMove "Discord" "" 4 1</string>
+# ———————————————————————————————————
+# 2) Dynamically bind workspaces to monitors
+# ———————————————————————————————————
+for i in {1..4}; do
+  aerospace workspace "$i"  
+    # ensure workspace exists &amp; switch to it :contentReference[oaicite:13]{index=13}
+  aerospace move-workspace-to-monitor built-in --workspace "$i"  
+    # pin ws $i to the built-in monitor :contentReference[oaicite:14]{index=14}
+done
+
+for i in {5..8}; do
+  aerospace workspace "$i"  
+    # ensure workspace exists &amp; switch to it :contentReference[oaicite:15]{index=15}
+  aerospace move-workspace-to-monitor secondary --workspace "$i"  
+    # pin ws $i to the external monitor :contentReference[oaicite:16]{index=16}
+done</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

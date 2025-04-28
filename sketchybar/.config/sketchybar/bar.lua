@@ -1,15 +1,16 @@
--- .config/sketchybar/bar.lua
-
 local colors = require("colors")
-local settings = require("settings")
 
 -- Equivalent to the --bar domain
 sbar.bar({
     color = colors.bar.bg,
-    height = settings.height,
-    padding_right = 6,
-    padding_left = 3,
-    sticky = 'on',
-    topmost = 'window',
-    y_offset = 5,
+    height = 36,
+    padding_right = 2,
+    padding_left = 2,
+    margin = 6,
+    corner_radius = 12,
+    topmost = "window",
+    y_offset = 2,
+    border_color = colors.transparent,
+    border_width = 2,
+    blur_radius = 10
 })

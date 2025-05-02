@@ -1,14 +1,19 @@
---  .config/sketchybar/icons.lua
 local settings = require("settings")
 
 local icons = {
     sf_symbols = {
         plus = "􀅼",
         loading = "􀖇",
-        apple = "􀣺",
+        apple = "􀣺", -- 󱚞
         gear = "􀍟",
-        cpu = "􀫥",
+        cpu = "󰒆",
         clipboard = "􀉄",
+        messages = "􀌤",
+
+        space_indicator = {
+            on = "󰄯",
+            off = "󰄰"
+        },
 
         switch = {
             on = "􁏮",
@@ -34,12 +39,18 @@ local icons = {
             download = "􀄩",
             connected = "􀙇",
             disconnected = "􀙈",
-            router = "􁓤"
+            router = "􁓤",
+            vpn = "󰌾",
+            test = ""
         },
         media = {
             back = "􀊊",
             forward = "􀊌",
             play_pause = "􀊈"
+        },
+        ramicons = {
+            swap = "󰁄",
+            ram = "󰍛"
         }
     },
 

@@ -4,7 +4,7 @@
 current_date=$(date -u +"%Y-%m-%d")
 
 # Wetterdaten von der API abrufen
-weather_data=$(curl -s "https://api.brightsky.dev/weather?lat=23.8103&lon=90.4125&date=${current_date}")
+weather_data=$(curl -s "https://api.brightsky.dev/weather?lat=23.8041&lon=90.4152&date=${current_date}")
 
 # Aktuelle Zeit in UTC bestimmen
 current_time=$(date -u +"%Y-%m-%dT%H:%M:%S%z")
@@ -17,7 +17,7 @@ else
     correct_hour=$(date -u -r $(($(date -u +%s) + 3600)) +"%Y-%m-%dT%H:00:00+00:00")
 fi
 
-# Daten extrahieren
+# Data extraction
 temperature=$(echo "$weather_data" | jq -r --arg correct_hour "$correct_hour" '
     .weather[] | select(.timestamp == $correct_hour) | .temperature')
 icon=$(echo "$weather_data" | jq -r --arg correct_hour "$correct_hour" '
@@ -32,7 +32,7 @@ visibility=$(echo "$weather_data" | jq -r --arg correct_hour "$correct_hour" '
     .weather[] | select(.timestamp == $correct_hour) | .visibility')
 
 # Ergebnisse auf separaten Zeilen ausgeben
-echo "Station Name: St. Egdidien/Kuhschnappel"
+echo "Station Name: Dhaka, Bangladesh"
 echo "Condition: ${condition}"
 echo "Icon: ${icon}"
 echo "Temperature: ${temperature}°C"

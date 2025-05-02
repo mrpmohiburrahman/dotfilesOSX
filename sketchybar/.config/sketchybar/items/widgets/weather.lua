@@ -141,7 +141,7 @@ local temperature = sbar.add("item", {
     position = "popup." .. weather_info.name,
     icon = {
         align = "left",
-        string = "Temperatur:",
+        string = "Temperature:",
         width = popup_width / 2
     },
     label = {
@@ -155,7 +155,7 @@ local condition = sbar.add("item", {
     position = "popup." .. weather_info.name,
     icon = {
         align = "left",
-        string = "Wetterlage:",
+        string = "Weather Conditions:",
         width = popup_width / 2
     },
     label = {
@@ -169,7 +169,7 @@ local windspeed = sbar.add("item", {
     position = "popup." .. weather_info.name,
     icon = {
         align = "left",
-        string = "Windgeschwindigkeit:",
+        string = "Wind speed:",
         width = popup_width / 2
     },
     label = {
@@ -183,7 +183,7 @@ local cloudcover = sbar.add("item", {
     position = "popup." .. weather_info.name,
     icon = {
         align = "left",
-        string = "Bewölkung:",
+        string = "Cloud cover:",
         width = popup_width / 2
     },
     label = {
@@ -197,7 +197,7 @@ local visibility = sbar.add("item", {
     position = "popup." .. weather_info.name,
     icon = {
         align = "left",
-        string = "Sichtweite:",
+        string = "Visibility:",
         width = popup_width / 2
     },
     label = {
@@ -232,7 +232,7 @@ local function toggle_details()
             local popup_cloud_cover = string.match(result, "Cloud Cover:%s*(.-)\n")
             local popup_visibility = string.match(result, "Visibility:%s*(.-)\n")
 
-            popup_condition = translate_condition(popup_condition)
+            -- popup_condition = translate_condition(popup_condition)
 
             local visibility_km = tonumber(popup_visibility) / 1000
 

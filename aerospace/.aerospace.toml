@@ -1,3 +1,4 @@
+
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
@@ -9,7 +10,21 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = [
+'exec-and-forget sketchybar',
+'exec-and-forget open -a Warp',
+'exec-and-forget open -a Notion',
+'exec-and-forget open -a Session',
+'exec-and-forget open -a "Symlex VPN.app"',
+'exec-and-forget open -a GoodTask',
+'exec-and-forget open -a Discord',
+'exec-and-forget open -a "Google Chrome"',
+'exec-and-forget open -a "Visual Studio Code.app"',
+'exec-and-forget sketchybar --reload'
+# 'exec-and-forget sleep 2 && move-workspace-to-monitor --workspace 5 "HP 22fw"',
+
+]
+
 
 exec-on-workspace-change = [
     '/bin/bash',
@@ -19,7 +34,6 @@ exec-on-workspace-change = [
 
 # Start AeroSpace at login
 start-at-login = true
-
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -63,6 +77,15 @@ preset = 'qwerty'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+[workspace-to-monitor-force-assignment]
+1 = 'Built-in Retina Display'
+2 = 'Built-in Retina Display'
+3 = 'Built-in Retina Display'
+4 = 'Built-in Retina Display'
+5 = 'HP 22fw'
+6 = 'HP 22fw'
+7 = 'HP 22fw'
+8 = 'HP 22fw'
 [gaps]
 inner.horizontal = 5
 inner.vertical =   5

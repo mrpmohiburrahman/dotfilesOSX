@@ -1,15 +1,21 @@
--- .config/sketchybar/items/apple.lua
+local colors = require("colors")
 local icons = require("icons")
-local settings = require("settings")
 
-sbar.add("item", {
-    default = true,
+local apple = sbar.add("item", {
     icon = {
-        padding_left = settings.padding.icon_item.icon.padding_left,
-        padding_right = settings.padding.icon_item.icon.padding_right,
+        font = {
+            size = 18.0
+        },
         string = icons.apple,
+        padding_right = 10,
+        padding_left = 10,
+        color = colors.purple,
+        y_offset = 1
     },
-    label = { drawing = false },
-    click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0",
-    subscribe = "logo mouse.clicked window_focus front_app_switched space_change title_change"
+    label = {
+        drawing = false
+    },
+    padding_left = 1,
+    padding_right = 1,
+    click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0"
 })

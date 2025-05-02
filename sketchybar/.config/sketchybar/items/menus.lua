@@ -7,7 +7,7 @@ local menu_item = sbar.add("item", "menu_trigger", {
     updates = true,
     icon = {
         font = {
-            size = 14.0
+            size = 16.0
         },
         padding_left = settings.padding.icon_item.icon.padding_left,
         padding_right = settings.padding.icon_item.icon.padding_right,

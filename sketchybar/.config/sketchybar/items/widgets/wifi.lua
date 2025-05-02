@@ -4,9 +4,9 @@ local colors = require("colors")
 local settings = require("settings")
 
 -- Execute the event provider binary which provides the event "network_update"
--- for the network interface "en0", which is fired every 2.0 seconds.
+-- for the network interface "en0", which is fired every 1.5 seconds.
 sbar.exec(
-    "killall network_load >/dev/null; $CONFIG_DIR/helpers/event_providers/network_load/bin/network_load en0 network_update 2.0")
+    "killall network_load >/dev/null; $CONFIG_DIR/helpers/event_providers/network_load/bin/network_load en0 network_update 1.5")
 
 local popup_width = 250
 
@@ -61,13 +61,16 @@ local wifi = sbar.add("item", "widgets.wifi.padding", {
     position = "right",
     label = {
         drawing = false
-    }
+    },
+    padding_left = 3
 })
 
 -- Background around the item
 local wifi_bracket = sbar.add("bracket", "widgets.wifi.bracket", {wifi.name, wifi_up.name, wifi_down.name}, {
     background = {
-        color = colors.bg1
+        color = colors.bg2,
+        border_color = colors.bg1,
+        border_width = 2
     },
     popup = {
         align = "center",
@@ -185,15 +188,44 @@ wifi_up:subscribe("network_update", function(env)
     })
 end)
 
-wifi:subscribe({"wifi_change", "system_woke"}, function(env)
-    sbar.exec("ipconfig getifaddr en0", function(ip)
-        local connected = not (ip == "")
+wifi:subscribe({"wifi_change", "system_woke", "forced"}, function(env)
+    wifi:set({
+        icon = {
+            string = icons.wifi.disconnected,
+            color = colors.pink
+        }
+    })
+    sbar.exec([[ipconfig getifaddr en0]], function(result_ip)
+        local ipconnected = not (result_ip == "")
+
+        if ipconnected then
+            Wifi_icon = icons.wifi.connected
+            Wifi_color = colors.dirty_white
+        end
+
         wifi:set({
             icon = {
-                string = connected and icons.wifi.connected or icons.wifi.disconnected,
-                color = connected and colors.white or colors.red
+                string = Wifi_icon,
+                color = Wifi_color
             }
         })
+
+        -- VPN icon
+        sbar.exec([[sleep 2; scutil --nwi | grep -m1 'utun' | awk '{ print $1 }']], function(vpn)
+            local vpnconnected = not (vpn == "")
+
+            if vpnconnected then
+                Wifi_icon = icons.wifi.vpn
+                Wifi_color = colors.green
+            end
+
+            wifi:set({
+                icon = {
+                    string = Wifi_icon,
+                    color = Wifi_color
+                }
+            })
+        end)
     end)
 end)
 

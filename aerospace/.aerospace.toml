@@ -18,7 +18,7 @@ after-startup-command = [
 'exec-and-forget open -a "Symlex VPN.app"',
 'exec-and-forget open -a GoodTask',
 'exec-and-forget open -a Discord',
-'exec-and-forget open -a "Google Chrome"',
+'exec-and-forget open -a "Google Chrome" "https://pahe.ink/" "https://psa.wf/" "https://fojik.com/genre/bollywood-hindi/" "https://www.facebook.com/messages/t/" "https://www.linkedin.com/" "https://news.ycombinator.com/" "https://youtube.com/"',
 'exec-and-forget open -a "Visual Studio Code.app"',
 'exec-and-forget sketchybar --reload'
 # 'exec-and-forget sleep 2 && move-workspace-to-monitor --workspace 5 "HP 22fw"',

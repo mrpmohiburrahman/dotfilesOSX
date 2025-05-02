@@ -116,7 +116,6 @@ export PATH=$PATH:$HOME/.maestro/bin
 export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
 source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
 
-
 eval "$(zoxide init --cmd cd zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -164,16 +163,16 @@ esac
 # pnpm end
 work() {
   # usage: work 10m, work 60s etc. Default is 20m
-  timer "${1:-20m}" && terminal-notifier -message 'Pomodoro'\
-        -title 'Work Timer is up! Take a Break 😊'\
-        -sound Crystal
+  timer "${1:-20m}" && terminal-notifier -message 'Pomodoro' \
+    -title 'Work Timer is up! Take a Break 😊' \
+    -sound Crystal
 }
 
 rest() {
   # usage: rest 10m, rest 60s etc. Default is 5m
-  timer "${1:-5m}" && terminal-notifier -message 'Pomodoro'\
-        -title 'Break is over! Get back to work 😬'\
-        -sound Crystal
+  timer "${1:-5m}" && terminal-notifier -message 'Pomodoro' \
+    -title 'Break is over! Get back to work 😬' \
+    -sound Crystal
 }
 PATH=~/.console-ninja/.bin:$PATH
 # The next line updates PATH for the Google Cloud SDK.
@@ -181,3 +180,4 @@ if [ -f '/Users/mrp/Documents/0-Inbox/google-cloud-sdk/path.zsh.inc' ]; then . '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mrp/Documents/0-Inbox/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mrp/Documents/0-Inbox/google-cloud-sdk/completion.zsh.inc'; fi
+. "$HOME/.cargo/env" # For sh/bash/zsh/ash/dash/pdksh

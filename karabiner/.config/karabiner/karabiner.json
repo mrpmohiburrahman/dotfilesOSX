@@ -557,7 +557,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/bin/dash /Users/mrp/dotfilesOSX/scripts/moveWindowLeftAndFollowFocus_aerospace.sh"
+                    "shell_command": "/bin/dash /Users/mrp/dotfilesOSX/aerospace-scripts/moveWindowLeftAndFollowFocus_aerospace.sh"
                   }
                 ],
                 "type": "basic"

@@ -374,12 +374,12 @@
                     "value": 1
                   }
                 ],
-                "description": "Open -a 'Reminders.app'",
+                "description": "Open -a 'GoodTask'",
                 "from": {
                   "key_code": "r",
                   "modifiers": { "mandatory": ["any"] }
                 },
-                "to": [{ "shell_command": "open -a 'Reminders.app'" }],
+                "to": [{ "shell_command": "open -a 'GoodTask'" }],
                 "type": "basic"
               }
             ]

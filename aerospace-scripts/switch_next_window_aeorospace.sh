@@ -1,31 +1,37 @@
-#!/usr/bin/env bash
+#!/bin/dash
 
-# 1. Gather all Notion window IDs across all workspaces:
-win_ids=($(
-    aerospace list-windows --all --json |
-        jq -r '.[] | select(.["app-name"]=="Notion") | .["window-id"]'
-))
+AERO="/opt/homebrew/bin/aerospace"
+JQ="/opt/homebrew/bin/jq"
 
-# 2. Exit if no Notion windows found
-if [[ ${#win_ids[@]} -eq 0 ]]; then
-    exit 1
-fi
+# 1. Fetch the focused window’s JSON (always a one-element array):
+focused_json=$($AERO list-windows --focused --json)
 
-# 3. Define a cache file to store the last index
-cache="$HOME/.cache/aerospace-notion-cycle-index"
+# 2. Extract its window-id and app-name from the first object:
+current_id=$(echo "$focused_json" | $JQ '.[0]["window-id"]')
+current_app=$(echo "$focused_json" | $JQ -r '.[0]["app-name"]')
 
-# 4. Load last index (default to -1 so the first cycle is 0)
-if [[ -f "$cache" ]]; then
-    last_index=$(<"$cache")
-else
-    last_index=-1
-fi
+# 3. List all windows, filter by that app, and sort the IDs:
+all_ids=$(
+    $AERO list-windows --all --json |
+        $JQ --arg app "$current_app" '
+      [.[] 
+       | select(."app-name" == $app) 
+       | ."window-id"]
+      | sort
+    '
+)
 
-# 5. Compute the next index (wrap around)
-next_index=$(((last_index + 1) % ${#win_ids[@]}))
+# 4. Compute the index of the next window (wrapping around):
+total=$(
+    echo "$all_ids" | $JQ 'length'
+)
+curr_index=$(
+    echo "$all_ids" | $JQ --argjson id "$current_id" 'index($id)'
+)
+next_index=$(((curr_index + 1) % total))
+next_id=$(
+    echo "$all_ids" | $JQ ".[$next_index]"
+)
 
-# 6. Save the new index
-echo "$next_index" >"$cache"
-
-# 7. Focus the next Notion window
-aerospace focus --window-id "${win_ids[$next_index]}"
+# 5. Focus it (if we got a valid ID):
+[ "$next_id" != "null" ] && $AERO focus --window-id "$next_id"

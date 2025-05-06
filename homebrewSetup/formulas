@@ -1,5 +1,5 @@
+# dotfilesOSX/homebrewSetup/brewfile
 cask_args appdir: "/Applications"
-
 ### TAPS
 # tap "getantibody/tap"
 # tap "homebrew/bundle"
@@ -9,16 +9,20 @@ cask_args appdir: "/Applications"
 # tap "mas-cli/tap"
 
 ### FORMULAS
-
+brew "pnpm"
+brew "koekeishiya/formulae/yabai"
+brew "sketchybar"
+brew "borders"
 brew "yarn"
 brew "n"
 
 brew "cocoapods"
 brew "applesimutils"
-brew "blackhole-2ch"
+# brew "blackhole-2ch"
 
 
 # Tools
+brew "eza"
 brew "z" # Jump around to frequent directories # use if from plugin
 brew "zoxide" # zoxide is a smarter cd command, inspired by z and autojump.
 brew "bat" # cat alternative with highlighting

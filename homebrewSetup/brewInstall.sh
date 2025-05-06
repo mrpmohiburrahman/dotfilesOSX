@@ -1,62 +1,49 @@
-#!/bin/bash
-
-# Installs Homebrew and some of the common dependencies needed/desired for software development
+#!/usr/bin/env bash
 
 # Ask for the administrator password upfront
 sudo -v
 
-# Check for Homebrew and install it if missing
-if test ! $(which brew); then
+# Install Homebrew if missing
+if ! command -v brew &>/dev/null; then
     echo "Installing Homebrew..."
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-brew tap homebrew/versions
-brew tap Goles/battery
-brew tap getantibody/tap
-brew tap homebrew/bundle
-brew tap homebrew/cask
-brew tap homebrew/cask-fonts
-brew tap homebrew/core
-brew tap mas-cli/tap
+# Taps
+brew tap Goles/battery   # battery status tools
+brew tap getantibody/tap # antibody plugin manager
+brew tap mas-cli/tap     # Mac App Store CLI tools
 
-# Make sure we’re using the latest Homebrew
-brew update
+# Update & upgrade
+brew update  # fetch latest list of formulae :contentReference[oaicite:3]{index=3}
+brew upgrade # upgrade installed formulae
 
-# Upgrade any already-installed formulae
-brew upgrade --all
+# Install formulas from Brewfile (absolute path)
+brew bundle install --file="$HOME/dotfilesOSX/homebrewSetup/formulas" --verbose # use specific Brewfile :contentReference[oaicite:4]{index=4}
 
-# Install the Homebrew packages I use on a day-to-day basis.
-brew bundle install --file=brewfile --verbose
+# Cask taps & installs
+brew install brew-cask # install brew-cask helper
+brew tap wix/brew      # tap for applesimutils via wix :contentReference[oaicite:5]{index=5}
+brew tap FelixKratz/formulae
+brew bundle install --file=~/dotfilesOSX/homebrewSetup/casks --verbose # install casks :contentReference[oaicite:6]{index=6}
 
-# INSTAL CASK APPLICATIONS
+# Cleanup outdated versions
+brew cleanup # remove old versions :contentReference[oaicite:7]{index=7}
 
-# Install Caskroom and taps
-brew tap caskroom/cask
-brew install brew-cask
-brew tap caskroom/versions
-brew tap wix/brew # for applesimutis
+# Switch to latest Node LTS
+sudo n lts # upgrade Node LTS via n
 
-# for jdk from zulu 11
-brew tap homebrew/cask-versions
+# Install Warp theme
+bash "$HOME/dotfilesOSX/homebrewSetup/warp/installThemesToWarp.sh"
 
-brew bundle install --file=brewflieCask --verbose
+# Finally, execute the macOS-specific setup
+bash "$HOME/dotfilesOSX/macos" # run additional macOS configuration script :contentReference[oaicite:8]{index=8}
 
-# Remove outdated versions from the cellar
-brew cleanup
+# symbolic link
 
-sudo n lts
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-xattr -r -d com.apple.quarantine /Applications
-
-# !/usr/bin/env bash
-
-# sudo xcode-select --switch /Applications/Xcode.app
-# brew install robotsandpencils/made/xcodes
-
-chmod +x ~/dotfilesOSX/startupScripts/setup_startup_script.sh
-
-# instal lwarp theme
-sh ~/dotfilesOSX/homebrewSetup/warp/installThemesToWarp.sh
-
-# clone this repo and install the fonts for sketchybar https://github.com/kvndrsslr/sketchybar-app-font
+# ln -nfs ~/dotfilesOSX/.zshrc ~/.zshrc
+# ln -nfs ~/dotfilesOSX/.zprofile ~/.zprofile
+# ln -nfs ~/dotfilesOSX/karabiner.json ~/.config/karabiner/karabiner.json
+# ln -s ~/bin/dotfiles/ZSH_THEME/mrp.zsh-theme ~/.oh-my-zsh/custom/themes/mrp.zsh-theme
+# ln -nfs ~/dotfilesOSX/.yabairc ~/.yabairc
+# ln -nfs ~/dotfilesOSX/.fzf.zsh ~/.fzf.zsh

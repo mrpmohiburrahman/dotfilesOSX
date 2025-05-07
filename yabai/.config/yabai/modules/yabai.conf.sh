@@ -15,7 +15,7 @@ yabai -m config normal_window_opacity 1.0
 yabai -m config insert_feedback_color 0xff9dd274
 yabai -m config window_origin_display default
 yabai -m config window_placement second_child
-yabai -m config window_topmost off
+# yabai -m config window_topmost off
 yabai -m config window_opacity_duration 0.0
-yabai -m config window_border_blur off # other wise some window like system settings or karabinar elements gets blurred
+# yabai -m config window_border_blur off # other wise some window like system settings or karabinar elements gets blurred
 yabai -m config external_bar all:39:0

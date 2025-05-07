@@ -13,3 +13,5 @@ yabai -m signal --add event=display_removed action="sleep 1 && $HOME/dotfilesOSX
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
 yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
+
+$HOME/dotfilesOSX/yabai/create_spaces.sh

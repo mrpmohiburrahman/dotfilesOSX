@@ -59,17 +59,24 @@ yabai -m config window_gap 6
 
 # float system preferences. Most of these just disable Yabai form resizing them.
 # yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
+# yabai -m rule --add app="Terminal" space=7 display=2
 yabai -m rule --add app="^System Settings$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Session$" sticky=on layer=above manage=off
+yabai -m rule --add app="^Warp$" space=1 display=1
+yabai -m rule --add app="^Session$" space=3 display=1
+yabai -m rule --add app="^Messenger$" space=4 display=1
+yabai -m rule --add app="^Discord$" space=4 display=1
+yabai -m rule --add app="^Google Chrome$" space=5 display=2
+yabai -m rule --add app="^Code$" space=6 display=2
+yabai -m rule --add app="^Notion$" space=7 display=2
 yabai -m rule --add app="^CleanMyMac$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Setapp$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Flux$" sticky=on layer=above manage=off
-yabai -m rule --add app="^ProtonVPN$" sticky=on layer=above manage=off
-yabai -m rule --add app="^ClearVPN$" sticky=on layer=above manage=off
+# yabai -m rule --add app="^ProtonVPN$" sticky=on layer=above manage=off
+# yabai -m rule --add app="^ClearVPN$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Simulator" sticky=on layer=above manage=off
 yabai -m rule --add app="^Folx$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Anki$" sticky=on layer=above manage=off

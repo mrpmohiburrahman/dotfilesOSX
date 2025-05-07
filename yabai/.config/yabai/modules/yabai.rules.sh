@@ -8,6 +8,7 @@ done
 
 # your fixed-space rules
 yabai -m rule --add app="^Warp$" space=1 display=1
+yabai -m rule --add app="^GoodTask$" space=2 display=1
 yabai -m rule --add app="^Session$" space=3 display=1
 yabai -m rule --add app="^SymlexVPN$" space=3 display=1
 yabai -m rule --add app="^Messenger$" space=4 display=1

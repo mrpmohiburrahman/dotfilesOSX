@@ -1,29 +1,39 @@
-#!/bin/sh
 
-DESIRED_SPACES_PER_DISPLAY=4
-CURRENT_SPACES="$(yabai -m query --displays | jq -r '.[].spaces | @sh')"
+#!/usr/bin/env sh
+# ~/dotfilesOSX/yabai/create_spaces.sh
+# Ensure exactly 4 spaces on every monitor.
 
-DELTA=0
-while read -r line
-do
-  LAST_SPACE="$(echo "${line##* }")"
-  LAST_SPACE=$(($LAST_SPACE+$DELTA))
-  EXISTING_SPACE_COUNT="$(echo "$line" | wc -w)"
-  MISSING_SPACES=$(($DESIRED_SPACES_PER_DISPLAY - $EXISTING_SPACE_COUNT))
-  if [ "$MISSING_SPACES" -gt 0 ]; then
-    for i in $(seq 1 $MISSING_SPACES)
-    do
-      yabai -m space --create "$LAST_SPACE"
-      LAST_SPACE=$(($LAST_SPACE+1))
+DESIRED=4
+
+# 1) For each display object from `yabai -m query --displays`…
+yabai -m query --displays | jq -c '.[]' | while read -r disp; do
+  # 2) Extract its arrangement index
+  idx=$(jq -r '.index' <<<"$disp")                            # :contentReference[oaicite:3]{index=3}
+
+  # 3) How many spaces it currently has
+  count=$(jq -r '.spaces | length' <<<"$disp")                # :contentReference[oaicite:4]{index=4}
+
+  # 4) Difference from our target
+  delta=$(( DESIRED - count ))
+
+  if [ "$delta" -gt 0 ]; then
+    # 5) To add spaces: focus display, then create on active display
+    for _ in $(seq 1 $delta); do
+      yabai -m display --focus "$idx"                           # :contentReference[oaicite:5]{index=5}
+      yabai -m space --create                                   # :contentReference[oaicite:6]{index=6}
     done
-  elif [ "$MISSING_SPACES" -lt 0 ]; then
-    for i in $(seq 1 $((-$MISSING_SPACES)))
-    do
-      yabai -m space --destroy "$LAST_SPACE"
-      LAST_SPACE=$(($LAST_SPACE-1))
+
+  elif [ "$delta" -lt 0 ]; then
+    # 6) To remove spaces: destroy by mission-control index
+    for _ in $(seq 1 $(( -delta ))); do
+      space_idx=$(
+        yabai -m query --spaces --display "$idx"                # :contentReference[oaicite:7]{index=7}
+        | jq -r '.[-1].index'
+      )
+      yabai -m space --destroy "$space_idx"                     # :contentReference[oaicite:8]{index=8}
     done
   fi
-  DELTA=$(($DELTA+$MISSING_SPACES))
-done <<< "$CURRENT_SPACES"
+done
 
-sketchybar --trigger space_change --trigger windows_on_spaces
+# 7) Trigger your bar (e.g. SketchyBar) to update
+sketchybar --trigger space_change --trigger windows_on_spaces   # :contentReference[oaicite:9]{index=9}

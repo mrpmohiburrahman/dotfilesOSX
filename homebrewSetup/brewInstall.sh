@@ -41,7 +41,7 @@ bash "$HOME/dotfilesOSX/macos/main.sh" # run additional macOS configuration scri
 
 if command -v xcodes >/dev/null 2>&1; then
     echo "💿 xcodes found — installing latest Xcode…"
-    xcodes install --latest
+    xcodes install --latest --experimental-unxip
 else
     echo "⚠️ xcodes CLI not installed; skipping Xcode install"
 fi

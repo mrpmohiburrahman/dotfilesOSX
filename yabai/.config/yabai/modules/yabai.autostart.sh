@@ -2,6 +2,7 @@
 # Autostart apps with one-shot rules
 autostart_apps=(
     "Warp:1:1"
+    "GoodTask:2:1"
     "SymlexVPN:3:1"
     "Session:3:1"
     "Messenger:4:1"

@@ -10,9 +10,9 @@ apply_general_ui() {
   defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
   defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-  # Quarantine dialog
+  # Quarantine dialog # Disable the “Are you sure you want to open this application?” dialog
   defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-  # Sidebar icon size
+  # Set sidebar icon size to medium ( default: 2)
   defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 3
 }

@@ -47,3 +47,7 @@ bash "$HOME/dotfilesOSX/macos" # run additional macOS configuration script :cont
 # ln -s ~/bin/dotfiles/ZSH_THEME/mrp.zsh-theme ~/.oh-my-zsh/custom/themes/mrp.zsh-theme
 # ln -nfs ~/dotfilesOSX/.yabairc ~/.yabairc
 # ln -nfs ~/dotfilesOSX/.fzf.zsh ~/.fzf.zsh
+
+# Modular Dock configuration
+bash "$HOME/dotfilesOSX/macos/add-dock-items.sh"
+bash "$HOME/dotfilesOSX/macos/dock_settings.sh"

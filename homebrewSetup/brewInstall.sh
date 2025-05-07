@@ -37,7 +37,14 @@ sudo n lts # upgrade Node LTS via n
 bash "$HOME/dotfilesOSX/homebrewSetup/warp/installThemesToWarp.sh"
 
 # Finally, execute the macOS-specific setup
-bash "$HOME/dotfilesOSX/macos" # run additional macOS configuration script :contentReference[oaicite:8]{index=8}
+bash "$HOME/dotfilesOSX/macos/main.sh" # run additional macOS configuration script :contentReference[oaicite:8]{index=8}
+
+if command -v xcodes >/dev/null 2>&1; then
+    echo "💿 xcodes found — installing latest Xcode…"
+    xcodes install --latest
+else
+    echo "⚠️ xcodes CLI not installed; skipping Xcode install"
+fi
 
 # symbolic link
 
@@ -49,5 +56,6 @@ bash "$HOME/dotfilesOSX/macos" # run additional macOS configuration script :cont
 # ln -nfs ~/dotfilesOSX/.fzf.zsh ~/.fzf.zsh
 
 # Modular Dock configuration
-bash "$HOME/dotfilesOSX/macos/add-dock-items.sh"
-bash "$HOME/dotfilesOSX/macos/dock_settings.sh"
+# bash "$HOME/dotfilesOSX/macos/add-dock-items.sh"
+# bash "$HOME/dotfilesOSX/macos/dock_settings.sh"
+# macos/main.sh

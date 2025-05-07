@@ -1,30 +1,26 @@
-#!/usr/bin/env sh
-# .yabairc
-# changes
-# the scripting-addition must be loaded manually if
-# you are running yabai on macOS Big Sur. Uncomment
-# the following line to have the injection performed
-# when the config is executed during startup.
-#
-# for this to work you must configure sudo such that
-# it will be able to run the command without password
-#
-# see this wiki page for information:
-#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
-#
-# sudo yabai --load-sa
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+#!/usr/bin/env bash
+# ~/.config/yabai/yabairc
+
+# —————————————————————————————————————————————————————————————————————————————
+# (1) Load scripting additions on Big Sur+ and trigger your create_spaces script
+# —————————————————————————————————————————————————————————————————————————————
+# require passwordless sudo for `yabai --load-sa`
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=display_added action="sleep 1 && $HOME/dotfilesOSX/yabai/create_spaces.sh"
 yabai -m signal --add event=display_removed action="sleep 1 && $HOME/dotfilesOSX/yabai/create_spaces.sh"
+
+# also trigger on windows for your SketchyBar
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
 yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
 
+# run once now to populate spaces
 $HOME/dotfilesOSX/yabai/create_spaces.sh
 
-# global settings
+# —————————————————————————————————————————————————————————————————————————————
+# (2) your existing global settings, rules, etc…
+# —————————————————————————————————————————————————————————————————————————————
 yabai -m config mouse_follows_focus off
 yabai -m config focus_follows_mouse off
 yabai -m config window_origin_display default
@@ -35,10 +31,6 @@ yabai -m config window_opacity off
 yabai -m config window_opacity_duration 0.0
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 1.0
-# yabai -m config window_border on
-# yabai -m config window_border_width 1
-# yabai -m config active_window_border_color 0xffe1e3e4
-# yabai -m config normal_window_border_color 0xff2a2f38
 yabai -m config insert_feedback_color 0xff9dd274
 yabai -m config split_ratio 0.50
 yabai -m config auto_balance on # Balance the window tree upon change, so that all windows occupy the same area.
@@ -58,15 +50,17 @@ yabai -m config right_padding 3
 yabai -m config window_gap 6
 
 # float system preferences. Most of these just disable Yabai form resizing them.
-# yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
-# yabai -m rule --add app="Terminal" space=7 display=2
+yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Settings$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
+
+# your fixed-space rules
 yabai -m rule --add app="^Warp$" space=1 display=1
 yabai -m rule --add app="^Session$" space=3 display=1
+yabai -m rule --add app="^SymlexVPN$" space=3 display=1
 yabai -m rule --add app="^Messenger$" space=4 display=1
 yabai -m rule --add app="^Discord$" space=4 display=1
 yabai -m rule --add app="^Google Chrome$" space=5 display=2
@@ -78,10 +72,52 @@ yabai -m rule --add app="^Flux$" sticky=on layer=above manage=off
 # yabai -m rule --add app="^ProtonVPN$" sticky=on layer=above manage=off
 # yabai -m rule --add app="^ClearVPN$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Simulator" sticky=on layer=above manage=off
-yabai -m rule --add app="^Folx$" sticky=on layer=above manage=off
+
+# —————————————————————————————————————————————————————————————————————————————
+# (3) AUTOSTART: open each app into its assigned space/display once yabai is up
+# —————————————————————————————————————————————————————————————————————————————
+# define apps → “space display”
+autostart_apps=(
+    "Warp:1:1"
+    "SymlexVPN:3:1"
+    "Session:3:1"
+    "Messenger:4:1"
+    "Discord:4:1"
+    "Visual Studio Code:6:2"
+)
+
+for entry in "${autostart_apps[@]}"; do
+    IFS=":" read -r app_name space display <<<"$entry"
+    # only launch if not already running
+    if ! pgrep -x "$app_name" >/dev/null; then
+        # one-shot rule sends the next window to the right space/display
+        yabai -m rule --add app="^${app_name//\//\\/}\$" space=$space display=$display --one-shot
+        open -a "$app_name"
+    fi
+done
+
+"Google Chrome:5:2"
+# inside your for-loop, or standalone if you only want Notion:
+if ! pgrep -x "Google Chrome" &>/dev/null; then
+    # one-shot rule for the *next* Notion window
+    yabai -m rule --add app="^Google Chrome$" space=5 display=2 --one-shot
+
+    # give yabai a moment to register the rule, then open Notion
+    sleep 1
+    open -a "Google Chrome" "https://pahe.ink/" "https://psa.wf/" "https://fojik.com/genre/bollywood-hindi/" "https://www.facebook.com/messages/t/" "https://www.linkedin.com/" "https://news.ycombinator.com/" "https://youtube.com/"
+fi
+
+# inside your for-loop, or standalone if you only want Notion:
+if ! pgrep -x "Notion" &>/dev/null; then
+    # one-shot rule for the *next* Notion window
+    yabai -m rule --add app="^Notion$" space=7 display=2 --one-shot
+
+    # give yabai a moment to register the rule, then open Notion
+    sleep 1
+    open -a "/Applications/Notion.app"
+fi
 yabai -m rule --add app="^Anki$" sticky=on layer=above manage=off
 
 # PIP mode
 yabai -m rule --add label="Firfox PIP" app="^Firefox$" title="^(Picture-in-Picture)$" manage=off
-
-echo "yabai configuration loaded.."
+echo "yabai configuration loaded; autostart rules applied."

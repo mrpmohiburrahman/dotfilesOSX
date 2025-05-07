@@ -1,5 +1,7 @@
+-- .config/sketchybar/items/init.lua
 require("items.apple")
-require("items.menus")
+require("items.menus") -- showing menu bar on sketchybar
+-- require("items.workspaces")
 require("items.spaces")
 require("items.front_app")
 require("items.calendar")

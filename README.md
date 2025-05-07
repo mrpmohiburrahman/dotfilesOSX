@@ -51,6 +51,8 @@ stow karabiner
 
 stow sketchybar
 
+stow --target=$HOME yabai
+
 stow zsh
 
 stow lsd

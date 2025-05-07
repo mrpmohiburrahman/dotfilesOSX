@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Source modules in order
+for mod in modules/yabai.signals.sh \
+    modules/yabai.conf.sh \
+    modules/yabai.rules.sh \
+    modules/yabai.autostart.sh; do
+    source "$(dirname "$0")/$mod"
+done
+
+echo "Modular yabai configuration loaded successfully."

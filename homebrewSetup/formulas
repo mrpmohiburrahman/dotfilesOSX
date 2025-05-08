@@ -47,6 +47,7 @@ brew "jq"
 brew "neovim"
 brew "dockutil"
 brew "xcodes"
+brew "switchaudio-osx"
 # brew "graphviz" # Graph visualization software from AT&T and Bell Labs
 # brew "htop" # Improved top (interactive process viewer)
 # brew "imagemagick" # Tools and libraries to manipulate images in many formats

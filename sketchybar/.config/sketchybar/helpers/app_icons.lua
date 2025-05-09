@@ -1,4 +1,4 @@
-# .config/sketchybar/helpers/app_icons.lua
+-- # .config/sketchybar/helpers/app_icons.lua
 return {
     ["Live"] = ":ableton:",
     ["Adobe Bridge"] = ":adobe_bridge:",
@@ -312,5 +312,5 @@ return {
     ["Zeplin"] = ":zeplin:",
     ["zoom.us"] = ":zoom:",
     ["Zotero"] = ":zotero:",
-    ["Zulip"] = ":zulip:",
+    ["Zulip"] = ":zulip:"
 }

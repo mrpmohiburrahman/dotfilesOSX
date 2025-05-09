@@ -1,3 +1,4 @@
+-- .config/sketchybar/bar.lua
 local colors = require("colors")
 
 -- Equivalent to the --bar domain

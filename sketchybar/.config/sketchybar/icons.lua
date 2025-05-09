@@ -1,3 +1,4 @@
+-- .config/sketchybar/icons.lua
 local settings = require("settings")
 
 local icons = {

@@ -436,7 +436,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/bin/dash /Users/mrp/dotfilesOSX/aerospace-scripts/switch_next_window_aeorospace.sh"
+                    "shell_command": "/bin/dash /Users/mrp/dotfilesOSX/yabai/switch_next_window.sh"
                   }
                 ],
                 "type": "basic"

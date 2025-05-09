@@ -1,7 +1,18 @@
 local colors = require("colors")
 local mic = sbar.add("item", "widgets.uname", {
     update_freq = 3,
-    position = "right"
+    position = "right",
+    padding_right = -2,
+    icon = {
+        padding_left = 2
+    },
+    label = {
+        padding_right = 2
+    },
+    background = {
+        color = colors.bg1,
+        border_width = 1 -- optional border
+    }
 })
 -- 3) Helper: sanitize UTF-8 via iconv
 local function sanitize(name, cb)
@@ -58,11 +69,13 @@ local function update(env)
                 mic:set({
                     icon = {
                         string = icon,
-                        color = clr
+                        color = clr,
+                        padding_left = 8
                     },
                     label = {
                         string = string.format("%s %d", dev, vol),
-                        color = clr
+                        color = clr,
+                        padding_right = 8
                     }
                 })
             end)

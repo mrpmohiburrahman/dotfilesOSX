@@ -1,5 +1,12 @@
 -- # .config/sketchybar/helpers/app_icons.lua
 return {
+    ["Session"] = "􀐱",
+    ["SymlexVPN"] = "􁓣",
+    ["Disk Utility"] = "􀤄",
+    ["VeraCrypt"] = "􀝝",
+    ["Photo Booth"] = "􀌞",
+    ["GoodTask"] = ":reminders:",
+    ["iPhone Mirroring"] = "􀬩",
     ["Live"] = ":ableton:",
     ["Adobe Bridge"] = ":adobe_bridge:",
     ["Affinity Designer"] = ":affinity_designer:",
@@ -243,7 +250,6 @@ return {
     ["Raindrop.io"] = ":raindrop_io:",
     ["Reeder"] = ":reeder5:",
     ["Reminders"] = ":reminders:",
-    ["GoodTask"] = ":reminders:",
     ["提醒事项"] = ":reminders:",
     ["Rappels"] = ":reminders:",
     ["Replit"] = ":replit:",

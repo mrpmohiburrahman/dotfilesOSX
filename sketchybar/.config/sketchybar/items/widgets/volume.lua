@@ -23,12 +23,13 @@ local volume_percent = sbar.add("item", "widgets.volume1", {
 -- Volume icon display
 local volume_icon = sbar.add("item", "widgets.volume2", {
     position = "right",
-    padding_right = -1,
+    padding_right = 6,
     icon = {
         string = icons.volume._100,
         width = 0,
         align = "left",
         color = colors.grey,
+        padding_right = 4, -- extra spacing just for the icon text :contentReference[oaicite:1]{index=1}
         font = {
             style = settings.font.style_map["Regular"],
             size = 14.0
@@ -37,6 +38,7 @@ local volume_icon = sbar.add("item", "widgets.volume2", {
     label = {
         width = 25,
         align = "left",
+        padding_left = 4, -- nudge the label away from the icon :contentReference[oaicite:2]{index=2}
         font = {
             style = settings.font.style_map["Regular"],
             size = 14.0

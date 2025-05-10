@@ -32,6 +32,7 @@ brew "lsd" # The next gen ls command https://github.com/lsd-rs/lsd
 brew "jq"
 brew "fzf" # Command-line fuzzy finder written in Go
 brew "direnv"
+brew "huggingface-cli"
 # brew "ack" # Search tool like grep, but optimized for programmers
 # brew "autossh" # Automatically restart SSH sessions and tunnels
 # brew "clinfo" # Print information about OpenCL platforms and devices

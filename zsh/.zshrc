@@ -114,7 +114,7 @@ export PATH=$PATH:$HOME/.maestro/bin
 
 # Mega CMD
 export PATH=/Applications/MEGAcmd.app/Contents/MacOS:$PATH
-source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
+# source /Applications/MEGAcmd.app/Contents/MacOS/megacmd_completion.sh
 
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -180,4 +180,6 @@ if [ -f '/Users/mrp/Documents/0-Inbox/google-cloud-sdk/path.zsh.inc' ]; then . '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mrp/Documents/0-Inbox/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mrp/Documents/0-Inbox/google-cloud-sdk/completion.zsh.inc'; fi
-. "$HOME/.cargo/env" # For sh/bash/zsh/ash/dash/pdksh
+if [ -r "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi

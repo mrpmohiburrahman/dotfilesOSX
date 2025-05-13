@@ -1,0 +1,272 @@
+06:28:29.103: [macOS] Permission for audio device access denied.
+06:28:29.106: [macOS] Permission for video device access denied.
+06:28:29.111: [macOS] Permission for accessibility denied.
+06:28:29.115: [macOS] Permission for screen capture denied.
+06:28:31.986: [macOS] Permission for screen capture denied.
+06:29:01.600: [macOS] Permission for video device access granted.
+06:29:05.021: [macOS] Permission for audio device access granted.
+06:29:06.264: [macOS] Permission for accessibility denied.
+06:29:19.001: [macOS] Permission for accessibility granted.
+06:29:22.047: CPU Name: Apple M1 Pro
+06:29:22.047: Physical Cores: 8, Logical Cores: 8
+06:29:22.047: Physical Memory: 16384MB Total
+06:29:22.047: Model Identifier: MacBookPro18,3
+06:29:22.047: OS Name: macOS
+06:29:22.047: OS Version: Version 15.4.1 (Build 24E263)
+06:29:22.047: Rosetta translation used: false
+06:29:22.047: Kernel Version: 24.4.0
+06:29:22.048: hotkeys-cocoa: Using keyboard layout 'com.apple.keylayout.ABC'
+06:29:22.049: Current Date/Time: 2025-05-12, 06:29:22
+06:29:22.049: Browser Hardware Acceleration: true
+06:29:22.049: Qt Version: 6.6.3 (runtime), 6.6.3 (compiled)
+06:29:22.049: Portable mode: false
+06:29:22.090: OBS 31.0.3 (mac)
+06:29:22.090: ---------------------------------
+06:29:22.092: ---------------------------------
+06:29:22.092: audio settings reset:
+06:29:22.092: 	samples per sec: 48000
+06:29:22.092: 	speakers:        2
+06:29:22.092: 	max buffering:   960 milliseconds
+06:29:22.092: 	buffering type:  dynamically increasing
+06:29:22.098: ---------------------------------
+06:29:22.098: Initializing OpenGL...
+06:29:22.206: Loading up OpenGL on adapter Apple Apple M1 Pro
+06:29:22.206: OpenGL loaded successfully, version 4.1 Metal - 89.4, shading language 4.10
+06:29:22.390: ---------------------------------
+06:29:22.390: video settings reset:
+06:29:22.390: 	base resolution:   1512x982
+06:29:22.390: 	output resolution: 1132x736
+06:29:22.390: 	downscale filter:  Bicubic
+06:29:22.390: 	fps:               30/1
+06:29:22.390: 	format:            NV12
+06:29:22.390: 	YUV mode:          Rec. 709/Partial
+06:29:22.390: NV12 texture support enabled
+06:29:22.390: P010 texture support not available
+06:29:22.390: Audio monitoring device:
+06:29:22.390: 	name: Default
+06:29:22.390: 	id: default
+06:29:22.391: ---------------------------------
+06:29:22.405: No AJA devices found, skipping loading AJA UI plugin
+06:29:22.405: Failed to initialize module 'aja-output-ui'
+06:29:22.417: No AJA devices found, skipping loading AJA plugin
+06:29:22.417: Failed to initialize module 'aja'
+06:29:22.426: Failed to load 'en-US' text for module: 'decklink-captions'
+06:29:22.431: Failed to load 'en-US' text for module: 'decklink-output-ui'
+06:29:22.435: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+06:29:22.435: Failed to initialize module 'decklink'
+06:29:22.661: [obs-browser]: Version 2.24.6
+06:29:22.662: [obs-browser]: CEF Version 127.0.6533.120 (runtime), 127.0.0-6533-fix-stutter.3039+g2b7d20b+chromium-127.0.6533.120 (compiled)
+06:29:22.715: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.5.6 | RPC Version: 1)
+06:29:22.715: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.6.3 | Qt version (run-time): 6.6.3
+06:29:22.715: [obs-websocket] [obs_module_load] Linked ASIO Version: 103100
+06:29:22.715: DEPRECATION: obs_frontend_get_global_config is deprecated. Read from global or user configuration explicitly instead.
+06:29:22.715: [obs-websocket] [Config::Load] Existing configuration not found, using defaults.
+06:29:22.715: [obs-websocket] [Config::Load] (FirstLoad) Generating new server password.
+06:29:22.719: [obs-websocket] [obs_module_load] Module loaded.
+06:29:22.753: [vlc-video]: VLC 3.0.21 Vetinari found, VLC video source enabled
+06:29:22.753: ---------------------------------
+06:29:22.753:   Loaded Modules:
+06:29:22.753:     vlc-video
+06:29:22.753:     text-freetype2
+06:29:22.753:     rtmp-services
+06:29:22.753:     obs-x264
+06:29:22.753:     obs-websocket
+06:29:22.753:     obs-webrtc
+06:29:22.753:     obs-vst
+06:29:22.753:     obs-transitions
+06:29:22.753:     obs-outputs
+06:29:22.753:     obs-filters
+06:29:22.753:     obs-ffmpeg
+06:29:22.753:     obs-browser
+06:29:22.753:     mac-virtualcam
+06:29:22.753:     mac-videotoolbox
+06:29:22.753:     mac-syphon
+06:29:22.753:     mac-capture
+06:29:22.753:     mac-avcapture
+06:29:22.753:     mac-avcapture-legacy
+06:29:22.753:     image-source
+06:29:22.753:     frontend-tools
+06:29:22.753:     decklink-output-ui
+06:29:22.753:     decklink-captions
+06:29:22.753:     coreaudio-encoder
+06:29:22.753: ---------------------------------
+06:29:22.753: [VideoToolbox encoder]: Added VideoToolbox encoders
+06:29:22.753: ---------------------------------
+06:29:22.753: Available Encoders:
+06:29:22.753:   Video Encoders:
+06:29:22.753: 	- ffmpeg_aom_av1 (AOM AV1)
+06:29:22.753: 	- obs_x264 (x264)
+06:29:22.753: 	- com.apple.videotoolbox.videoencoder.prores-422 (Apple VT ProRes Software Encoder)
+06:29:22.753: 	- com.apple.videotoolbox.videoencoder.appleproreshw.422 (Apple VT ProRes Hardware Encoder)
+06:29:22.753: 	- com.apple.videotoolbox.videoencoder.ave.avc (Apple VT H264 Hardware Encoder)
+06:29:22.753: 	- com.apple.videotoolbox.videoencoder.h264 (Apple VT H264 Software Encoder)
+06:29:22.753: 	- com.apple.videotoolbox.videoencoder.ave.hevc (Apple VT HEVC Hardware Encoder)
+06:29:22.753: 	- com.apple.videotoolbox.videoencoder.hevc.vcp (Apple VT HEVC Software Encoder)
+06:29:22.753:   Audio Encoders:
+06:29:22.753: 	- CoreAudio_AAC (CoreAudio AAC)
+06:29:22.753: 	- ffmpeg_aac (FFmpeg AAC)
+06:29:22.753: 	- ffmpeg_opus (FFmpeg Opus)
+06:29:22.753: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+06:29:22.753: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+06:29:22.753: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+06:29:22.753: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+06:29:22.753: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+06:29:22.753: ==== Startup complete ===============================================
+06:29:22.773: No scene file found, creating default scene
+06:29:22.798: All scene data cleared
+06:29:22.798: ------------------------------------------------
+06:29:22.862: Downmix enabled: 1 to 2 channels.
+06:29:22.881: coreaudio: Device 'krisp microphone' [48000 Hz] initialized
+06:29:22.882: Switched to scene 'Scene'
+06:29:22.882: Created scene collection 'Untitled' (clean, Untitled.json)
+06:29:22.882: ------------------------------------------------
+06:29:22.929: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Mic/Aux)
+06:29:22.929: 
+06:29:23.898: [rtmp-services plugin] Successfully updated file 'services.json' (version 272)
+06:29:23.898: [rtmp-services plugin] Successfully updated package (version 272)
+06:29:23.913: [mac-virtualcam] mac-camera-extension: OSSystemExtensionErrorCode 8 ("code signature invalid")
+06:30:23.240: 
+06:30:23.240: ==== Auto-config wizard testing commencing ======
+
+06:30:30.159: Number of remaining views: 1
+06:30:30.159: ---------------------------------
+06:30:30.159: video settings reset:
+06:30:30.159: 	base resolution:   1920x1080
+06:30:30.159: 	output resolution: 1920x1080
+06:30:30.159: 	downscale filter:  Bicubic
+06:30:30.159: 	fps:               60/1
+06:30:30.159: 	format:            NV12
+06:30:30.159: 	YUV mode:          Rec. 709/Partial
+06:30:30.159: NV12 texture support enabled
+06:30:30.159: P010 texture support not available
+06:30:30.181: 
+06:30:30.181: ==== Auto-config wizard testing stopping ========
+
+06:30:30.221: [mac-virtualcam] mac-camera-extension: OSSystemExtensionErrorCode 8 ("code signature invalid")
+06:31:04.475: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:31:25.948: User added source 'HP 22fw' (screen_capture) to scene 'Scene'
+06:31:26.022: adding 106 milliseconds of audio buffering, total audio buffering is now 149 milliseconds (source: HP 22fw)
+06:31:26.022: 
+06:31:51.515: [ mac-screencapture ]: init_screen_stream: Invalid target window ID:  0
+06:31:51.515: 
+06:32:09.093: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:32:09.557: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:32:29.044: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:32:29.363: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:37:35.160: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:37:51.713: User added source 'Obsbot meet 2' (macos-avcapture) to scene 'Scene'
+06:37:51.753: Obsbot meet 2: No device selected
+06:37:55.314: Obsbot meet 2: Selected device 'OBSBOT Meet 2 StreamCamera'
+06:38:10.630: Obsbot meet 2: Selected device 'iPhone Camera'
+06:38:18.641: Obsbot meet 2: Selected device 'OBSBOT Meet 2 StreamCamera'
+06:39:15.256: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:39:23.520: Downmix enabled: 1 to 2 channels.
+06:39:23.535: coreaudio: Device 'krisp microphone' [48000 Hz] initialized
+06:39:23.538: User added source 'Krisp' (coreaudio_input_capture) to scene 'Scene'
+06:39:28.070: Downmix enabled: 1 to 2 channels.
+06:39:28.081: coreaudio: Device 'krisp microphone' [48000 Hz] initialized
+06:41:44.056: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:41:51.145: Source 'Scene' renamed to 'Landscape'
+06:42:01.410: User added scene 'Potrait'
+06:42:01.413: User switched to scene 'Potrait'
+06:42:03.881: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:42:04.249: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:42:10.513: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:42:10.866: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:42:26.990: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:42:27.712: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+06:42:35.513: Populating font family aliases took 221 ms. Replace uses of missing font family "MS Shell Dlg" with one that exists to avoid this cost. 
+06:42:35.519:   OpenType support missing for "Open Sans", script 11
+06:42:35.519:   OpenType support missing for ".AppleSystemUIFont", script 11
+06:42:35.538:   OpenType support missing for "Open Sans", script 12
+06:42:35.539:   OpenType support missing for ".AppleSystemUIFont", script 12
+06:42:35.540:   OpenType support missing for "Open Sans", script 20
+06:42:35.540:   OpenType support missing for ".AppleSystemUIFont", script 20
+06:43:53.985: Settings changed (outputs)
+06:43:53.986: ------------------------------------------------
+06:43:54.076: [mac-virtualcam] mac-camera-extension: OSSystemExtensionErrorCode 8 ("code signature invalid")
+06:45:04.926: Obsbot meet 2: Received disconnect event for device 'OBSBOT Meet 2 StreamCamera' (UUID 0x1000003564fefb)
+07:28:46.471: [ mac-screencapture ]: Stream stopped as no capture source was not found.
+07:28:46.733: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+07:49:56.162: ==== Shutting down ==================================================
+07:49:56.273: All scene data cleared
+07:49:56.273: ------------------------------------------------
+07:49:56.365: [obs-websocket] [obs_module_unload] Shutting down...
+07:49:56.366: Tried to call obs_frontend_remove_event_callback with no callbacks!
+07:49:56.366: [obs-websocket] [obs_module_unload] Finished shutting down.
+07:49:56.369: [Scripting] Total detached callbacks: 0
+07:49:56.370: Freeing OBS context data
+07:49:56.394: == Profiler Results =============================
+07:49:56.394: run_program_init: 54025.5 ms
+07:49:56.394:  ┣OBSApp::AppInit: 16.318 ms
+07:49:56.394:  ┃ ┗OBSApp::InitLocale: 1.97 ms
+07:49:56.394:  ┗OBSApp::OBSInit: 938.976 ms
+07:49:56.394:    ┣obs_startup: 2.358 ms
+07:49:56.394:    ┗OBSBasic::OBSInit: 894.26 ms
+07:49:56.394:      ┣OBSBasic::InitBasicConfig: 1.193 ms
+07:49:56.394:      ┣OBSBasic::ResetAudio: 0.28 ms
+07:49:56.394:      ┣OBSBasic::ResetVideo: 298.061 ms
+07:49:56.394:      ┃ ┗obs_init_graphics: 297.761 ms
+07:49:56.394:      ┃   ┗shader compilation: 184.027 ms
+07:49:56.394:      ┣OBSBasic::InitOBSCallbacks: 0.002 ms
+07:49:56.394:      ┣OBSBasic::InitHotkeys: 0.009 ms
+07:49:56.394:      ┣obs_load_all_modules2: 361.906 ms
+07:49:56.394:      ┃ ┣obs_init_module(aja-output-ui): 1.138 ms
+07:49:56.394:      ┃ ┣obs_init_module(aja): 0.814 ms
+07:49:56.394:      ┃ ┣obs_init_module(coreaudio-encoder): 0.001 ms
+07:49:56.394:      ┃ ┣obs_init_module(decklink-captions): 0 ms
+07:49:56.394:      ┃ ┣obs_init_module(decklink-output-ui): 0 ms
+07:49:56.394:      ┃ ┣obs_init_module(decklink): 0.036 ms
+07:49:56.394:      ┃ ┣obs_init_module(frontend-tools): 4.477 ms
+07:49:56.394:      ┃ ┣obs_init_module(image-source): 0.007 ms
+07:49:56.394:      ┃ ┣obs_init_module(mac-avcapture-legacy): 106.999 ms
+07:49:56.394:      ┃ ┣obs_init_module(mac-avcapture): 0.002 ms
+07:49:56.394:      ┃ ┣obs_init_module(mac-capture): 0.172 ms
+07:49:56.394:      ┃ ┣obs_init_module(mac-syphon): 0.001 ms
+07:49:56.394:      ┃ ┣obs_init_module(mac-videotoolbox): 0.006 ms
+07:49:56.394:      ┃ ┣obs_init_module(mac-virtualcam): 0 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-browser): 53.985 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-ffmpeg): 1.486 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-filters): 0.01 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-outputs): 0.002 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-transitions): 0.004 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-vst): 0.001 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-webrtc): 0.019 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-websocket): 4.38 ms
+07:49:56.394:      ┃ ┣obs_init_module(obs-x264): 0.001 ms
+07:49:56.394:      ┃ ┣obs_init_module(rtmp-services): 0.166 ms
+07:49:56.394:      ┃ ┣obs_init_module(text-freetype2): 0.041 ms
+07:49:56.394:      ┃ ┗obs_init_module(vlc-video): 9.163 ms
+07:49:56.394:      ┣OBSBasic::InitService: 1.485 ms
+07:49:56.394:      ┣OBSBasic::ResetOutputs: 16.302 ms
+07:49:56.394:      ┣OBSBasic::CreateHotkeys: 0.111 ms
+07:49:56.394:      ┣OBSBasic::InitPrimitives: 0.04 ms
+07:49:56.394:      ┗OBSBasic::Load: 108.73 ms
+07:49:56.394: obs_hotkey_thread(25 ms): min=0 ms, median=0 ms, max=6.278 ms, 99th percentile=0.002 ms, 100% below 25 ms
+07:49:56.394: audio_thread(Audio): min=0.003 ms, median=0.088 ms, max=35.969 ms, 99th percentile=2.313 ms
+07:49:56.394: obs_graphics_thread(33.3333 ms): min=0.138 ms, median=2.798 ms, max=56.877 ms, 99th percentile=7.864 ms, 99.9508% below 33.333 ms
+07:49:56.394:  ┣tick_sources: min=0 ms, median=0.021 ms, max=0.354 ms, 99th percentile=0.071 ms
+07:49:56.394:  ┣output_frame: min=0.093 ms, median=0.696 ms, max=3.04 ms, 99th percentile=1.2 ms
+07:49:56.394:  ┃ ┗gs_context(video->graphics): min=0.093 ms, median=0.695 ms, max=3.04 ms, 99th percentile=1.199 ms
+07:49:56.394:  ┃   ┣render_video: min=0.02 ms, median=0.152 ms, max=0.983 ms, 99th percentile=0.327 ms
+07:49:56.394:  ┃   ┃ ┗render_main_texture: min=0.018 ms, median=0.136 ms, max=0.964 ms, 99th percentile=0.285 ms
+07:49:56.394:  ┃   ┗gs_flush: min=0.06 ms, median=0.524 ms, max=2.641 ms, 99th percentile=0.985 ms
+07:49:56.394:  ┗render_displays: min=0 ms, median=1.972 ms, max=56.705 ms, 99th percentile=7.182 ms
+07:49:56.394: obs_graphics_thread(16.6667 ms): min=0.221 ms, median=3.036 ms, max=656.758 ms, 99th percentile=9.709 ms, 99.9598% below 16.667 ms
+07:49:56.394:  ┣tick_sources: min=0.002 ms, median=0.036 ms, max=183.799 ms, 99th percentile=1.725 ms
+07:49:56.394:  ┣output_frame: min=0.041 ms, median=0.752 ms, max=24.996 ms, 99th percentile=2.48 ms
+07:49:56.394:  ┃ ┗gs_context(video->graphics): min=0.041 ms, median=0.751 ms, max=24.99 ms, 99th percentile=2.477 ms
+07:49:56.395:  ┃   ┣render_video: min=0.006 ms, median=0.13 ms, max=24.21 ms, 99th percentile=1.052 ms
+07:49:56.395:  ┃   ┃ ┗render_main_texture: min=0.005 ms, median=0.117 ms, max=24.206 ms, 99th percentile=1.01 ms
+07:49:56.395:  ┃   ┗gs_flush: min=0.034 ms, median=0.586 ms, max=10.409 ms, 99th percentile=2.027 ms
+07:49:56.395:  ┗render_displays: min=0 ms, median=2.055 ms, max=644.761 ms, 99th percentile=8.525 ms
+07:49:56.395: OBSBasic::ResetVideo: 8.718 ms
+07:49:56.395: OBSBasic::ResetOutputs: min=0.817 ms, median=0 ms, max=0.967 ms, 99th percentile=0.967 ms
+07:49:56.395: OBSBasicSettings::LoadThemeList: min=0.088 ms, median=0 ms, max=0.11 ms, 99th percentile=0.11 ms
+07:49:56.395: =================================================
+07:49:56.395: == Profiler Time Between Calls ==================
+07:49:56.395: obs_hotkey_thread(25 ms): min=25.014 ms, median=30.062 ms, max=106.369 ms, 1.65781% within ±2% of 25 ms (0% lower, 98.3422% higher)
+07:49:56.395: obs_graphics_thread(33.3333 ms): min=9.401 ms, median=33.334 ms, max=56.884 ms, 89.7146% within ±2% of 33.333 ms (5.21654% lower, 5.0689% higher)
+07:49:56.395: obs_graphics_thread(16.6667 ms): min=1.531 ms, median=16.668 ms, max=656.763 ms, 48.6032% within ±2% of 16.667 ms (25.4374% lower, 25.9594% higher)
+07:49:56.395: =================================================
+07:49:56.448: Number of memory leaks: 0

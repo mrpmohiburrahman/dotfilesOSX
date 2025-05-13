@@ -67,6 +67,14 @@ stow starship
 
 stow alacritty
 
+stow --target=$HOME obs-studio
+
+```shell
+# verifies if the symlink is done or not
+ls -l ~/Library/Application\ Support/obs-studio
+
+```
+
 <!-- cd nvim
 stow -t "$HOME/" CoreNvim --verbose  -->
 

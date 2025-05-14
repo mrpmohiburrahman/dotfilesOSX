@@ -1,0 +1,440 @@
+19:10:21.136: [macOS] Permission for audio device access granted.
+19:10:21.138: [macOS] Permission for video device access granted.
+19:10:21.142: [macOS] Permission for accessibility granted.
+19:10:21.147: [macOS] Permission for screen capture granted.
+19:10:21.147: CPU Name: Apple M1 Pro
+19:10:21.147: Physical Cores: 8, Logical Cores: 8
+19:10:21.147: Physical Memory: 16384MB Total
+19:10:21.147: Model Identifier: MacBookPro18,3
+19:10:21.147: OS Name: macOS
+19:10:21.147: OS Version: Version 15.4.1 (Build 24E263)
+19:10:21.147: Rosetta translation used: false
+19:10:21.147: Kernel Version: 24.4.0
+19:10:21.148: hotkeys-cocoa: Using keyboard layout 'com.apple.keylayout.ABC'
+19:10:21.148: Current Date/Time: 2025-05-13, 19:10:21
+19:10:21.148: Browser Hardware Acceleration: true
+19:10:21.148: Qt Version: 6.6.3 (runtime), 6.6.3 (compiled)
+19:10:21.148: Portable mode: false
+19:10:21.271: OBS 31.0.3 (mac)
+19:10:21.271: ---------------------------------
+19:10:21.273: ---------------------------------
+19:10:21.273: audio settings reset:
+19:10:21.273: 	samples per sec: 48000
+19:10:21.273: 	speakers:        2
+19:10:21.273: 	max buffering:   960 milliseconds
+19:10:21.273: 	buffering type:  dynamically increasing
+19:10:21.274: ---------------------------------
+19:10:21.274: Initializing OpenGL...
+19:10:21.318: Loading up OpenGL on adapter Apple Apple M1 Pro
+19:10:21.318: OpenGL loaded successfully, version 4.1 Metal - 89.4, shading language 4.10
+19:10:21.495: ---------------------------------
+19:10:21.495: video settings reset:
+19:10:21.495: 	base resolution:   1920x1080
+19:10:21.495: 	output resolution: 1920x1080
+19:10:21.495: 	downscale filter:  Bicubic
+19:10:21.495: 	fps:               60/1
+19:10:21.495: 	format:            NV12
+19:10:21.495: 	YUV mode:          Rec. 709/Partial
+19:10:21.495: NV12 texture support enabled
+19:10:21.495: P010 texture support not available
+19:10:21.497: Audio monitoring device:
+19:10:21.497: 	name: Default
+19:10:21.497: 	id: default
+19:10:21.498: ---------------------------------
+19:10:21.502: No AJA devices found, skipping loading AJA UI plugin
+19:10:21.502: Failed to initialize module 'aja-output-ui'
+19:10:21.504: No AJA devices found, skipping loading AJA plugin
+19:10:21.504: Failed to initialize module 'aja'
+19:10:21.505: Failed to load 'en-US' text for module: 'decklink-captions'
+19:10:21.507: Failed to load 'en-US' text for module: 'decklink-output-ui'
+19:10:21.508: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+19:10:21.508: Failed to initialize module 'decklink'
+19:10:21.621: [obs-browser]: Version 2.24.6
+19:10:21.622: [obs-browser]: CEF Version 127.0.6533.120 (runtime), 127.0.0-6533-fix-stutter.3039+g2b7d20b+chromium-127.0.6533.120 (compiled)
+19:10:21.635: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.5.6 | RPC Version: 1)
+19:10:21.635: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.6.3 | Qt version (run-time): 6.6.3
+19:10:21.635: [obs-websocket] [obs_module_load] Linked ASIO Version: 103100
+19:10:21.635: DEPRECATION: obs_frontend_get_global_config is deprecated. Read from global or user configuration explicitly instead.
+19:10:21.638: [obs-websocket] [obs_module_load] Module loaded.
+19:10:21.648: [vlc-video]: VLC 3.0.21 Vetinari found, VLC video source enabled
+19:10:21.650: [Advanced Masks] loaded version 1.1.0
+19:10:21.650: ---------------------------------
+19:10:21.650:   Loaded Modules:
+19:10:21.650:     obs-advanced-masks
+19:10:21.650:     vlc-video
+19:10:21.650:     text-freetype2
+19:10:21.650:     rtmp-services
+19:10:21.650:     obs-x264
+19:10:21.650:     obs-websocket
+19:10:21.650:     obs-webrtc
+19:10:21.650:     obs-vst
+19:10:21.650:     obs-transitions
+19:10:21.650:     obs-outputs
+19:10:21.650:     obs-filters
+19:10:21.650:     obs-ffmpeg
+19:10:21.650:     obs-browser
+19:10:21.650:     mac-virtualcam
+19:10:21.650:     mac-videotoolbox
+19:10:21.650:     mac-syphon
+19:10:21.650:     mac-capture
+19:10:21.650:     mac-avcapture
+19:10:21.650:     mac-avcapture-legacy
+19:10:21.650:     image-source
+19:10:21.650:     frontend-tools
+19:10:21.650:     decklink-output-ui
+19:10:21.650:     decklink-captions
+19:10:21.650:     coreaudio-encoder
+19:10:21.650: ---------------------------------
+19:10:21.654: [VideoToolbox encoder]: Added VideoToolbox encoders
+19:10:21.654: ---------------------------------
+19:10:21.654: Available Encoders:
+19:10:21.655:   Video Encoders:
+19:10:21.655: 	- ffmpeg_aom_av1 (AOM AV1)
+19:10:21.655: 	- obs_x264 (x264)
+19:10:21.655: 	- com.apple.videotoolbox.videoencoder.prores-422 (Apple VT ProRes Software Encoder)
+19:10:21.655: 	- com.apple.videotoolbox.videoencoder.appleproreshw.422 (Apple VT ProRes Hardware Encoder)
+19:10:21.655: 	- com.apple.videotoolbox.videoencoder.ave.avc (Apple VT H264 Hardware Encoder)
+19:10:21.655: 	- com.apple.videotoolbox.videoencoder.h264 (Apple VT H264 Software Encoder)
+19:10:21.655: 	- com.apple.videotoolbox.videoencoder.ave.hevc (Apple VT HEVC Hardware Encoder)
+19:10:21.655: 	- com.apple.videotoolbox.videoencoder.hevc.vcp (Apple VT HEVC Software Encoder)
+19:10:21.655:   Audio Encoders:
+19:10:21.655: 	- CoreAudio_AAC (CoreAudio AAC)
+19:10:21.655: 	- ffmpeg_aac (FFmpeg AAC)
+19:10:21.655: 	- ffmpeg_opus (FFmpeg Opus)
+19:10:21.655: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+19:10:21.655: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+19:10:21.655: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+19:10:21.655: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+19:10:21.655: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+19:10:21.655: ==== Startup complete ===============================================
+19:10:21.681: All scene data cleared
+19:10:21.681: ------------------------------------------------
+19:10:21.751: Downmix enabled: 1 to 2 channels.
+19:10:21.779: coreaudio: Device 'krisp microphone' [48000 Hz] initialized
+19:10:21.779: [Loaded global audio device]: 'Mic/Aux'
+19:10:21.916: Obsbot meet 2: Selected device 'OBSBOT Meet 2 StreamCamera'
+19:10:21.954: Downmix enabled: 1 to 2 channels.
+19:10:21.959: adding 64 milliseconds of audio buffering, total audio buffering is now 64 milliseconds (source: HP 22fw)
+19:10:21.959: 
+19:10:21.964: coreaudio: Device 'krisp microphone' [48000 Hz] initialized
+19:10:21.965: Switched to scene 'Landscape'
+19:10:21.965: ------------------------------------------------
+19:10:21.965: Loaded scenes:
+19:10:21.965: - scene 'Landscape':
+19:10:21.965:     - source: 'HP 22fw' (screen_capture)
+19:10:21.965:     - source: 'Obsbot meet 2' (macos-avcapture)
+19:10:21.965:         - filter: 'Advanced Mask' (advanced_masks_filter_v2)
+19:10:21.965:     - source: 'Krisp' (coreaudio_input_capture)
+19:10:21.965: - scene 'Potrait':
+19:10:21.965: ------------------------------------------------
+19:10:22.306: [mac-virtualcam] mac-camera-extension: OSSystemExtensionErrorCode 8 ("code signature invalid")
+19:10:27.984: User switched to scene 'Potrait'
+19:10:29.833: User switched to scene 'Landscape'
+19:10:36.620: User added scene 'Scene 2'
+19:10:36.621: User switched to scene 'Scene 2'
+19:11:24.375: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:11:30.638: User added source 'Obsbot meet 2' (macos-avcapture) to scene 'Scene 2'
+19:11:39.011: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:11:44.670: User removed filter 'Advanced Mask' (advanced_masks_filter_v2) from source 'Obsbot meet 2'
+19:12:03.555: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:12:57.954: [Media Source 'camera mask']: settings:
+19:12:57.954: 	input:                   
+19:12:57.954: 	input_format:            (null)
+19:12:57.954: 	speed:                   100
+19:12:57.954: 	is_looping:              no
+19:12:57.954: 	is_linear_alpha:         no
+19:12:57.954: 	is_hw_decoding:          no
+19:12:57.954: 	is_clear_on_media_end:   yes
+19:12:57.954: 	restart_on_activate:     yes
+19:12:57.954: 	close_when_inactive:     no
+19:12:57.954: 	full_decode:             no
+19:12:57.954: 	ffmpeg_options:          
+19:12:57.957: User added source 'camera mask' (ffmpeg_source) to scene 'Scene 2'
+19:13:26.948: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:14:13.169: [Media Source 'camera mask']: settings:
+19:14:13.169: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Square to round_mask.webm
+19:14:13.169: 	input_format:            (null)
+19:14:13.169: 	speed:                   100
+19:14:13.169: 	is_looping:              yes
+19:14:13.169: 	is_linear_alpha:         no
+19:14:13.169: 	is_hw_decoding:          no
+19:14:13.169: 	is_clear_on_media_end:   yes
+19:14:13.169: 	restart_on_activate:     yes
+19:14:13.169: 	close_when_inactive:     no
+19:14:13.169: 	full_decode:             no
+19:14:13.169: 	ffmpeg_options:          
+19:15:17.381: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:15:24.197: [Media Source 'cam border']: settings:
+19:15:24.197: 	input:                   
+19:15:24.197: 	input_format:            (null)
+19:15:24.197: 	speed:                   100
+19:15:24.197: 	is_looping:              no
+19:15:24.197: 	is_linear_alpha:         no
+19:15:24.197: 	is_hw_decoding:          no
+19:15:24.197: 	is_clear_on_media_end:   yes
+19:15:24.197: 	restart_on_activate:     yes
+19:15:24.197: 	close_when_inactive:     no
+19:15:24.197: 	full_decode:             no
+19:15:24.197: 	ffmpeg_options:          
+19:15:24.201: User added source 'cam border' (ffmpeg_source) to scene 'Scene 2'
+19:16:24.603: [Media Source 'cam border']: settings:
+19:16:24.603: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Square to round_cam overlay.webm
+19:16:24.603: 	input_format:            (null)
+19:16:24.603: 	speed:                   100
+19:16:24.603: 	is_looping:              yes
+19:16:24.603: 	is_linear_alpha:         no
+19:16:24.603: 	is_hw_decoding:          no
+19:16:24.603: 	is_clear_on_media_end:   yes
+19:16:24.603: 	restart_on_activate:     yes
+19:16:24.603: 	close_when_inactive:     no
+19:16:24.603: 	full_decode:             no
+19:16:24.603: 	ffmpeg_options:          
+19:16:30.123: User switched to scene 'Potrait'
+19:16:31.079: User switched to scene 'Scene 2'
+19:17:42.027: [Media Source 'camera mask']: settings:
+19:17:42.027: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Blob_mask.webm
+19:17:42.027: 	input_format:            (null)
+19:17:42.027: 	speed:                   100
+19:17:42.027: 	is_looping:              yes
+19:17:42.027: 	is_linear_alpha:         no
+19:17:42.027: 	is_hw_decoding:          no
+19:17:42.027: 	is_clear_on_media_end:   yes
+19:17:42.027: 	restart_on_activate:     yes
+19:17:42.027: 	close_when_inactive:     no
+19:17:42.027: 	full_decode:             no
+19:17:42.027: 	ffmpeg_options:          
+19:17:54.337: [Media Source 'camera mask']: settings:
+19:17:54.337: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Blob_mask.webm
+19:17:54.337: 	input_format:            (null)
+19:17:54.337: 	speed:                   100
+19:17:54.337: 	is_looping:              yes
+19:17:54.337: 	is_linear_alpha:         no
+19:17:54.337: 	is_hw_decoding:          no
+19:17:54.337: 	is_clear_on_media_end:   yes
+19:17:54.337: 	restart_on_activate:     yes
+19:17:54.337: 	close_when_inactive:     no
+19:17:54.337: 	full_decode:             no
+19:17:54.337: 	ffmpeg_options:          
+19:17:55.652: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:17:55.980: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:18:08.586: [Media Source 'blob-mask-overlay']: settings:
+19:18:08.586: 	input:                   
+19:18:08.586: 	input_format:            (null)
+19:18:08.586: 	speed:                   100
+19:18:08.586: 	is_looping:              no
+19:18:08.586: 	is_linear_alpha:         no
+19:18:08.586: 	is_hw_decoding:          no
+19:18:08.586: 	is_clear_on_media_end:   yes
+19:18:08.586: 	restart_on_activate:     yes
+19:18:08.586: 	close_when_inactive:     no
+19:18:08.586: 	full_decode:             no
+19:18:08.586: 	ffmpeg_options:          
+19:18:08.588: User added source 'blob-mask-overlay' (ffmpeg_source) to scene 'Scene 2'
+19:19:31.178: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:19:35.581: User Removed source 'blob-mask-overlay' (ffmpeg_source) from scene 'Scene 2'
+19:19:46.761: [Media Source 'camera mask']: settings:
+19:19:46.761: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Rectangle jelly_mask.webm
+19:19:46.761: 	input_format:            (null)
+19:19:46.761: 	speed:                   100
+19:19:46.761: 	is_looping:              yes
+19:19:46.761: 	is_linear_alpha:         no
+19:19:46.761: 	is_hw_decoding:          no
+19:19:46.761: 	is_clear_on_media_end:   yes
+19:19:46.761: 	restart_on_activate:     yes
+19:19:46.761: 	close_when_inactive:     no
+19:19:46.761: 	full_decode:             no
+19:19:46.761: 	ffmpeg_options:          
+19:20:45.612: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:20:48.684: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:20:52.916: User added filter 'Chroma Key' (chroma_key_filter_v2) to source 'camera mask'
+19:21:08.627: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:21:15.037: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:21:20.274: User removed filter 'Chroma Key' (chroma_key_filter_v2) from source 'camera mask'
+19:21:55.920: adding 42 milliseconds of audio buffering, total audio buffering is now 106 milliseconds (source: camera mask)
+19:21:55.920: 
+19:22:01.720: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:22:02.892: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:22:07.444: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:22:11.766: User added filter 'Chroma Key' (chroma_key_filter_v2) to source 'Scene 2'
+19:22:24.511: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:22:47.480: User removed filter 'Chroma Key' (chroma_key_filter_v2) from source 'Scene 2'
+19:22:52.033: User switched to scene 'Landscape'
+19:23:00.735: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:23:04.973: User added source 'Scene 2' (scene) to scene 'Landscape'
+19:23:11.086: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:23:11.657: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:23:14.524: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:23:18.376: User added filter 'Chroma Key' (chroma_key_filter_v2) to source 'Landscape'
+19:23:39.073: User removed filter 'Chroma Key' (chroma_key_filter_v2) from source 'Landscape'
+19:23:42.114: User switched to scene 'Scene 2'
+19:24:26.726: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:24:38.422: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:24:51.516: [Media Source 'cam border']: settings:
+19:24:51.516: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Rectangle jelly_cam overlay.webm
+19:24:51.516: 	input_format:            (null)
+19:24:51.516: 	speed:                   100
+19:24:51.516: 	is_looping:              yes
+19:24:51.516: 	is_linear_alpha:         no
+19:24:51.516: 	is_hw_decoding:          no
+19:24:51.516: 	is_clear_on_media_end:   yes
+19:24:51.516: 	restart_on_activate:     yes
+19:24:51.516: 	close_when_inactive:     no
+19:24:51.516: 	full_decode:             no
+19:24:51.516: 	ffmpeg_options:          
+19:24:57.309: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:25:00.959: [Media Source 'cam border']: settings:
+19:25:00.959: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Rectangle jelly_cam overlay.webm
+19:25:00.959: 	input_format:            (null)
+19:25:00.959: 	speed:                   100
+19:25:00.959: 	is_looping:              yes
+19:25:00.959: 	is_linear_alpha:         no
+19:25:00.959: 	is_hw_decoding:          no
+19:25:00.959: 	is_clear_on_media_end:   yes
+19:25:00.959: 	restart_on_activate:     yes
+19:25:00.959: 	close_when_inactive:     no
+19:25:00.959: 	full_decode:             no
+19:25:00.959: 	ffmpeg_options:          
+19:25:02.294: User switched to scene 'Potrait'
+19:25:03.129: User switched to scene 'Scene 2'
+19:26:12.746: User switched to scene 'Potrait'
+19:26:13.439: User switched to scene 'Landscape'
+19:26:15.600: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:26:18.780: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:26:27.754: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+19:26:32.811: User added filter 'Chroma Key' (chroma_key_filter_v2) to source 'Scene 2'
+20:06:24.632: User switched to scene 'Scene 2'
+20:06:46.955: User switched to scene 'Landscape'
+20:07:04.091: User switched to scene 'Potrait'
+20:07:04.847: User switched to scene 'Scene 2'
+20:07:15.609: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:07:33.117: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:07:35.825: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:07:39.828: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:11:49.304: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:11:49.731: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:11:52.131: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:12:07.482: User added filter 'Color Correction' (color_filter_v2) to source 'cam border'
+20:13:24.134: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:13:44.328: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:15:07.545: User switched to scene 'Landscape'
+20:15:19.356: User switched to scene 'Scene 2'
+20:16:09.709: [VideoToolbox simple_video_recording: 'h264']: session created with hardware encoding
+20:16:09.727: [VideoToolbox simple_video_recording: 'h264']: settings:
+20:16:09.727: 	vt_encoder_id          com.apple.videotoolbox.videoencoder.ave.avc
+20:16:09.727: 	rate_control:          CRF
+20:16:09.727: 	bitrate:               2500 (kbps)
+20:16:09.727: 	quality:               0.500000
+20:16:09.727: 	fps_num:               60
+20:16:09.727: 	fps_den:               1
+20:16:09.727: 	width:                 1920
+20:16:09.727: 	height:                1080
+20:16:09.727: 	keyint:                2 (s)
+20:16:09.727: 	limit_bitrate:         off
+20:16:09.727: 	rc_max_bitrate:        2500 (kbps)
+20:16:09.727: 	rc_max_bitrate_window: 1.500000 (s)
+20:16:09.727: 	hw_enc:                on
+20:16:09.727: 	profile:               high
+20:16:09.727: 	codec_type:            h264
+20:16:09.727: 
+20:16:09.730: [CoreAudio AAC: 'simple_aac_recording0']: settings:
+20:16:09.730: 	mode:          AAC
+20:16:09.730: 	bitrate:       192
+20:16:09.730: 	sample rate:   48000
+20:16:09.730: 	cbr:           on
+20:16:09.730: 	output buffer: 1536
+20:16:09.730: [ffmpeg muxer: 'simple_file_output'] Using muxer settings:
+20:16:09.730: 	movflags=frag_keyframe+empty_moov+delay_moov
+20:16:09.791: ==== Recording Start ===============================================
+20:16:09.791: [ffmpeg muxer: 'simple_file_output'] Writing file '/Users/mrp/Documents/1-Projects/obs-studio-recording/2025-05-13 20-16-09.mov'...
+20:16:12.824: [ffmpeg muxer: 'simple_file_output'] Output of file '/Users/mrp/Documents/1-Projects/obs-studio-recording/2025-05-13 20-16-09.mov' stopped
+20:16:12.824: Output 'simple_file_output': stopping
+20:16:12.824: Output 'simple_file_output': Total frames output: 171
+20:16:12.824: Output 'simple_file_output': Total drawn frames: 180 (182 attempted)
+20:16:12.824: Output 'simple_file_output': Number of lagged frames due to rendering lag/stalls: 2 (1.1%)
+20:16:12.824: ==== Recording Stop ================================================
+20:17:01.912: User switched to scene 'Landscape'
+20:19:09.594: ==== Shutting down ==================================================
+20:19:09.751: All scene data cleared
+20:19:09.752: ------------------------------------------------
+20:19:09.841: [obs-websocket] [obs_module_unload] Shutting down...
+20:19:09.841: Tried to call obs_frontend_remove_event_callback with no callbacks!
+20:19:09.841: [obs-websocket] [obs_module_unload] Finished shutting down.
+20:19:09.841: [Scripting] Total detached callbacks: 0
+20:19:09.841: Freeing OBS context data
+20:19:09.859: == Profiler Results =============================
+20:19:09.859: run_program_init: 1080.8 ms
+20:19:09.859:  ┣OBSApp::AppInit: 12.749 ms
+20:19:09.859:  ┃ ┗OBSApp::InitLocale: 1.51 ms
+20:19:09.859:  ┗OBSApp::OBSInit: 944.156 ms
+20:19:09.859:    ┣obs_startup: 0.872 ms
+20:19:09.859:    ┗OBSBasic::OBSInit: 819.15 ms
+20:19:09.859:      ┣OBSBasic::InitBasicConfig: 0.943 ms
+20:19:09.859:      ┣OBSBasic::ResetAudio: 0.088 ms
+20:19:09.859:      ┣OBSBasic::ResetVideo: 224.519 ms
+20:19:09.859:      ┃ ┗obs_init_graphics: 222.241 ms
+20:19:09.859:      ┃   ┗shader compilation: 176.978 ms
+20:19:09.859:      ┣OBSBasic::InitOBSCallbacks: 0.002 ms
+20:19:09.859:      ┣OBSBasic::InitHotkeys: 0.009 ms
+20:19:09.859:      ┣obs_load_all_modules2: 151.63 ms
+20:19:09.859:      ┃ ┣obs_init_module(aja-output-ui): 0.866 ms
+20:19:09.859:      ┃ ┣obs_init_module(aja): 0.383 ms
+20:19:09.859:      ┃ ┣obs_init_module(coreaudio-encoder): 0.001 ms
+20:19:09.859:      ┃ ┣obs_init_module(decklink-captions): 0 ms
+20:19:09.859:      ┃ ┣obs_init_module(decklink-output-ui): 0 ms
+20:19:09.859:      ┃ ┣obs_init_module(decklink): 0.037 ms
+20:19:09.859:      ┃ ┣obs_init_module(frontend-tools): 1.684 ms
+20:19:09.859:      ┃ ┣obs_init_module(image-source): 0.005 ms
+20:19:09.859:      ┃ ┣obs_init_module(mac-avcapture-legacy): 74.417 ms
+20:19:09.859:      ┃ ┣obs_init_module(mac-avcapture): 0.001 ms
+20:19:09.859:      ┃ ┣obs_init_module(mac-capture): 0.01 ms
+20:19:09.859:      ┃ ┣obs_init_module(mac-syphon): 0.001 ms
+20:19:09.859:      ┃ ┣obs_init_module(mac-videotoolbox): 0.004 ms
+20:19:09.859:      ┃ ┣obs_init_module(mac-virtualcam): 0.001 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-browser): 23.106 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-ffmpeg): 0.044 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-filters): 0.013 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-outputs): 0.001 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-transitions): 0.004 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-vst): 0.001 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-webrtc): 0.004 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-websocket): 2.928 ms
+20:19:09.859:      ┃ ┣obs_init_module(obs-x264): 0.001 ms
+20:19:09.859:      ┃ ┣obs_init_module(rtmp-services): 1.196 ms
+20:19:09.859:      ┃ ┣obs_init_module(text-freetype2): 0.023 ms
+20:19:09.859:      ┃ ┣obs_init_module(vlc-video): 3.05 ms
+20:19:09.859:      ┃ ┗obs_init_module(obs-advanced-masks): 0.012 ms
+20:19:09.859:      ┣OBSBasic::InitService: 1.325 ms
+20:19:09.859:      ┣OBSBasic::ResetOutputs: 10.998 ms
+20:19:09.859:      ┣OBSBasic::CreateHotkeys: 0.037 ms
+20:19:09.859:      ┣OBSBasic::InitPrimitives: 0.037 ms
+20:19:09.859:      ┗OBSBasic::Load: 299.928 ms
+20:19:09.859: obs_hotkey_thread(25 ms): min=0 ms, median=0 ms, max=0.612 ms, 99th percentile=0.001 ms, 100% below 25 ms
+20:19:09.859: audio_thread(Audio): min=0.003 ms, median=0.057 ms, max=81.296 ms, 99th percentile=1.71 ms
+20:19:09.859:  ┗receive_audio: min=0.001 ms, median=0.442 ms, max=2.111 ms, 99th percentile=0.773 ms, 0.000738915 calls per parent call
+20:19:09.859:    ┣buffer_audio: min=0 ms, median=0.001 ms, max=0.008 ms, 99th percentile=0.005 ms
+20:19:09.859:    ┗do_encode: min=0.308 ms, median=0.44 ms, max=2.104 ms, 99th percentile=0.77 ms
+20:19:09.859:      ┣encode(simple_aac_recording0): min=0.304 ms, median=0.434 ms, max=2.098 ms, 99th percentile=0.765 ms
+20:19:09.859:      ┗send_packet: min=0.001 ms, median=0.004 ms, max=0.05 ms, 99th percentile=0.025 ms
+20:19:09.859: obs_graphics_thread(16.6667 ms): min=0.09 ms, median=2.369 ms, max=184.83 ms, 99th percentile=10.129 ms, 99.9217% below 16.667 ms
+20:19:09.859:  ┣tick_sources: min=0 ms, median=0.012 ms, max=184.657 ms, 99th percentile=0.065 ms
+20:19:09.859:  ┣output_frame: min=0.056 ms, median=1.011 ms, max=87.816 ms, 99th percentile=5.118 ms
+20:19:09.859:  ┃ ┣gs_context(video->graphics): min=0.056 ms, median=1.01 ms, max=87.811 ms, 99th percentile=5.108 ms
+20:19:09.859:  ┃ ┃ ┣render_video: min=0.013 ms, median=0.784 ms, max=86.944 ms, 99th percentile=4.081 ms
+20:19:09.859:  ┃ ┃ ┃ ┣render_main_texture: min=0.011 ms, median=0.781 ms, max=86.942 ms, 99th percentile=4.058 ms
+20:19:09.859:  ┃ ┃ ┃ ┣render_convert_texture: min=0.031 ms, median=0.04 ms, max=55.14 ms, 99th percentile=0.051 ms, 0.000726929 calls per parent call
+20:19:09.859:  ┃ ┃ ┃ ┗stage_output_texture: min=0.2 ms, median=0.28 ms, max=3.213 ms, 99th percentile=1.195 ms, 0.000726929 calls per parent call
+20:19:09.859:  ┃ ┃ ┣gs_flush: min=0.007 ms, median=0.225 ms, max=15.314 ms, 99th percentile=1.183 ms
+20:19:09.859:  ┃ ┃ ┗download_frame: min=0 ms, median=4.047 ms, max=6.621 ms, 99th percentile=6.295 ms, 0.000726929 calls per parent call
+20:19:09.859:  ┃ ┗output_video_data: min=0.074 ms, median=0.082 ms, max=0.595 ms, 99th percentile=0.591 ms, 0.000722891 calls per parent call
+20:19:09.859:  ┗render_displays: min=0 ms, median=1.195 ms, max=77.787 ms, 99th percentile=7.835 ms
+20:19:09.859: video_thread(video): min=0.326 ms, median=0.421 ms, max=26.581 ms, 99th percentile=3.222 ms
+20:19:09.859:  ┗receive_video: min=0.325 ms, median=0.422 ms, max=23.248 ms, 99th percentile=3.221 ms
+20:19:09.859:    ┗do_encode: min=0.325 ms, median=0.421 ms, max=23.247 ms, 99th percentile=3.221 ms
+20:19:09.859:      ┣encode(simple_video_recording): min=0.319 ms, median=0.411 ms, max=23.241 ms, 99th percentile=1.918 ms
+20:19:09.859:      ┗send_packet: min=0.002 ms, median=0.006 ms, max=2.837 ms, 99th percentile=0.042 ms
+20:19:09.859: =================================================
+20:19:09.859: == Profiler Time Between Calls ==================
+20:19:09.859: obs_hotkey_thread(25 ms): min=25.01 ms, median=29.722 ms, max=91.553 ms, 3.96198% within ±2% of 25 ms (0% lower, 96.038% higher)
+20:19:09.859: obs_graphics_thread(16.6667 ms): min=1.063 ms, median=16.667 ms, max=184.833 ms, 52.7094% within ±2% of 16.667 ms (23.3709% lower, 23.9197% higher)
+20:19:09.859: =================================================
+20:19:09.915: Number of memory leaks: 1

@@ -1,0 +1,309 @@
+20:19:13.902: [macOS] Permission for audio device access granted.
+20:19:13.905: [macOS] Permission for video device access granted.
+20:19:13.908: [macOS] Permission for accessibility granted.
+20:19:13.912: [macOS] Permission for screen capture granted.
+20:19:13.912: CPU Name: Apple M1 Pro
+20:19:13.912: Physical Cores: 8, Logical Cores: 8
+20:19:13.912: Physical Memory: 16384MB Total
+20:19:13.912: Model Identifier: MacBookPro18,3
+20:19:13.912: OS Name: macOS
+20:19:13.913: OS Version: Version 15.4.1 (Build 24E263)
+20:19:13.913: Rosetta translation used: false
+20:19:13.913: Kernel Version: 24.4.0
+20:19:13.913: hotkeys-cocoa: Using keyboard layout 'com.apple.keylayout.ABC'
+20:19:13.913: Current Date/Time: 2025-05-13, 20:19:13
+20:19:13.913: Browser Hardware Acceleration: true
+20:19:13.913: Qt Version: 6.6.3 (runtime), 6.6.3 (compiled)
+20:19:13.913: Portable mode: false
+20:19:14.041: OBS 31.0.3 (mac)
+20:19:14.041: ---------------------------------
+20:19:14.042: ---------------------------------
+20:19:14.042: audio settings reset:
+20:19:14.042: 	samples per sec: 48000
+20:19:14.042: 	speakers:        2
+20:19:14.042: 	max buffering:   960 milliseconds
+20:19:14.042: 	buffering type:  dynamically increasing
+20:19:14.043: ---------------------------------
+20:19:14.043: Initializing OpenGL...
+20:19:14.089: Loading up OpenGL on adapter Apple Apple M1 Pro
+20:19:14.089: OpenGL loaded successfully, version 4.1 Metal - 89.4, shading language 4.10
+20:19:14.269: ---------------------------------
+20:19:14.269: video settings reset:
+20:19:14.269: 	base resolution:   1920x1080
+20:19:14.269: 	output resolution: 1920x1080
+20:19:14.269: 	downscale filter:  Bicubic
+20:19:14.269: 	fps:               60/1
+20:19:14.269: 	format:            NV12
+20:19:14.269: 	YUV mode:          Rec. 709/Partial
+20:19:14.269: NV12 texture support enabled
+20:19:14.269: P010 texture support not available
+20:19:14.272: Audio monitoring device:
+20:19:14.272: 	name: Default
+20:19:14.272: 	id: default
+20:19:14.272: ---------------------------------
+20:19:14.276: No AJA devices found, skipping loading AJA UI plugin
+20:19:14.276: Failed to initialize module 'aja-output-ui'
+20:19:14.279: No AJA devices found, skipping loading AJA plugin
+20:19:14.279: Failed to initialize module 'aja'
+20:19:14.281: Failed to load 'en-US' text for module: 'decklink-captions'
+20:19:14.282: Failed to load 'en-US' text for module: 'decklink-output-ui'
+20:19:14.283: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+20:19:14.283: Failed to initialize module 'decklink'
+20:19:14.409: [obs-browser]: Version 2.24.6
+20:19:14.409: [obs-browser]: CEF Version 127.0.6533.120 (runtime), 127.0.0-6533-fix-stutter.3039+g2b7d20b+chromium-127.0.6533.120 (compiled)
+20:19:14.424: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.5.6 | RPC Version: 1)
+20:19:14.424: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.6.3 | Qt version (run-time): 6.6.3
+20:19:14.424: [obs-websocket] [obs_module_load] Linked ASIO Version: 103100
+20:19:14.424: DEPRECATION: obs_frontend_get_global_config is deprecated. Read from global or user configuration explicitly instead.
+20:19:14.427: [obs-websocket] [obs_module_load] Module loaded.
+20:19:14.438: [vlc-video]: VLC 3.0.21 Vetinari found, VLC video source enabled
+20:19:14.440: [Advanced Masks] loaded version 1.1.0
+20:19:14.443: [Composite Blur] loaded version 1.5.1
+20:19:14.444: ---------------------------------
+20:19:14.444:   Loaded Modules:
+20:19:14.444:     obs-composite-blur
+20:19:14.444:     obs-advanced-masks
+20:19:14.444:     vlc-video
+20:19:14.444:     text-freetype2
+20:19:14.444:     rtmp-services
+20:19:14.444:     obs-x264
+20:19:14.444:     obs-websocket
+20:19:14.444:     obs-webrtc
+20:19:14.444:     obs-vst
+20:19:14.444:     obs-transitions
+20:19:14.444:     obs-outputs
+20:19:14.444:     obs-filters
+20:19:14.444:     obs-ffmpeg
+20:19:14.444:     obs-browser
+20:19:14.444:     mac-virtualcam
+20:19:14.444:     mac-videotoolbox
+20:19:14.444:     mac-syphon
+20:19:14.444:     mac-capture
+20:19:14.444:     mac-avcapture
+20:19:14.444:     mac-avcapture-legacy
+20:19:14.444:     image-source
+20:19:14.444:     frontend-tools
+20:19:14.444:     decklink-output-ui
+20:19:14.444:     decklink-captions
+20:19:14.444:     coreaudio-encoder
+20:19:14.444: ---------------------------------
+20:19:14.445: [VideoToolbox encoder]: Added VideoToolbox encoders
+20:19:14.445: ---------------------------------
+20:19:14.445: Available Encoders:
+20:19:14.445:   Video Encoders:
+20:19:14.445: 	- ffmpeg_aom_av1 (AOM AV1)
+20:19:14.445: 	- obs_x264 (x264)
+20:19:14.445: 	- com.apple.videotoolbox.videoencoder.prores-422 (Apple VT ProRes Software Encoder)
+20:19:14.445: 	- com.apple.videotoolbox.videoencoder.appleproreshw.422 (Apple VT ProRes Hardware Encoder)
+20:19:14.445: 	- com.apple.videotoolbox.videoencoder.ave.avc (Apple VT H264 Hardware Encoder)
+20:19:14.445: 	- com.apple.videotoolbox.videoencoder.h264 (Apple VT H264 Software Encoder)
+20:19:14.445: 	- com.apple.videotoolbox.videoencoder.ave.hevc (Apple VT HEVC Hardware Encoder)
+20:19:14.445: 	- com.apple.videotoolbox.videoencoder.hevc.vcp (Apple VT HEVC Software Encoder)
+20:19:14.445:   Audio Encoders:
+20:19:14.445: 	- CoreAudio_AAC (CoreAudio AAC)
+20:19:14.445: 	- ffmpeg_aac (FFmpeg AAC)
+20:19:14.445: 	- ffmpeg_opus (FFmpeg Opus)
+20:19:14.445: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+20:19:14.445: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+20:19:14.445: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+20:19:14.445: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+20:19:14.445: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+20:19:14.445: ==== Startup complete ===============================================
+20:19:14.470: All scene data cleared
+20:19:14.470: ------------------------------------------------
+20:19:14.531: Downmix enabled: 1 to 2 channels.
+20:19:14.547: coreaudio: Device 'krisp microphone' [48000 Hz] initialized
+20:19:14.547: [Loaded global audio device]: 'Mic/Aux'
+20:19:14.682: Downmix enabled: 1 to 2 channels.
+20:19:14.692: coreaudio: Device 'krisp microphone' [48000 Hz] initialized
+20:19:14.695: [Media Source 'camera mask']: settings:
+20:19:14.695: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Rectangle jelly_mask.webm
+20:19:14.695: 	input_format:            (null)
+20:19:14.695: 	speed:                   100
+20:19:14.695: 	is_looping:              yes
+20:19:14.695: 	is_linear_alpha:         no
+20:19:14.695: 	is_hw_decoding:          no
+20:19:14.695: 	is_clear_on_media_end:   yes
+20:19:14.695: 	restart_on_activate:     yes
+20:19:14.695: 	close_when_inactive:     no
+20:19:14.695: 	full_decode:             no
+20:19:14.695: 	ffmpeg_options:          
+20:19:14.695: [Media Source 'cam border']: settings:
+20:19:14.695: 	input:                   /Users/mrp/Documents/0-Inbox/obs resources/Rectangle jelly_cam overlay.webm
+20:19:14.695: 	input_format:            (null)
+20:19:14.695: 	speed:                   100
+20:19:14.695: 	is_looping:              yes
+20:19:14.695: 	is_linear_alpha:         no
+20:19:14.695: 	is_hw_decoding:          no
+20:19:14.695: 	is_clear_on_media_end:   yes
+20:19:14.695: 	restart_on_activate:     yes
+20:19:14.695: 	close_when_inactive:     no
+20:19:14.695: 	full_decode:             no
+20:19:14.695: 	ffmpeg_options:          
+20:19:14.696: Obsbot meet 2: Selected device 'OBSBOT Meet 2 StreamCamera'
+20:19:14.697: Switched to scene 'Landscape'
+20:19:14.697: ------------------------------------------------
+20:19:14.697: Loaded scenes:
+20:19:14.697: - scene 'Landscape':
+20:19:14.699:     - source: 'HP 22fw' (screen_capture)
+20:19:14.699:     - source: 'Obsbot meet 2' (macos-avcapture)
+20:19:14.699:     - source: 'Krisp' (coreaudio_input_capture)
+20:19:14.699:     - source: 'Scene 2' (scene)
+20:19:14.699:         - filter: 'Chroma Key' (chroma_key_filter_v2)
+20:19:14.699: - scene 'Potrait':
+20:19:14.699: - scene 'Scene 2':
+20:19:14.699:     - source: 'Obsbot meet 2' (macos-avcapture)
+20:19:14.699:     - source: 'camera mask' (ffmpeg_source)
+20:19:14.699:     - source: 'cam border' (ffmpeg_source)
+20:19:14.699:         - filter: 'Color Correction' (color_filter_v2)
+20:19:14.699:     - filter: 'Chroma Key' (chroma_key_filter_v2)
+20:19:14.699: ------------------------------------------------
+20:19:14.728: adding 64 milliseconds of audio buffering, total audio buffering is now 64 milliseconds (source: HP 22fw)
+20:19:14.728: 
+20:19:15.031: [mac-virtualcam] mac-camera-extension: OSSystemExtensionErrorCode 8 ("code signature invalid")
+20:19:18.114: User switched to scene 'Scene 2'
+20:19:20.528: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:19:21.153: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:19:28.256: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:19:33.110: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:20:22.401: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:20:25.806: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:20:28.411: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:20:34.545: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:21:43.047: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:21:46.163: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:21:47.291: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:21:53.718: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:22:30.846: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:22:32.594: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:22:33.241: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:22:35.669: The cached device pixel ratio value was stale on window expose.  Please file a QTBUG which explains how to reproduce.
+20:22:44.805: User added filter 'Composite Blur' (obs_composite_blur) to source 'Obsbot meet 2'
+20:22:44.812: Error compiling shader:
+20:22:44.812: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:44.812: 
+20:22:44.812: 
+20:22:44.812: device_pixelshader_create (GL) failed
+20:22:44.812: Pass (0) <> missing pixel shader!
+20:22:44.815: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:22:44.815: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:44.815: 
+20:22:44.815: 
+20:22:44.890: Error compiling shader:
+20:22:44.890: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:44.890: 
+20:22:44.890: 
+20:22:44.890: device_pixelshader_create (GL) failed
+20:22:44.890: Pass (0) <> missing pixel shader!
+20:22:44.893: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:22:44.893: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:44.893: 
+20:22:44.893: 
+20:22:57.179: Error compiling shader:
+20:22:57.179: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:57.179: 
+20:22:57.179: 
+20:22:57.179: device_pixelshader_create (GL) failed
+20:22:57.179: Pass (0) <> missing pixel shader!
+20:22:57.182: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:22:57.182: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:57.182: 
+20:22:57.182: 
+20:22:59.275: Error compiling shader:
+20:22:59.275: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:59.275: 
+20:22:59.275: 
+20:22:59.275: device_pixelshader_create (GL) failed
+20:22:59.275: Pass (0) <> missing pixel shader!
+20:22:59.278: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:22:59.278: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:22:59.278: 
+20:22:59.278: 
+20:23:00.757: Error compiling shader:
+20:23:00.757: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:00.757: 
+20:23:00.757: 
+20:23:00.757: device_pixelshader_create (GL) failed
+20:23:00.758: Pass (0) <> missing pixel shader!
+20:23:00.760: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:23:00.760: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:00.760: 
+20:23:00.760: 
+20:23:02.856: Error compiling shader:
+20:23:02.856: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:02.856: 
+20:23:02.856: 
+20:23:02.856: device_pixelshader_create (GL) failed
+20:23:02.856: Pass (0) <> missing pixel shader!
+20:23:02.858: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:23:02.858: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:02.858: 
+20:23:02.858: 
+20:23:11.714: Error compiling shader:
+20:23:11.714: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:11.714: 
+20:23:11.714: 
+20:23:11.714: device_pixelshader_create (GL) failed
+20:23:11.714: Pass (0) <> missing pixel shader!
+20:23:11.717: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:23:11.717: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:11.717: 
+20:23:11.717: 
+20:23:17.776: Error compiling shader:
+20:23:17.776: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:17.776: 
+20:23:17.776: 
+20:23:17.776: device_pixelshader_create (GL) failed
+20:23:17.776: Pass (0) <> missing pixel shader!
+20:23:17.778: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:23:17.778: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:17.778: 
+20:23:17.778: 
+20:23:23.538: Error compiling shader:
+20:23:23.538: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:23.538: 
+20:23:23.538: 
+20:23:23.538: device_pixelshader_create (GL) failed
+20:23:23.539: Pass (0) <> missing pixel shader!
+20:23:23.541: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:23:23.541: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:23.541: 
+20:23:23.541: 
+20:23:26.590: Error compiling shader:
+20:23:26.590: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:26.590: 
+20:23:26.590: 
+20:23:26.590: device_pixelshader_create (GL) failed
+20:23:26.590: Pass (0) <> missing pixel shader!
+20:23:26.592: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:23:26.592: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:26.592: 
+20:23:26.592: 
+20:23:26.602: Error compiling shader:
+20:23:26.602: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:26.602: 
+20:23:26.602: 
+20:23:26.602: device_pixelshader_create (GL) failed
+20:23:26.602: Pass (0) <> missing pixel shader!
+20:23:26.604: [obs-composite-blur] Unable to load .effect file.  Errors:
+20:23:26.604: (null) (158, 1): Error creating shader: ERROR: 0:56: '{' : syntax error: syntax error
+20:23:26.604: 
+20:23:26.604: 
+20:23:58.510: adding 85 milliseconds of audio buffering, total audio buffering is now 149 milliseconds (source: cam border)
+20:23:58.510: 
+20:24:48.085: adding 85 milliseconds of audio buffering, total audio buffering is now 234 milliseconds (source: camera mask)
+20:24:48.085: 
+20:24:48.367: adding 85 milliseconds of audio buffering, total audio buffering is now 320 milliseconds (source: camera mask)
+20:24:48.367: 
+20:24:50.129: adding 192 milliseconds of audio buffering, total audio buffering is now 512 milliseconds (source: camera mask)
+20:24:50.129: 
+20:24:50.816: adding 426 milliseconds of audio buffering, total audio buffering is now 938 milliseconds (source: camera mask)
+20:24:50.816: 
+20:24:50.923: Max audio buffering reached!
+20:24:50.923: adding 21 milliseconds of audio buffering, total audio buffering is now 960 milliseconds (source: camera mask)
+20:24:50.923: 
+20:25:11.444: Source camera mask audio is lagging (over by 107.80 ms) at max audio buffering. Restarting source audio.
+20:25:11.445: Source cam border audio is lagging (over by 57.80 ms) at max audio buffering. Restarting source audio.
+20:25:13.395: Source cam border audio is lagging (over by 328.91 ms) at max audio buffering. Restarting source audio.
+20:25:13.404: Source cam border audio is lagging (over by 340.24 ms) at max audio buffering. Restarting source audio.
+20:25:14.066: Source camera mask audio is lagging (over by 1149.22 ms) at max audio buffering. Restarting source audio.

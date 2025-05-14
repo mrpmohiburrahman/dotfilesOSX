@@ -38,6 +38,9 @@
         },
         {
             "name": "Potrait"
+        },
+        {
+            "name": "Scene 2"
         }
     ],
     "name": "Untitled",
@@ -110,28 +113,22 @@
             "filters": [
                 {
                     "prev_ver": 520093699,
-                    "name": "Advanced Mask",
-                    "uuid": "54a37e5b-1cd3-4316-ae82-c57796288425",
-                    "id": "advanced_masks_filter",
-                    "versioned_id": "advanced_masks_filter_v2",
+                    "name": "Background Removal",
+                    "uuid": "40810a58-87c9-4e25-845b-c696107ebc92",
+                    "id": "background_removal",
+                    "versioned_id": "background_removal",
                     "settings": {
-                        "rectangle_corner_type": 1,
-                        "shape_feather_type": 1,
-                        "shape_center_x": 960.0,
-                        "position_x": 960.0,
-                        "shape_center_y": 540.0,
-                        "position_y": 540.0,
-                        "mask_gradient_position": 960.0,
-                        "rectangle_corner_radius": 128.0,
-                        "source_zoom": 87.0,
-                        "rectangle_height": 1000.0
+                        "advanced": true,
+                        "blur_background": 2,
+                        "enable_focal_blur": false,
+                        "useGPU": "coreml"
                     },
                     "mixers": 0,
                     "sync": 0,
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": true,
+                    "enabled": false,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -183,7 +180,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 3,
+                "id_counter": 4,
                 "custom_size": false,
                 "items": [
                     {
@@ -244,7 +241,7 @@
                     {
                         "name": "Obsbot meet 2",
                         "source_uuid": "6d8ee7c3-e20a-4fa2-b813-bd9e44344ae0",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -350,6 +347,61 @@
                             "duration": 0
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Scene 2",
+                        "source_uuid": "4bd29b4a-a471-445d-aa40-1da7359aee3e",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 4,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1353.0,
+                            "y": 734.0
+                        },
+                        "pos_rel": {
+                            "x": 0.72777777910232544,
+                            "y": 0.35925924777984619
+                        },
+                        "scale": {
+                            "x": 0.3203125,
+                            "y": 0.3203703761100769
+                        },
+                        "scale_rel": {
+                            "x": 0.3203125,
+                            "y": 0.3203703761100769
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -371,7 +423,9 @@
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": [],
                 "libobs.show_scene_item.3": [],
-                "libobs.hide_scene_item.3": []
+                "libobs.hide_scene_item.3": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -407,6 +461,338 @@
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
             "private_settings": {}
+        },
+        {
+            "prev_ver": 520093699,
+            "name": "Scene 2",
+            "uuid": "4bd29b4a-a471-445d-aa40-1da7359aee3e",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 5,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Obsbot meet 2",
+                        "source_uuid": "6d8ee7c3-e20a-4fa2-b813-bd9e44344ae0",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": -28.0,
+                            "y": -200.0
+                        },
+                        "pos_rel": {
+                            "x": -1.82962965965271,
+                            "y": -1.3703703880310059
+                        },
+                        "scale": {
+                            "x": 1.1854166984558105,
+                            "y": 1.1851851940155029
+                        },
+                        "scale_rel": {
+                            "x": 1.1854166984558105,
+                            "y": 1.1851851940155029
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "camera mask",
+                        "source_uuid": "6b01bc52-813d-4865-b00e-9ba00d3c98ea",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "cam border",
+                        "source_uuid": "591def7e-7db4-4ab8-bfa7-287ebe540251",
+                        "visible": true,
+                        "locked": true,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 520093699,
+                    "name": "Chroma Key",
+                    "uuid": "96070dad-df6e-40fa-ae60-a9c6fcc77200",
+                    "id": "chroma_key_filter",
+                    "versioned_id": "chroma_key_filter_v2",
+                    "settings": {
+                        "key_color_type": "green",
+                        "similarity": 282
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 520093699,
+            "name": "camera mask",
+            "uuid": "6b01bc52-813d-4865-b00e-9ba00d3c98ea",
+            "id": "ffmpeg_source",
+            "versioned_id": "ffmpeg_source",
+            "settings": {
+                "local_file": "/Users/mrp/Documents/0-Inbox/obs resources/Rectangle jelly_mask.webm",
+                "looping": true,
+                "is_local_file": true
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Play": [],
+                "MediaSource.Pause": [],
+                "MediaSource.Stop": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 520093699,
+            "name": "cam border",
+            "uuid": "591def7e-7db4-4ab8-bfa7-287ebe540251",
+            "id": "ffmpeg_source",
+            "versioned_id": "ffmpeg_source",
+            "settings": {
+                "local_file": "/Users/mrp/Documents/0-Inbox/obs resources/Rectangle jelly_cam overlay.webm",
+                "looping": true
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Play": [],
+                "MediaSource.Pause": [],
+                "MediaSource.Stop": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 520093699,
+                    "name": "Color Correction",
+                    "uuid": "88d642e8-fc6d-4d91-b9cc-739cdf79a654",
+                    "id": "color_filter",
+                    "versioned_id": "color_filter_v2",
+                    "settings": {
+                        "color_add": 4287766932
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
         }
     ],
     "groups": [],
@@ -465,6 +851,10 @@
             "active": false,
             "switches": []
         }
+    },
+    "resolution": {
+        "x": 1920,
+        "y": 1080
     },
     "version": 2
 }

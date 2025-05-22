@@ -7,6 +7,8 @@ autostart_apps=(
     "Session:3:1"
     "Messenger:4:1"
     "Discord:4:1"
+    "Telegram:4:1"
+    "WhatsApp:4:1"
     "Visual Studio Code:6:2"
 )
 
@@ -28,7 +30,7 @@ if ! pgrep -x "Google Chrome" &>/dev/null; then
 
     # give yabai a moment to register the rule, then open Notion
     sleep 1
-    open -a "Google Chrome" "https://pahe.ink/" "https://psa.wf/" "https://fojik.com/genre/bollywood-hindi/" "https://www.facebook.com/messages/t/" "https://www.linkedin.com/" "https://news.ycombinator.com/" "https://youtube.com/"
+    open -a "Google Chrome" "https://pahe.ink/" "https://psa.wf/" "https://fojik.com/genre/bollywood-hindi/" "https://www.facebook.com/messages/t/" "https://www.linkedin.com/" "https://news.ycombinator.com/" "https://youtube.com/" "https://twitter.com/home"
 fi
 
 # inside your for-loop, or standalone if you only want Notion:
